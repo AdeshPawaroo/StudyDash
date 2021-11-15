@@ -30,9 +30,9 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 const db = require("./config/keys").mongoURI;
+const User = require("./models/User");
 const users = require("./routes/api/users");
 // const tasks = require("./routes/api/tasks");
-const User = require("./models/User");
 const bodyParser = require("body-parser");
 const passport = require('passport');
 
