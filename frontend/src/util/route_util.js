@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom';
-import { Redirect } from 'react-router'
+import { Route, withRouter, Redirect } from 'react-router-dom';
 
 // Passed in from parent component or from mapStateToProps
 const Auth = ({ component: Component, path, loggedIn, exact }) => (
@@ -9,8 +8,8 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
         !loggedIn ? (
             <Component {...props} />
         ) : (
-            // Redirect to the tweets page if the user is authenticated
-            <Redirect to="/tweets" />
+            // Redirect to the main page if the user is authenticated
+            <Redirect to="/" />
         )
     )} />
 );

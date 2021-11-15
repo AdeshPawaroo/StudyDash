@@ -1,4 +1,4 @@
-import { RECEIVE_TASKS, RECEIVE_USER_TASKS, RECEIVE_NEW_TASK } from '../actions/task_actions';
+// import { RECEIVE_TASKS, RECEIVE_USER_TASKS, RECEIVE_NEW_TASK } from '../actions/task_actions';
 
 const TasksReducer = (state = { all: {}, user: {}, new: undefined }, action) => {
     Object.freeze(state);
@@ -15,4 +15,4 @@ const TasksReducer = (state = { all: {}, user: {}, new: undefined }, action) => 
     }
 };
 
-export default TasksReducer;
+// export default TasksReducer;
