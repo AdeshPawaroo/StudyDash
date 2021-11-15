@@ -30,9 +30,9 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 const db = require("./config/keys").mongoURI;
-const users = require("./routes/api/users");
-const tasks = require("./routes/api/tasks");
 const User = require("./models/User");
+const users = require("./routes/api/users");
+// const tasks = require("./routes/api/tasks");
 const bodyParser = require("body-parser");
 const passport = require('passport');
 
@@ -63,7 +63,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
     
 app.use("/api/users", users)
-app.use("/api/tasks", tasks)
+// app.use("/api/tasks", tasks)
 
 
 const port = process.env.PORT || 5000;
