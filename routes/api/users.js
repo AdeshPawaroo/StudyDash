@@ -65,10 +65,16 @@ router.post('/login', (req, res) => {
         bcrypt.compare(password, user.password)
           .then(isMatch => {
             if (isMatch) {
+                let days = user.daysLoggedIn;
+                const currentDate = Date.now()
+                if (days === 0){
+                  days += 1;
+                }
                 const payload = {
                     id: user.id,
                     handle: user.handle,
-                    email: user.email
+                    email: user.email,
+                    daysLoggedIn: days
                 }
                 jwt.sign(
                     payload,
