@@ -18,6 +18,22 @@ router.get("/", (req, res) => {
         .catch(err => res.status(400).json(err));
 });
 
+router.get("/user/:user_id", (req, res) => {
+    Flashcard 
+        .find({ user: req.params.user_id })
+        .then(flashcards => res.json(flashcards))
+        .catch(err => res.status(400).json(err));
+});
+
+router.get("/:id", (req, res) => {
+    Flashcard  
+        .findById(req.params.id)
+        .then(flashcard => res.json(flashcard))
+        .catch(err => res.status(400).json(err));
+});
+
+//MIGHT NEED MORE ROUTES HERE LATER -- ONLY BASIC ONES IMPLEMENTED
+
 router.post("/",
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -28,7 +44,7 @@ router.post("/",
         }
 
         const newFlashcard =  new Flashcard({
-            user: req.body.user,
+            user: req.user.id,
             question: req.body.question,
             answer: req.body.answer
         });
