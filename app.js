@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const db = require("./config/keys").mongoURI;
-const tasks = require("./routes/api/tasks");
+const User = require("./models/User");
+const users = require("./routes/api/users");
+// const tasks = require("./routes/api/tasks");
 const bodyParser = require("body-parser");
 const users = require("./routes/api/users")
 const User = require("./models/User");
@@ -35,7 +37,8 @@ require('./config/passport')(passport);
     
 app.use("/api/users", users)
 app.use("/api/flashcards", flashcards)
-app.use("/api/tasks", tasks)
+// app.use("/api/tasks", tasks)
+// app.use("/api/tasks", tasks)
 
 
 const port = process.env.PORT || 5000;
