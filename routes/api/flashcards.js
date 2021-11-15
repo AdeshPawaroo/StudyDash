@@ -10,6 +10,14 @@ router.get("/test", (req, res) => {
     res.json({ msg: "This is the flashcard route" });
 });
 
+router.get("/", (req, res) => {
+    Flashcard
+        .find()
+        .sort({ date: -1 })
+        .then(flashcards => res.json(flashcards))
+        .catch(err => res.status(400).json(err));
+});
+
 router.post("/",
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
