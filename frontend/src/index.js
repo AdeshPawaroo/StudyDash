@@ -4,9 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 // We will create this component shortly
 import Root from './components/root';
 
