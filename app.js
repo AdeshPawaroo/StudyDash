@@ -2,10 +2,14 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
+const users = require("./routes/api/users");
+const tasks = require("./routes/api/tasks");
+const User = require("./models/User");
 const bodyParser = require("body-parser");
 const users = require("./routes/api/users")
 const User = require("./models/User");
 const flashcards = require("./routes/api/flashcards");
+
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -30,6 +34,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", users)
 app.use("/api/flashcards", flashcards)
+app.use("/api/tasks", tasks)
+
 
 const port = process.env.PORT || 5000;
 
