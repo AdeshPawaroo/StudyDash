@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
 
 // We will create this component shortly
 import Root from './components/root';
@@ -24,7 +22,7 @@ import { logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
-
+  
   // If a returning user has a session token stored in localStorage
   if (localStorage.jwtToken) {
 
@@ -42,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentTime = Date.now() / 1000;
 
     // If the user's token has expired
+    // May have to be refactored
     if (decodedUser.exp < currentTime) {
       // Logout the user and redirect to the login page
       store.dispatch(logout());
@@ -51,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // If this is a first time user, start with an empty store
     store = configureStore({});
   }
+  window.store = store;
+  window.axios = axios;
   // Render our root component and pass in the store as a prop
   const root = document.getElementById('root');
 
