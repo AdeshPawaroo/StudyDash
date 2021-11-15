@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const users = require("./routes/api/users")
 const User = require("./models/User");
 const flashcards = require("./routes/api/flashcards");
+const passport = require("passport");
 
 
 mongoose
@@ -19,6 +20,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 app.get("/", (req, res) => {
     const user = new User({
