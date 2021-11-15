@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const FlashcardSchema = new Schema({
-    //maybe might need user here
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+    },
     question: {
         type: String,
         required: true
