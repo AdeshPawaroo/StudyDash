@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Task = require("../../models/Task");
-const validateTaskInput = require('../../validation/task');
+// const validateTaskInput = require('../../validation/task');
 
 router.post("/", async (req,res) => {
     try {
@@ -14,7 +14,7 @@ router.post("/", async (req,res) => {
 
 router.get("/", async (req,res) => {
     try {
-        const tasls = await Task.find();
+        const tasks = await Task.find();
         res.send(tasks);
     } catch (error) {
         res.send(error)
