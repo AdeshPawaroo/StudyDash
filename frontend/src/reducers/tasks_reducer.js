@@ -4,9 +4,6 @@ const TasksReducer = (state = { all: {}, user: {}, new: undefined }, action) => 
     Object.freeze(state);
     let newState = Object.assign({}, state);
     switch (action.type) {
-        case RECEIVE_TASKS:
-            newState.all = action.tasks.data;
-            return newState;
         case RECEIVE_USER_TASKS:
             newState.user = action.tasks.data;
             return newState;

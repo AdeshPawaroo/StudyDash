@@ -1,18 +1,18 @@
 import axios from 'axios';
-const apiUrl = "/api/tasks"
+
 
 export function getTasks() {
-    return axios.get(apiUrl);
+    return axios.get('/api/tasks/');
 }
 
-export function addTask(task) {
-    return axios.post(apiUrl, data)
+export function addTask(data) {
+    return axios.post('/api/tasks/', data)
 }
 
-export function updateTask(id, task) {
-    return axios.put(apiUrl + "/" + id, data)
+export function updateTask(id, data) {
+    return axios.put('/api/tasks/' + id, data)
 }
 
 export function deleteTask(id) {
-    return axios.delete(apiUrl + "/" + id);
+    return axios.delete(`/api/tasks/${id}`);
 }
