@@ -10,9 +10,9 @@ class Flashcard extends React.Component {
         this.props.fetchFlashcards();
     }
 
+    //returns all flashcards
     render() {
         if (!this.props.tweets) return null;
-
         return(
             <div>
                 here

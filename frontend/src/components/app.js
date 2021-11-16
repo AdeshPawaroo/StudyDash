@@ -7,6 +7,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import MainPageContainer from './main/main_page_container';
 import FlashcardContainer from './flashcards/flashcards_container';
+import ProfileContainer from './flashcards/profile_container';
 
 const App = () => (
     <div>
@@ -16,6 +17,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
             <ProtectedRoute exact path="/flashcards" component={FlashcardContainer} />
+            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
         </Switch>
     </div>
 );
