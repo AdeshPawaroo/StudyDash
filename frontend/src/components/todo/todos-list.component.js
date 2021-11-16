@@ -61,19 +61,24 @@ export default class TodosList extends Component {
         return (
             <div>
                 <h3>Todos List</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }}>
-                    <thead>
-                        <tr>
-                            <th>Description</th>
-                            <th>Responsible</th>
-                            <th>Priority</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.todoList()}
-                    </tbody>
-                </table>
+                <div class="container">
+                    <table className="table table-striped" style={{ marginTop: 20 }}>
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Responsible</th>
+                                <th>Priority</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.todoList()}
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <Link to={'/create'}>Add a new task</Link>
             </div>
         )
     }

@@ -12,6 +12,7 @@ import TodosList from './todo/todos-list.component';
 import CreateTodo from './todo/create_todo_component';
 import EditTodo from './todo/edit-todo.component';
 import './todo/index.css';
+import Dash from './dash/dash';
 
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
         <Switch>
             <Route exact path='/create' component={CreateTodo} />
             <ProtectedRoute exact path="/" component={MainPageContainer} />
+            <ProtectedRoute exact path="/dash" component={Dash} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <AuthRoute exact path="/" component={MainPage} />

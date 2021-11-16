@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './main_page.css';
 
 class MainPage extends React.Component {
@@ -31,6 +32,13 @@ class MainPage extends React.Component {
                 <button onClick={this.logoutUser}>Logout</button> */}
                 {greeting}
                 <br />
+                <div>
+                    <p><Link to={'/clock'}>Pomodoro Clock</Link></p>
+                    <p><Link to={'/list'}>Tasks</Link></p>
+                    <p><Link to={'/flashcards'}>FlashCards</Link></p>
+                    <p><Link to={'/calender'}>Calendar</Link></p>
+                    <p><Link to={'/profile'}>Profile</Link></p >
+                </div>
                 <footer>
                     Copyright &copy; 2021 StudyDash
                 </footer>
