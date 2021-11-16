@@ -73,10 +73,18 @@ router.post('/login', (req, res) => {
         bcrypt.compare(password, user.password)
           .then(isMatch => {
             if (isMatch) {
+                let days = user.daysLoggedIn;
+                const currentDate = new Date()
+                if (days === 0 || currentDate.getDate() != user.lastLogin.getDate()){
+                  days += 1;
+                }
                 const payload = {
                     id: user.id,
                     handle: user.handle,
-                    email: user.email
+                    email: user.email,
+                    date: user.date,
+                    daysLoggedIn: days,
+                    lastLogin: new Date()
                 }
                 jwt.sign(
                     payload,
@@ -94,6 +102,7 @@ router.post('/login', (req, res) => {
             }
           })
       })
-  })
+  }
+)
 
 module.exports = router;

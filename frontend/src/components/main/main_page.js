@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ProfileContainer from '../profile/profile_container';
 
 class MainPage extends React.Component {
     constructor(props){
@@ -16,20 +18,21 @@ class MainPage extends React.Component {
         let greeting = ''
         if(this.props.currentUser){
             greeting = (
-                <div>
+                <div className='greeting'>
                     <h2>Hello, {this.props.currentUser.handle}</h2>
-                    <button onClick={this.logoutUser}>Logout</button> 
+                    <button id='logout-button' onClick={this.logoutUser}>Logout</button>
+                    
                 </div>
             )
 
         }
         return (
-            <div>
-                <h1>Study Dash</h1>
-                {/* <h2>{greeting}</h2>
-                <button onClick={this.logoutUser}>Logout</button> */}
+            <div className='main-page-div'>
+                <h1 className='app-name'>Study Dash</h1>
                 {greeting}
+                <p>What would you like to do?</p>
                 <br />
+                
                 <footer>
                     Copyright &copy; 2021 StudyDash
                 </footer>

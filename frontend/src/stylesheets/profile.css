@@ -1,0 +1,19 @@
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgba(232, 250, 255, 0.205);
+    width: 55%;
+    border-radius: 5px;
+}
+
+.profile-info{
+    margin-bottom: 5px;
+}
+
+#profile-handle{
+    margin-top: 10px;
+    font-size: 16pt;
+}
+
