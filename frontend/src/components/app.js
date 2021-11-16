@@ -19,7 +19,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
             <ProtectedRoute exact path="/flashcards" component={FlashcardContainer} />
-            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
+            <ProtectedRoute exact path="/flashcards/user" component={ProfileContainer} />
             <ProtectedRoute exact path="/flashcards/new" component={FlashcardCompose} />
             <ProtectedRoute exact path="/flashcards/edit" component={FlashcardEdit} />
         </Switch>

@@ -27,16 +27,16 @@ class Flashcard extends React.Component {
             return (<div>There are no Flashcards</div>)
         }else {
             return(
-                <div className='all-flashcards'>
+                <div>
                     <h1>All Flashcards</h1>
                     {this.state.flashcards.map(flashcard => (
                         <div>
-                             <FlashcardBox 
-                            key={flashcard._id}
-                            user={flashcard.user}
-                            question={flashcard.question}
-                            answer={flashcard.answer}
-                        />
+                            <FlashcardBox 
+                                key={flashcard._id}
+                                user={flashcard.user}
+                                question={flashcard.question}
+                                answer={flashcard.answer}
+                            />
                         </div>
                     ))}
                 </div>
