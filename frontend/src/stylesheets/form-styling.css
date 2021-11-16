@@ -28,6 +28,13 @@
     margin-right: 15%;
 }
 
+.loginlink {
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+}
+
 .login-div form div{
     display: flex;
     flex-direction: column;
