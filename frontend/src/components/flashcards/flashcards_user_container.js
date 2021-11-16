@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { fetchUserFlashcards } from "../../actions/flashcard_actions";
-import Profile from "./profile";
+import Profile from "./flashcards_user";
 
 const mSTP = (state) => ({
     flashcards: Object.values(state.flashcards.user),

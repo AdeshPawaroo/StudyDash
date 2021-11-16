@@ -1,4 +1,4 @@
-import { getFlashcards, getUserFlashcards, writeFlashcard } from "../util/flashcard_api_util";
+import { getFlashcards, getUserFlashcards, writeFlashcard, updateFlashcard } from "../util/flashcard_api_util";
 
 export const RECEIVE_FLASHCARDS = "RECEIVE_FLASHCARDS";
 export const RECEIVE_USER_FLASHCARDS = "RECIEVE_USER_FLASHCARDS";
@@ -19,6 +19,10 @@ export const receiveNewFlashcard = flashcard => ({
     flashcard
 });
 
+
+
+
+
 export const fetchFlashcards = () => dispatch => (
     getFlashcards()
         .then(flashcards => dispatch(receiveFlashcards(flashcards)))
@@ -36,3 +40,9 @@ export const composeFlashcard = (data) => dispatch => (
         .then(flashcard => dispatch(receiveNewFlashcard(flashcard)))
         .catch(err => console.log(err))
 );
+
+export const editFlashcard = (id) => dispatch => (
+    updateFlashcard(id)
+        .then(flashcard => dispatch(receiveNewFlashcard(flashcard)))
+        .catch(err => console.log(err))
+)

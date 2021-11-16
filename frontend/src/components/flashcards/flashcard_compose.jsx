@@ -21,7 +21,6 @@ class FlashcardCompose extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         let flashcard = {
             question: this.state.question,
@@ -36,6 +35,8 @@ class FlashcardCompose extends React.Component {
     }
 
     render() {
+        console.log(this.props);
+        // debugger
         if (!this.props.composeFlashcard) return null
         return (
             <div>
