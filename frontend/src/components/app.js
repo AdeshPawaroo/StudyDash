@@ -5,10 +5,11 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import MainPageContainer from './main/main_page_container';
 // import NavBarContainer from './nav/navbar_container';
-// import ProfileContainer from './profile/profile_container';
+import ProfileContainer from './profile/profile_container';
 import TasksContainer from './task/tasks_container';
 import MainPage from './main/main_page';
 import TaskComposeContainer from './task/create_task_container';
+// import AnalyticsContainer from './profile/profile_container'
 
 const App = () => (
     <div>
@@ -19,7 +20,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <AuthRoute exact path="/" component={MainPage} />
             <ProtectedRoute exact path="/tasks" component={TasksContainer} />
-            {/* <ProtectedRoute exact path="/profile" component={ProfileContainer} /> */}
+            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <ProtectedRoute exact path="/new_task" component={TaskComposeContainer} />
         </Switch>
 
