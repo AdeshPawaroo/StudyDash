@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
+import FlashcardBox from "./flashcard_box";
 
 class Flashcard extends React.Component {
     constructor(props) {
@@ -20,12 +21,27 @@ class Flashcard extends React.Component {
 
     //returns all flashcards
     render() {
-        if (!this.props.tweets) return null;
-        return(
-            <div>
-                here
-            </div>
-        );
+        // debugger
+        // if (!this.state.flashcards) return null;
+        if (this.state.flashcards.length === 0) {
+            return (<div>There are no Flashcards</div>)
+        }else {
+            return(
+                <div className='all-flashcards'>
+                    <h1>All Flashcards</h1>
+                    {this.state.flashcards.map(flashcard => (
+                        <div>
+                             <FlashcardBox 
+                            key={flashcard._id}
+                            user={flashcard.user}
+                            question={flashcard.question}
+                            answer={flashcard.answer}
+                        />
+                        </div>
+                    ))}
+                </div>
+            );
+        }
     }
 };
 
