@@ -3,10 +3,17 @@ import React from 'react';
 class FlashcardBox extends React.Component {
     constructor(props) {
         super(props)
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        console.log(this.props.card_id)
     }
 
     render () {
-        console.log(this.props);
+        // debugger
         return (
             <div>
                 Question: {this.props.question}
@@ -15,7 +22,10 @@ class FlashcardBox extends React.Component {
                 <br/>
                 User: {this.props.user}
                 <br/>
+                Flashcard ID: {this.props.card_id}
                 <br/>
+                <br/>
+                <button onClick={this.handleClick}></button>
             </div>            
         )
     }

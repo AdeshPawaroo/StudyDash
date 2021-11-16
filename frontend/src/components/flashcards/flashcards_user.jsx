@@ -19,9 +19,8 @@ class Profile extends React.Component {
         this.setState({ flashcards: newState.flashcards })
     }
 
-    //returns all flashcards that belong to the current user
     render() {
-        debugger
+        // debugger
         if (this.state.flashcards.length == 0) {
             return(<div>Sorry, you don't have any flashcards created!</div>)
         } else {
@@ -35,6 +34,7 @@ class Profile extends React.Component {
                                 user={flashcard.user}
                                 question={flashcard.question}
                                 answer={flashcard.answer}
+                                card_id={flashcard._id}
                             />
                         </div>
                     ))}

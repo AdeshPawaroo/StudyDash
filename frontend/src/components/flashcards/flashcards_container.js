@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { withRouter } from "react-router";
 import { fetchFlashcards } from "../../actions/flashcard_actions";
 import Flashcards from "./flashcards";
 
@@ -10,4 +11,4 @@ const mDTP = (dispatch) => ({
     fetchFlashcards: () => dispatch(fetchFlashcards())
 });
 
-export default connect(mSTP, mDTP)(Flashcards);
+export default withRouter(connect(mSTP, mDTP)(Flashcards));
