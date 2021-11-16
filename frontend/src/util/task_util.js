@@ -1,18 +1,18 @@
-// import axios from 'axios';
-// const apiUrl = "/api/tasks"
+import axios from 'axios';
 
-// export function getTasks() {
-//     return axios.get(apiUrl);
-// }
 
-// export function addTask(task) {
-//     return axios.post(apiUrl, data)
-// }
+export function getTasks() {
+    return axios.get('/api/tasks/');
+}
 
-// export function updateTask(id, task) {
-//     return axios.put(apiUrl + "/" + id, data)
-// }
+export function addTask(data) {
+    return axios.post('/api/tasks/', data)
+}
 
-// export function deleteTask(id) {
-//     return axios.delete(apiUrl + "/" + id);
-// }
+export function updateTask(id, data) {
+    return axios.put('/api/tasks/' + id, data)
+}
+
+export function deleteTask(id) {
+    return axios.delete(`/api/tasks/${id}`);
+}
