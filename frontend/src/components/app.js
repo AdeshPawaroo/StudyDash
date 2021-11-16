@@ -8,6 +8,7 @@ import SignupFormContainer from './session/signup_form_container';
 import MainPageContainer from './main/main_page_container';
 import FlashcardContainer from './flashcards/flashcards_container';
 import ProfileContainer from './flashcards/profile_container';
+import FlashcardCompose from './flashcards/flashcard_compose_container';
 
 const App = () => (
     <div>
@@ -18,6 +19,7 @@ const App = () => (
 
             <ProtectedRoute exact path="/flashcards" component={FlashcardContainer} />
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
+            <ProtectedRoute exact path="/flashcards/new" component={FlashcardCompose} />
         </Switch>
     </div>
 );
