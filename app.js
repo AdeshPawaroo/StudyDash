@@ -13,6 +13,7 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 const todo = require("./routes/api/todo");
 
+
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))

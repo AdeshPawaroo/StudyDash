@@ -4,7 +4,7 @@
     margin: 0 auto;
     margin-top: 10%;
     background-color: rgba(232, 250, 255, 0.253);
-    width: 80%;
+    width: 60%;
     border-radius: 5px;
 }
 
@@ -22,5 +22,10 @@
 #profile-handle{
     margin-top: 10px;
     font-size: 16pt;
+    border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
 }
 
+#profile-account-info{
+    padding-top: 10px;
+    border-top: rgba(255, 255, 255, 0.5) solid 1px;
+}
