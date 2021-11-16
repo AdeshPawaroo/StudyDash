@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const db = require("./config/keys").mongoURI;
 const User = require("./models/User");
+const cors = require('cors');
 const users = require("./routes/api/users");
 // const tasks = require("./routes/api/tasks");
 const bodyParser = require("body-parser");
@@ -10,6 +11,7 @@ const bodyParser = require("body-parser");
 const flashcards = require("./routes/api/flashcards");
 const passport = require("passport");
 const mongoose = require("mongoose");
+const todo = require("./routes/api/todo");
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -34,7 +36,7 @@ mongoose
     
 app.use(passport.initialize());
 require('./config/passport')(passport);
-    
+app.use('/todos', todo);
 app.use("/api/users", users)
 app.use("/api/flashcards", flashcards)
 // app.use("/api/tasks", tasks)
