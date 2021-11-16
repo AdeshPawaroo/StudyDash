@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { editFlashcard } from "../../actions/flashcard_actions";
+import { editFlashcard, fetchCurrentFlashcard } from "../../actions/flashcard_actions";
 import FlashcardEdit from "./flashcard_edit";
 
 const mSTP = (state) => ({
