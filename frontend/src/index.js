@@ -18,6 +18,7 @@ import { setAuthToken } from './util/session_api_util';
 
 // We have not created this action yet, but will do so in the next step
 import { logout } from './actions/session_actions';
+import Tasks2 from './components/task2/Tasks';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -55,4 +56,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
 
   ReactDOM.render(<Root store={store} />, root);
+
 });

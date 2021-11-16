@@ -1,6 +1,7 @@
-import { getTasks, addTask, updateTask, deleteTask} from '../util/task_util'
+import { getTasks, addTask, updateTask, deleteTask} from '../util/task_api_util'
 export const RECEIVE_USER_TASKS = "RECEIVE_USER_TASKS";
 export const RECEIVE_NEW_TASK = "RECEIVE_NEW_TASK";
+export const REMOVE_TASK = "REMOVE_TASK";
 
 
 export const receiveUserTasks = tasks => ({
@@ -13,6 +14,11 @@ export const receiveNewTask = task => ({
     task
 })
 
+export const removeTask = task => ({
+    type: REMOVE_TASK,
+    task
+});
+
 export const fetchUserTasks = id => dispatch => (
     getTasks(id)
         .then(tasks => dispatch(receiveUserTasks(tasks)))
@@ -24,3 +30,13 @@ export const composeTask = data => dispatch => (
         .then(task => dispatch(receiveNewTask(task)))
         .catch(err => console.log(err))
 );
+
+export const destroyTask = task => dispatch => (
+    deleteTask(task)
+        .then(task => dispatch(removeTask(task)))
+        .catch(err => console.log(err))
+);
+
+
+
+
