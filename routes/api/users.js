@@ -74,15 +74,17 @@ router.post('/login', (req, res) => {
           .then(isMatch => {
             if (isMatch) {
                 let days = user.daysLoggedIn;
-                const currentDate = Date.now()
-                if (days === 0){
+                const currentDate = new Date()
+                if (days === 0 || currentDate.getDate() != user.lastLogin.getDate()){
                   days += 1;
                 }
                 const payload = {
                     id: user.id,
                     handle: user.handle,
                     email: user.email,
-                    daysLoggedIn: days
+                    date: user.date,
+                    daysLoggedIn: days,
+                    lastLogin: new Date()
                 }
                 jwt.sign(
                     payload,
@@ -100,6 +102,7 @@ router.post('/login', (req, res) => {
             }
           })
       })
-  })
+  }
+)
 
 module.exports = router;
