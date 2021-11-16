@@ -1,7 +1,38 @@
-.login-div, .signup-form-container{
+.login-div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 9em;
+    border: 5px solid black;
+    width: 30em;
+    height: 21em;
+    margin-left: 30%;
+    justify-content: center;
+
+}
+
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 9em;
+    border: 5px solid black;
+    width: 30em;
+    height: 21em;
+    margin-left: 30%;
+    justify-content: center;
+
+}
+
+.signup-form {
+    margin-right: 15%;
+}
+
+.loginlink {
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
 }
 
 .login-div form div{
@@ -19,5 +50,6 @@
 }
 
 .form-title{
-    font-size: 20pt;
+    font-size: 50pt;
+    font-weight: 500;
 }
