@@ -19,13 +19,19 @@ export const receiveNewFlashcard = flashcard => ({
     flashcard
 });
 
-export const fetchFlashcards = () => (
+export const fetchFlashcards = () => dispatch => (
     getFlashcards()
         .then(flashcards => dispatch(receiveFlashcards(flashcards)))
         .catch(err => console.log(err))
 );
 
-export const composeFlashcard = data => dispatch(
+export const fetchUserFlashcards = (id) => dispatch => (
+    getUserFlashcards(id)
+        .then(flashcards => dispatch(receiveUserFlashcards(flashcards)))
+        .catch(err => console.log(err))
+);
+
+export const composeFlashcard = (data) => dispatch => (
     writeFlashcard(data)
         .then(flashcard => dispatch(receiveNewFlashcard(flashcard)))
         .catch(err => console.log(err))

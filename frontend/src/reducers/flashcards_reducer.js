@@ -4,9 +4,9 @@ const FlashcardsReducer = (state = { all: {}, user: {}, new: undefined }, action
     Object.freeze(state);
     let newState = Object.assign({}, state);
 
-    switch(actions.type) {
+    switch(action.type) {
         case RECEIVE_FLASHCARDS:
-            newState.all = actions.flashcards.data;
+            newState.all = action.flashcards.data;
             return newState;
         case RECEIVE_USER_FLASHCARDS: 
             newState.user = action.flashcards.data;
