@@ -18,6 +18,7 @@ class Profile extends React.Component {
         this.setState({ flashcards: newState.flashcards })
     }
 
+    //returns all flashcards that belong to the current user
     render() {
         if (!this.props.flashcards) return null;
         return (
