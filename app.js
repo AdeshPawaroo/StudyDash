@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 const flashcards = require("./routes/api/flashcards");
 const passport = require("passport");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -17,7 +18,9 @@ mongoose
   app.use(bodyParser.urlencoded({
       extended: false
   }));
-  
+
+  app.use(cors());
+
   app.use(bodyParser.json());
   
   app.get("/", (req, res) => {

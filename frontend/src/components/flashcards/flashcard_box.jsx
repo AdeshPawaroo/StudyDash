@@ -10,6 +10,7 @@ class FlashcardBox extends React.Component {
     handleClick(e) {
         e.preventDefault();
         console.log(this.props.card_id)
+        window.location = `login#/flashcards/${this.props.card_id}`
     }
 
     render () {
@@ -25,7 +26,7 @@ class FlashcardBox extends React.Component {
                 Flashcard ID: {this.props.card_id}
                 <br/>
                 <br/>
-                <button onClick={this.handleClick}></button>
+                <button className="edit-btn" onClick={this.handleClick}>Edit</button>
             </div>            
         )
     }

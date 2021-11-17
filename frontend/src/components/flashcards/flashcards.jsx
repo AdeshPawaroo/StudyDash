@@ -21,7 +21,7 @@ class Flashcard extends React.Component {
 
     //returns all flashcards
     render() {
-        debugger
+        // debugger
         // if (!this.state.flashcards) return null;
         if (this.state.flashcards.length === 0) {
             return (<div>There are no Flashcards</div>)

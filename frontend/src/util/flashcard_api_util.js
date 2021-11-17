@@ -8,7 +8,7 @@ export const getUserFlashcards = user_id => {
     return axios.get(`/api/flashcards/user/${user_id}`)
 };
 
-export const getCurrentFlashcard = flashcard_id => {
+export const getFlashcard = flashcard_id => {
     return axios.get(`/api/flashcards/${flashcard_id}`)
 }
 

@@ -21,7 +21,7 @@ const App = () => (
             <ProtectedRoute exact path="/flashcards" component={FlashcardContainer} />
             <ProtectedRoute exact path="/flashcards/user" component={ProfileContainer} />
             <ProtectedRoute exact path="/flashcards/new" component={FlashcardCompose} />
-            <ProtectedRoute exact path="/flashcards/edit" component={FlashcardEdit} />
+            <ProtectedRoute exact path="/flashcards/:flashcard_id" component={FlashcardEdit} />
         </Switch>
     </div>
 );
