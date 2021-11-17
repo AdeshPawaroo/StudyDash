@@ -10,6 +10,8 @@ class Profile extends React.Component {
         this.state = {
             flashcards: []
         }
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -19,6 +21,12 @@ class Profile extends React.Component {
 
     componentWillReceiveProps(newState) {
         this.setState({ flashcards: newState.flashcards })
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+
+        window.location = 'login#/flashcards/new'
     }
 
     render() {
@@ -37,7 +45,8 @@ class Profile extends React.Component {
                 <div className='user-cards-container'>
                     <div className="user-cards-header">All of your Flashcards:</div>
                     <br />
-                    <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link>
+                    <button className='btn-to-new' onClick={this.handleClick}>Create A New Flashcard!</button>
+                    {/* <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link> */}
                     <br />
                     <div className='container-card'>
                     {this.props.flashcards.map(flashcard => (

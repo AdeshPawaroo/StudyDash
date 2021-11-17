@@ -1,10 +1,16 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { removeFlashcard } from "../../actions/flashcard_actions";
 
 class FlashcardBox extends React.Component {
     constructor(props) {
         super(props);
+
+        // this.state = {
+        //     question: '',
+        //     answer: ''
+        // }
 
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
@@ -21,7 +27,11 @@ class FlashcardBox extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.removeFlashcard(this.props.card_id);
-
+     
+        // this.setState({
+        //     question: null,
+        //     answer: null
+        // })
         window.location = "login#/flashcards/user";
     }
 
@@ -43,6 +53,7 @@ class FlashcardBox extends React.Component {
     }
 
     render () {
+        // if (!this.props) return null
         console.log(this.props);
         return (
             <div className='flashcard-container'>
@@ -67,4 +78,4 @@ const mDTP = (dispatch) => ({
     removeFlashcard: id => dispatch(removeFlashcard(id))
 });
 
-export default connect(null, mDTP)(FlashcardBox);
+export default withRouter(connect(null, mDTP)(FlashcardBox));

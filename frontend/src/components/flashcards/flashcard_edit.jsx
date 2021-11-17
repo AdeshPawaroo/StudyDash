@@ -10,6 +10,7 @@ class FlashcardEdit extends React.Component {
             answer: ''
         }
 
+
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -46,6 +47,7 @@ class FlashcardEdit extends React.Component {
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
 
+        // window.location = "login#/flashcards/user"
         this.props.history.push("/");
     }
 

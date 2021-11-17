@@ -1,0 +1,70 @@
+.card-create-container {
+    /* border: black solid; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-create-header {
+    font-size: 10vh;
+    font-weight: bolder;
+}
+
+.card-create-form {
+    /* border: black solid; */
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.question-field {
+    height: 7vh;
+    width: 50vw;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold   ;
+}
+
+.answer-field {
+    height: 7vh;
+    width: 50vw;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.new-submit {
+    height: 5vh;
+    width: 15vw;
+    font-weight: bold;
+    color: teal;
+}
+
+.new-submit:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    color: white;
+    background-color: teal;
+}
+
+.card-view-link {
+    font-weight: bold;
+    font-size: 7vh;
+    color: black;
+    border-radius: 14px;
+    color: teal;
+    padding: 1rem;
+}
+
+.card-view-link:hover {
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+    transform: scale(1.10);
+}

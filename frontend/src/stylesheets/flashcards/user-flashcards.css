@@ -5,7 +5,7 @@
     /* overflow: scroll; */
 }
 
-.user-cards-container > a {
+/* .user-cards-container > a {
     text-decoration: none;
     color: black;
     font-size: 30px;
@@ -15,6 +15,24 @@
 .user-cards-container > a:hover {
     cursor: pointer;
     color: teal;
+} */
+
+.btn-to-new {
+    text-decoration: none;
+    color: teal;
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;    
+    padding: 1rem;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+.btn-to-new:hover {
+    cursor: pointer;
+    color: white;
+    background-color: teal;
+    transform: scale(1.10);
 }
 
 .user-cards-header {
@@ -76,6 +94,7 @@
 .show-btn {
     height: 5vh;
     border-radius: 8px;
+    margin-top: 1.4vh;
 }
 
 .hide-btn {
