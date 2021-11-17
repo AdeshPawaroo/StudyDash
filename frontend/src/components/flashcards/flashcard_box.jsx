@@ -4,16 +4,12 @@ import { removeFlashcard } from "../../actions/flashcard_actions";
 
 class FlashcardBox extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleShow = this.handleShow.bind(this);
         this.handleHide = this.handleHide.bind(this);
-    }
-
-    componentDidUpdate() {
-        
     }
 
     handleUpdate(e) {
@@ -25,6 +21,8 @@ class FlashcardBox extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.removeFlashcard(this.props.card_id);
+
+        window.location = "login#/flashcards/user";
     }
 
     handleShow(e) {
