@@ -52,6 +52,7 @@ export default class CreateTodo extends Component {
             todo_priority: '',
             todo_completed: false
         })
+        
     }
 
     render() {
