@@ -42,4 +42,6 @@
 @import '../src/stylesheets/profile.css';
 @import '../src/stylesheets/form-styling.css';
 @import '../src/stylesheets/button.css';
-@import '../src/stylesheets/homebuttons.css'
+@import '../src/stylesheets/homebuttons.css';
+@import '../src/stylesheets/clock.css'
+
