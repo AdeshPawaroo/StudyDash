@@ -3,7 +3,7 @@ import React from 'react';
 class ClockPage extends React.Component {
     constructor(props){
         super(props)
-        // this.start_timer = this.start_timer.bind(this);
+        this.start_timer = this.start_timer.bind(this);
         this.handleClick = this.handleClick.bind(this);
         
     }
@@ -14,7 +14,7 @@ class ClockPage extends React.Component {
         let session_seconds = "00";
         let session_minutes = 25;
         // click_sound.play();
-
+        let that = this;
         // Change the minutes and seconds to starting time
         session_minutes = 24;
         session_seconds = 59;
@@ -32,10 +32,11 @@ class ClockPage extends React.Component {
         }
 
         // Function for second counter
+        
         function secondsTimer() {
             session_seconds = session_seconds - 1;
             document.getElementById("seconds").innerHTML = session_seconds;
-
+            that.props.currentUser.timeStudied += 1;
             // Check if the seconds and minutes counter has reached 0
             // If reached 0 then end the session
             if (session_seconds <= 0) {

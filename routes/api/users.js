@@ -83,7 +83,8 @@ router.post('/login', (req, res) => {
                     email: user.email,
                     date: user.date,
                     daysLoggedIn: days,
-                    lastLogin: new Date()
+                    lastLogin: new Date(),
+                    timeStudied: user.timeStudied
                 }
                 jwt.sign(
                     payload,
