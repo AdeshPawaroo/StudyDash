@@ -22,7 +22,8 @@ class Profile extends React.Component {
     }
 
     render() {
-        // debugger
+        let i = 0;
+        // console.log(this.props);
         if (this.state.flashcards.length == 0) {
             return(
                 <div>
@@ -46,11 +47,13 @@ class Profile extends React.Component {
                                 question={flashcard.question}
                                 answer={flashcard.answer}
                                 card_id={flashcard._id}
-                            />
+                                index={i}
+                                />
+                                {i = i + 1}
                         </div>
                     ))}
                 </div>
-            ); 
+            );
         }
         // if (!this.props.flashcards) return null;
         // return (

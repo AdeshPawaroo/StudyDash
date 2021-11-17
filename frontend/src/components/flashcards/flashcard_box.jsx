@@ -22,9 +22,17 @@ class FlashcardBox extends React.Component {
         this.props.removeFlashcard(this.props.card_id);
     }
 
+    // handleClick(e) {
+    //     e.preventDefault();  
+    //     let answers = document.getElementsByClassName("answer-container");
+    //     for (let i = 0; i < answers.length; i++) {
+    //         answers[i].style.display = "flex";
+    //     }
+    // }
+
     handleClick(e) {
-        e.preventDefault();  
-        document.getElementsByClassName("answer-container")[0].style.display = "flex"; 
+        e.preventDefault();
+        document.getElementsByClassName("answer-container")[this.props.index].style.display = "flex";
     }
 
     render () {
