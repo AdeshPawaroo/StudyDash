@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.store = store;
   window.axios = axios;
+  window.getState = store.getState;
+  
   // Render our root component and pass in the store as a prop
   const root = document.getElementById('root');
 
