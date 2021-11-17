@@ -154,8 +154,8 @@ export default function CalenderContainer() {
             startAccessor="start" endAccessor="end" 
             style={{height: 600, margin: "50px"}} />
 
-            <div>
-                <input type="text" placeholder="Add title" style={{width: "20%", marginRight: "10px"}}
+            <form>
+                <input type="text" placeholder="Add title" style={{marginRight: "10px"}}
                 value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
 
                 <DatePicker placeholderText="Start date" style={{marginRight: "10px"}} 
@@ -164,8 +164,8 @@ export default function CalenderContainer() {
                 <DatePicker placeholderText="End date" selected={newEvent.end} 
                 onChange={(end) => setNewEvent({...newEvent, end})} />
 
-                <button style={{marginTop: "10px"}} onClick={() => handleAddEvent}>Add event</button>
-            </div>
+                <button style={{marginTop: "10px"}} onClick={handleAddEvent}>Add event</button>
+            </form>
 
         </div>
     )
