@@ -1,4 +1,6 @@
-/config
+/config/keys_dev.js
+/config/keys.js
 /node_modules
 
 frontend/node_modules
+
