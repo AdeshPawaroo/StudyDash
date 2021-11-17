@@ -26,8 +26,8 @@ import Clock from './clock/clock';
 import Clock2 from './clock/clock_page';
 import MusicPage from './music/music_page';
 import NavBar from './navbar/nav_bar';
-import Clock3 from './clock2/clock';
-import SettingsContextProvider from './clock2/SettingsContext';
+// import Clock3 from './clock2/clock';
+// import SettingsContextProvider from './clock2/SettingsContext';
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
         {/* <NavBar /> */}
@@ -51,10 +51,10 @@ const App = () => (
             <Route path='/list' exact component={TodosList} />
             <Route path='/playlist' exact component={MusicPage} />
             <Route exact path='/create' component={CreateTodo} />
-            <SettingsContextProvider>
+            {/* <SettingsContextProvider> */}
                 
-            <ProtectedRoute exact path="/clock3" component={Clock3} />
-            </SettingsContextProvider>
+            {/* <ProtectedRoute exact path="/clock3" component={Clock3} /> */}
+            {/* </SettingsContextProvider> */}
         </Switch>
         <Footer />
 
