@@ -1,19 +1,28 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { removeFlashcard } from "../../actions/flashcard_actions";
 
 class FlashcardBox extends React.Component {
     constructor(props) {
         super(props)
 
-        this.handleClick = this.handleClick.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
-    handleClick(e) {
+    handleUpdate(e) {
         e.preventDefault();
-        console.log(this.props.card_id)
+
         window.location = `login#/flashcards/${this.props.card_id}`
     }
 
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.removeFlashcard(this.props.card_id);
+    }
+
     render () {
+        console.log(this.props)
         // debugger
         return (
             <div>
@@ -26,10 +35,15 @@ class FlashcardBox extends React.Component {
                 Flashcard ID: {this.props.card_id}
                 <br/>
                 <br/>
-                <button className="edit-btn" onClick={this.handleClick}>Edit</button>
+                <button className="edit-btn" onClick={this.handleUpdate}>Edit</button>
+                <button classNam="delete-btn" onClick={this.handleDelete}>Delete</button>
             </div>            
         )
     }
 }
 
-export default FlashcardBox;
+const mDTP = (dispatch) => ({
+    removeFlashcard: id => dispatch(removeFlashcard(id))
+});
+
+export default connect(null, mDTP)(FlashcardBox);
