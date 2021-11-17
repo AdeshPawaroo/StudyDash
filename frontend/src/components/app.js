@@ -18,11 +18,12 @@ import MainPage from './main/main_page';
 // import AnalyticsContainer from './profile/profile_container'
 import TodosList from './todo/todos-list.component';
 import CreateTodo from './todo/create_todo_component';
-import EditTodo from './todo/edit-todo.component';
+// import EditTodo from './todo/edit-todo.component';
 import Footer from './footer/footer'
 import './todo/index.css';
 import Clock from './clock/clock';
 import Clock2 from './clock/clock_page';
+import MusicPage from './music/music_page';
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
     
@@ -42,6 +43,7 @@ const App = () => (
             {/* <ProtectedRoute exact path="/tasks" component={TasksContainer} /> */}
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <Route path='/list' exact component={TodosList} />
+            <Route path='/playlist' exact component={MusicPage} />
             <Route exact path='/create' component={CreateTodo} />
         </Switch>
         <Footer />
