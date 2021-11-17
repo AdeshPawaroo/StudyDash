@@ -37,17 +37,35 @@ router.get("/:id", (req, res) => {
 });
 
 // EDIT
-router.put("/:id", async(req, res) => {
-    try {
-        const flashcard = await Flashcard.findOneAndUpdate(
-            { _id: req.params.id },
-            req.body
-        )
-        res.send(flashcard)
-    } catch (error) {
-        res.send(error)
-    }
-});
+router.post("/:id", (req, res) => {
+    Flashcard.findById(req.params.id, (err, flashcard) => {
+        if (!flashcard) {
+            res.status(404).send("Was not found");
+        } else {
+            flashcard.question = req.body.question;
+            flashcard.answer = req.body.answer;
+
+            flashcard.save().then(flashcard => {
+                res.json("Flashcard has been updated")
+            })
+                .catch(err => {
+                    res.status(400).send("Update not possible");
+                });
+        }
+    })
+})
+
+// router.put("/:id", async(req, res) => {
+//     try {
+//         const flashcard = await Flashcard.findOneAndUpdate(
+//             { _id: req.params.id },
+//             req.body
+//         )
+//         res.send(flashcard)
+//     } catch (error) {
+//         res.send(error)
+//     }
+// });
 
 //DELETE
 router.delete("/:id", async(req, res) => {
@@ -59,6 +77,7 @@ router.delete("/:id", async(req, res) => {
     }
 });
 
+//CREATE
 router.post("/",
     passport.authenticate('jwt', { session: false }),
     (req, res) => {

@@ -105,4 +105,13 @@ router.post('/login', (req, res) => {
   }
 )
 
+//FIND ALL -- SORTS BY DATE
+router.get("/", (req, res) => {
+  User
+      .find()
+      .sort({ date: -1 })
+      .then(users => res.json(users))
+      .catch(err => res.status(400).json(err));
+});
+
 module.exports = router;
