@@ -30,6 +30,10 @@ class FlashcardBox extends React.Component {
     handleShow(e) {
         e.preventDefault();
         document.getElementsByClassName("answer-container")[this.props.index].style.display = "flex";
+        document.getElementsByClassName("answer-container")[this.props.index].style.width = "100%";
+        document.getElementsByClassName("answer-container")[this.props.index].style.height = "20%";
+        document.getElementsByClassName("answer-container")[this.props.index].style.overflowWrap = "break-word";
+        document.getElementsByClassName("answer-container")[this.props.index].style.flexDirection = "column";
     }
 
     handleHide(e) {

@@ -38,21 +38,32 @@
     text-align: center;
     border: black solid;
     margin: 10px;
-
+    height: 40vh;
+    width: 30vw;
 }
 
 .answer-container {
     display: none;
 }
 
+.question-container {
+    width: 100%;
+    height: 20%;
+    overflow-wrap: break-word;
+}
+
 .to-hide {
     display: none;
 }
 
-.container {
+.container-card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
+    overflow: scroll;
+    align-content: flex-start;
+    width: 100%;
+    height: 85vh;
 }

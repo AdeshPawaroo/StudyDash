@@ -39,7 +39,7 @@ class Profile extends React.Component {
                     <br />
                     <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link>
                     <br />
-                    <div className='container'>
+                    <div className='container-card'>
                     {this.props.flashcards.map(flashcard => (
                         <div>
                             <FlashcardBox 
