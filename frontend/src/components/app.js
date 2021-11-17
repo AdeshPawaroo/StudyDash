@@ -21,8 +21,10 @@ import CreateTodo from './todo/create_todo_component';
 import EditTodo from './todo/edit-todo.component';
 import Footer from './footer/footer'
 import './todo/index.css';
+import Clock from './clock/clock';
+import Clock2 from './clock/clock_page';
 const App = () => (
-    <div>
+    <div style={{ width: "100%", height: "100%"}}>
     
         <Switch>
             <ProtectedRoute exact path="/" component={MainPageContainer} />
@@ -34,6 +36,8 @@ const App = () => (
             <ProtectedRoute exact path="/flashcards/new" component={FlashcardCompose} />
             <ProtectedRoute exact path="/flashcards/:flashcard_id" component={FlashcardEdit} />
             <AuthRoute exact path="/" component={MainPage} />
+            <ProtectedRoute exact path="/clock" component={Clock2} />
+  
 
             {/* <ProtectedRoute exact path="/tasks" component={TasksContainer} /> */}
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
