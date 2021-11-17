@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class FlashcardCompose extends React.Component {
     constructor(props) {
@@ -35,9 +35,7 @@ class FlashcardCompose extends React.Component {
     }
 
     render() {
-        console.log(this.props);
-        // debugger
-        if (!this.props.composeFlashcard) return null
+        if (!this.props.composeFlashcard) return null;  
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -55,6 +53,7 @@ class FlashcardCompose extends React.Component {
                         <input type='submit' value="Submit" />
                    </div>
                 </form>
+                <Link to={"/flashcards/user"}>View Your Current Flashcards!</Link>
             </div>
         );
     }
