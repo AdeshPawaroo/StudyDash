@@ -25,6 +25,8 @@ import Clock from './clock/clock';
 import Clock2 from './clock/clock_page';
 import MusicPage from './music/music_page';
 import NavBar from './navbar/nav_bar';
+import CalenderContainer from './calendar/calendar'
+
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
         {/* <NavBar /> */}
@@ -40,7 +42,8 @@ const App = () => (
             <ProtectedRoute exact path="/flashcards/:flashcard_id" component={FlashcardEdit} />
             <AuthRoute exact path="/" component={MainPage} />
             <ProtectedRoute exact path="/clock" component={Clock2} />
-  
+            <ProtectedRoute exact path="/calender" component={CalenderContainer}/>
+            
 
             {/* <ProtectedRoute exact path="/tasks" component={TasksContainer} /> */}
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
