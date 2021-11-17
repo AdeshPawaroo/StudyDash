@@ -35,10 +35,11 @@ class Profile extends React.Component {
         } else {
             return (
                 <div className='user-cards-container'>
-                    <h1 className="user-cards-header">All of your Flashcards:</h1>
+                    <div className="user-cards-header">All of your Flashcards:</div>
                     <br />
                     <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link>
                     <br />
+                    <div className='container'>
                     {this.props.flashcards.map(flashcard => (
                         <div>
                             <FlashcardBox 
@@ -48,10 +49,13 @@ class Profile extends React.Component {
                                 answer={flashcard.answer}
                                 card_id={flashcard._id}
                                 index={i}
-                                />
+                            />
+                            <div className="to-hide">
                                 {i = i + 1}
+                            </div>
                         </div>
                     ))}
+                    </div>
                 </div>
             );
         }
