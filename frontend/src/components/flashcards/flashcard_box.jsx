@@ -34,6 +34,9 @@ class FlashcardBox extends React.Component {
         document.getElementsByClassName("answer-container")[this.props.index].style.height = "20%";
         document.getElementsByClassName("answer-container")[this.props.index].style.overflowWrap = "break-word";
         document.getElementsByClassName("answer-container")[this.props.index].style.flexDirection = "column";
+        document.getElementsByClassName("answer-container")[this.props.index].style.fontWeight = "bold";
+        document.getElementsByClassName("answer-container")[this.props.index].style.fontSize = "2vh";
+
     }
 
     handleHide(e) {
@@ -52,11 +55,11 @@ class FlashcardBox extends React.Component {
                 <div className='answer-container'>
                     Answer: {this.props.answer}
                 </div>
-                <button onClick={this.handleShow}>Click here to show the answer</button>
-                <button onClick={this.handleHide}>Click here to hide the answer</button>
+                <button className='show-btn' onClick={this.handleShow}>Click here to show the answer</button>
+                <button className='hide-btn' onClick={this.handleHide}>Click here to hide the answer</button>
                 <br/>
                 <button className="edit-btn" onClick={this.handleUpdate}>Edit</button>
-                <button classNam="delete-btn" onClick={this.handleDelete}>Delete</button>
+                <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
             </div>            
         )
     }

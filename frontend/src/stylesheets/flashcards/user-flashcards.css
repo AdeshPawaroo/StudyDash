@@ -40,6 +40,7 @@
     margin: 10px;
     height: 40vh;
     width: 30vw;
+    justify-content: space-between;
 }
 
 .answer-container {
@@ -47,9 +48,13 @@
 }
 
 .question-container {
+    font-weight: bold;
+    font-size: 2vh;
     width: 100%;
     height: 20%;
     overflow-wrap: break-word;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .to-hide {
@@ -66,4 +71,43 @@
     align-content: flex-start;
     width: 100%;
     height: 85vh;
+}
+
+.show-btn {
+    height: 5vh;
+    border-radius: 8px;
+}
+
+.hide-btn {
+    height: 5vh;
+    border-radius: 8px;
+}
+
+.show-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.hide-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.edit-btn {
+    border-radius: 8px;
+}
+
+.delete-btn {
+    border-radius: 8px;
+    margin-bottom: 1vh;
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
 }
