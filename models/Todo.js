@@ -6,7 +6,7 @@ let Todo = new Schema({
         type: String
     },
     todo_responsible: {
-        type: String
+        type: Date
     },
     todo_priority: {
         type: String
