@@ -8,6 +8,7 @@ class FlashcardBox extends React.Component {
 
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleUpdate(e) {
@@ -21,19 +22,23 @@ class FlashcardBox extends React.Component {
         this.props.removeFlashcard(this.props.card_id);
     }
 
+    handleClick(e) {
+        e.preventDefault();  
+        document.getElementsByClassName("answer-container")[0].style.display = "flex"; 
+    }
+
     render () {
-        console.log(this.props)
-        // debugger
+        console.log(this.props);
         return (
-            <div>
-                Question: {this.props.question}
+            <div className='flashcard-container'>
+                <div className='question-container'>
+                    Question: {this.props.question}
+                </div>
                 <br/>
-                Answer: {this.props.answer}
-                <br/>
-                User: {this.props.user}
-                <br/>
-                Flashcard ID: {this.props.card_id}
-                <br/>
+                <div className='answer-container'>
+                    Answer: {this.props.answer}
+                </div>
+                <button onClick={this.handleClick}>Click here to show the answer</button>
                 <br/>
                 <button className="edit-btn" onClick={this.handleUpdate}>Edit</button>
                 <button classNam="delete-btn" onClick={this.handleDelete}>Delete</button>
