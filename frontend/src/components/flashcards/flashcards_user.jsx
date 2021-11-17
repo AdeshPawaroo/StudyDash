@@ -33,8 +33,10 @@ class Profile extends React.Component {
 
         } else {
             return (
-                <div>
-                    <h1 className="user-cards-header">All of your Flashcards</h1>
+                <div className='user-cards-container'>
+                    <h1 className="user-cards-header">All of your Flashcards:</h1>
+                    <br />
+                    <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link>
                     <br />
                     {this.props.flashcards.map(flashcard => (
                         <div>
