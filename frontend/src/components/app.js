@@ -24,8 +24,10 @@ import './todo/index.css';
 import Clock from './clock/clock';
 import Clock2 from './clock/clock_page';
 import MusicPage from './music/music_page';
+import NavBar from './navbar/nav_bar';
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
+        {/* <NavBar /> */}
     
         <Switch>
             <ProtectedRoute exact path="/" component={MainPageContainer} />
