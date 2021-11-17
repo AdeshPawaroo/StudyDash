@@ -78,8 +78,8 @@ export default class EditTodo extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Responsible: </label>
-                        <input type="text"
+                        <label>Due Date: </label>
+                        <input type="date"
                             className="form-control"
                             value={this.state.todo_responsible}
                             onChange={this.onChangeTodoResponsible}
