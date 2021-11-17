@@ -16,7 +16,15 @@ const UserSchema = new Schema({
     },
     date: {
         type: Date,
-        default: Date.now
+        default: new Date()
+    },
+    daysLoggedIn: {
+        type: Number,
+        default: 0
+    },
+    lastLogin: {
+        type: Date,
+        default: new Date()
     }
 });
 

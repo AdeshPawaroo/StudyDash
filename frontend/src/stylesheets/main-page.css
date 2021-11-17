@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(to right, aqua, rgb(132, 31, 179));
+}
+
+.app-name{
+    font-size: 20pt;
+}
+
+.main-page-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.greeting{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#logout-button{
+    margin-top: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.links{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.links a{
+    border: solid black 1px;
+    text-decoration: none;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.411);
+}
+
+.links h3{
+    font-size: 14pt;
+}
+
+/* Gradient */
+/* background-image: linear-gradient(direction, color-stop1, color-stop2, ...); */

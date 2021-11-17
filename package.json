@@ -24,6 +24,10 @@
     "mongoose": "^6.0.12",
     "passport": "^0.5.0",
     "passport-jwt": "^4.0.0",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {
