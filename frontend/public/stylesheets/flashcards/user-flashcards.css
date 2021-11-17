@@ -1,0 +1,42 @@
+.user-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-cards-container > a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.user-cards-container > a:hover {
+    cursor: pointer;
+    color: teal;
+}
+
+.user-cards-header {
+    font-size: 40px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    margin-bottom: 2.5vh;
+}
+
+.flashcard-container {
+    border: black solid10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    text-align: center;
+}
+
+.answer-container {
+    display: none;
+}

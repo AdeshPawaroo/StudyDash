@@ -50,7 +50,6 @@ class FlashcardEdit extends React.Component {
     }
 
     render() {
-        debugger
         return(
             <div>
                 <h1>Update Flashcard</h1>

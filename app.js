@@ -10,6 +10,14 @@ const flashcards = require("./routes/api/flashcards");
 const passport = require("passport");
 const mongoose = require("mongoose");
 const todo = require("./routes/api/todo");
+const path = require('path');
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('/', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    })
+  }
 
 
 mongoose
