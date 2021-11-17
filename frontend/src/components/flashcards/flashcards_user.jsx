@@ -1,5 +1,7 @@
 import React from 'react';
 import FlashcardBox from './flashcard_box';
+import { Link } from 'react-router-dom';
+// import FlashcardCompose from './flashcard_compose_container'
 
 class Profile extends React.Component {
     constructor(props) {
@@ -22,11 +24,18 @@ class Profile extends React.Component {
     render() {
         // debugger
         if (this.state.flashcards.length == 0) {
-            return(<div>Sorry, you don't have any flashcards created!</div>)
+            return(
+                <div>
+                    <h1>Sorry, you don't have any flashcards created!</h1>
+                     <Link to={'/flashcards/new'}>Create Some Here!</Link>
+                </div>
+            )
+
         } else {
             return (
                 <div>
-                    <h1>All of your Flashcards</h1>
+                    <h1 className="user-cards-header">All of your Flashcards</h1>
+                    <br />
                     {this.props.flashcards.map(flashcard => (
                         <div>
                             <FlashcardBox 
