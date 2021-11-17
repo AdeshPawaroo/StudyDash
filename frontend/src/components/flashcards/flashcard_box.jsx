@@ -23,14 +23,12 @@ class FlashcardBox extends React.Component {
     }
 
     handleClick(e) {
-        e.preventDefault();
-
-        document.getElementsByClassName("answer-container")[0].style.display = "flex";
+        e.preventDefault();  
+        document.getElementsByClassName("answer-container")[0].style.display = "flex"; 
     }
 
     render () {
-        console.log(this.props)
-        // debugger
+        console.log(this.props);
         return (
             <div className='flashcard-container'>
                 <div className='question-container'>
