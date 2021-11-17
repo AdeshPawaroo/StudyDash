@@ -69,16 +69,14 @@ router.post('/login', (req, res) => {
         if (!user) {
           return res.status(404).json({email: 'This user does not exist'});
         }
-
         bcrypt.compare(password, user.password)
           .then(isMatch => {
             if (isMatch) {
                 let days = user.daysLoggedIn;
                 const currentDate = new Date()
+                const date = new Date(user.date)
+                days = Math.round((currentDate.getTime() - date.getTime()) / 86400000) + 1
                 
-                // if (days === 0 || currentDate.getDate() != user.lastLogin.getDate()){
-                //   days += 1;
-                // }
                 const payload = {
                     id: user.id,
                     handle: user.handle,
