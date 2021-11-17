@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import FlashcardProfileContainer from '../flashcards/flashcards_user_container'
 
 class Profile extends React.Component {
     constructor(props){
@@ -11,13 +13,18 @@ class Profile extends React.Component {
         const date = new Date(this.props.currentUser.date)
         console.log(lastLogin)
         return(
-            <div>
-                <div>Study Dash</div>
+            <div className='profile-div'>
+                
+                <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
                 <div className='profile-content'>
-                    <div className='profile-info' id='profile-handle'>
+                    <div id='profile-handle'>
                         {this.props.currentUser.handle}
                     </div>
-                    <h2>Stats:</h2>
+                    <h2>Flashcards:</h2>
+                    <div id="flashcard-div">
+                        <FlashcardProfileContainer/>
+                    </div>
+                    <h2>Analytics:</h2>
                     <div className='profile-info'>
                         Days Logged In: {this.props.currentUser.daysLoggedIn}
                     </div>
@@ -25,7 +32,7 @@ class Profile extends React.Component {
                         Total Time Spent Studying: __ hr(s) __ min(s)
                     </div>
 
-                    <h2 id='profile-account-info'>Account Information:</h2>
+                    <h2 id='profile-account-info' >Account Information:</h2>
                     <div className='profile-info'>
                         Email: {this.props.currentUser.email}
                     </div>

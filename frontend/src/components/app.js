@@ -10,7 +10,7 @@ import FlashcardContainer from './flashcards/flashcards_container';
 import ProfileContainer from './flashcards/flashcards_user_container';
 import FlashcardCompose from './flashcards/flashcard_compose_container';
 import FlashcardEdit from './flashcards/flashcard_edit_container';
-
+import UserProfileContainer from './profile/profile_container';
 // import NavBarContainer from './nav/navbar_container';
 // import TasksContainer from './task/tasks_container';
 import MainPage from './main/main_page';
@@ -40,7 +40,7 @@ const App = () => (
   
 
             {/* <ProtectedRoute exact path="/tasks" component={TasksContainer} /> */}
-            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
+            <ProtectedRoute exact path="/profile" component={UserProfileContainer} />
             <Route path='/list' exact component={TodosList} />
             <Route exact path='/create' component={CreateTodo} />
         </Switch>

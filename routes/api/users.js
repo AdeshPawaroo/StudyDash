@@ -75,9 +75,10 @@ router.post('/login', (req, res) => {
             if (isMatch) {
                 let days = user.daysLoggedIn;
                 const currentDate = new Date()
-                if (days === 0 || currentDate.getDate() != user.lastLogin.getDate()){
-                  days += 1;
-                }
+                
+                // if (days === 0 || currentDate.getDate() != user.lastLogin.getDate()){
+                //   days += 1;
+                // }
                 const payload = {
                     id: user.id,
                     handle: user.handle,
