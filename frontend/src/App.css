@@ -44,4 +44,7 @@
 @import '../src/stylesheets/button.css';
 @import '../src/stylesheets/homebuttons.css';
 @import '../src/stylesheets/clock.css';
+@import '../src/stylesheets/navbar.css';
+@import '../src/stylesheets/music.css';
 @import '../src/stylesheets/flashcards/user-flashcards.css';
+
