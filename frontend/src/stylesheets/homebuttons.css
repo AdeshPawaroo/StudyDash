@@ -1,0 +1,40 @@
+.leftcontainer {
+    display: flex;
+    /* border: 5px solid black; */
+    width: 64em;
+    height: 16em;
+    justify-content: center;
+    padding-top: 3%;
+}
+.pomodorobox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6%;
+    border: 5px solid black;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    background: white;
+    border-radius: 14%;
+}
+
+.rightcontainer {
+    display: flex;
+    width: 64em;
+    height: 16em;
+    justify-content: center;
+    padding-top: 6vh;
+    /* border: 5px solid black; */
+}
+
+.titleofbox {
+    /* border: 5px solid black; */
+    margin-left: 0vh;
+    margin-right: -1vh;
+    width: 25vh;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: unset;
+    padding-bottom: 7%;
+}

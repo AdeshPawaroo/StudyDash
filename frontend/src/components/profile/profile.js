@@ -21,26 +21,31 @@ class Profile extends React.Component {
                         {this.props.currentUser.handle}
                     </div>
                     <h2>Flashcards:</h2>
-                    <div id="flashcard-div">
+                    <div className="flashcard-div profile-info-div">
                         <FlashcardProfileContainer/>
                     </div>
+
                     <h2>Analytics:</h2>
-                    <div className='profile-info'>
-                        Days Logged In: {this.props.currentUser.daysLoggedIn}
-                    </div>
-                    <div className='profile-info'>
-                        Total Time Spent Studying: __ hr(s) __ min(s)
+                    <div className='profile-info-div'>
+                        <div className='profile-info'>
+                            Days Logged In: {this.props.currentUser.daysLoggedIn}
+                        </div>
+                        <div className='profile-info'>
+                            Total Time Spent Studying: __ hr(s) __ min(s)
+                        </div>
                     </div>
 
                     <h2 id='profile-account-info' >Account Information:</h2>
-                    <div className='profile-info'>
-                        Email: {this.props.currentUser.email}
-                    </div>
-                    <div className='profile-info'>
-                        Account Created: {date.toDateString()}
-                    </div>
-                    <div className='profile-info'>
-                        Last Login: {lastLogin.toDateString()}
+                    <div className='profile-info-div'>
+                        <div className='profile-info'>
+                            Email: {this.props.currentUser.email}
+                        </div>
+                        <div className='profile-info'>
+                            Account Created: {date.toDateString()}
+                        </div>
+                        <div className='profile-info'>
+                            Last Login: {lastLogin.toDateString()}
+                        </div>
                     </div>
                 </div>
             </div>
