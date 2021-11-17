@@ -1,0 +1,14 @@
+.nav-flex-container {
+    /* width: 9vh; */
+    border: 5pxsolid black;
+    /* display: flex; */
+    /* justify-items: center; */
+    /* margin-left: 163vh; */
+    margin-top: 3vh;
+    margin-right: -130%;
+
+}
+
+.purpleiconcolor {
+    color: rgb(192, 158, 214);
+}
