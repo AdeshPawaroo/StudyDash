@@ -3,7 +3,9 @@ body{
 }
 
 .app-name{
-    font-size: 20pt;
+    padding-top: 5px;
+    font-size: 90px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .main-page-div{
@@ -43,5 +45,47 @@ body{
     font-size: 14pt;
 }
 
+.fa, .fas {
+    font-weight: 900;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+}
+
+.maindesc {
+    padding-top: 4%;
+    align-items: center;
+}
+
+.clickbutton {
+    background: teal;
+    padding-bottom: 1vh;
+    border-radius: 19%;
+    width: 16vh;
+    height: 24vh;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.clocklink {
+    margin-left: 3%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.welcomemsg {
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.bottommsg {
+    padding-top: 15px;
+    font-weight: 800;
+    font-size: 30px;
+}
 /* Gradient */
 /* background-image: linear-gradient(direction, color-stop1, color-stop2, ...); */

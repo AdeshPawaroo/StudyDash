@@ -14,6 +14,7 @@ import MainPage from './main/main_page';
 import TodosList from './todo/todos-list.component';
 import CreateTodo from './todo/create_todo_component';
 import EditTodo from './todo/edit-todo.component';
+import Footer from './footer/footer'
 import './todo/index.css';
 const App = () => (
     <div>
@@ -28,6 +29,7 @@ const App = () => (
             <Route path='/list' exact component={TodosList} />
             <Route exact path='/create' component={CreateTodo} />
         </Switch>
+        <Footer />
 
     </div>
 );
