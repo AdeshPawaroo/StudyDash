@@ -56,7 +56,7 @@ class FlashcardBox extends React.Component {
         // if (!this.props) return null
         console.log(this.props);
         return (
-            <div className='flashcard-container'>
+            <div className='flashcard-container' onMouseOver={this.handleShow} onMouseOut={this.handleHide} >
                 <div className='question-container'>
                     Question: {this.props.question}
                 </div>
@@ -64,8 +64,8 @@ class FlashcardBox extends React.Component {
                 <div className='answer-container'>
                     Answer: {this.props.answer}
                 </div>
-                <button className='show-btn' onClick={this.handleShow}>Click here to show the answer</button>
-                <button className='hide-btn' onClick={this.handleHide}>Click here to hide the answer</button>
+                {/* <button className='show-btn' onClick={this.handleShow}>Click here to show the answer</button>
+                <button className='hide-btn' onClick={this.handleHide}>Click here to hide the answer</button> */}
                 <br/>
                 <button className="edit-btn" onClick={this.handleUpdate}>Edit</button>
                 <button className="delete-btn" onClick={this.handleDelete}>Delete</button>

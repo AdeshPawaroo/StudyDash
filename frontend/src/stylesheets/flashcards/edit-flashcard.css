@@ -1,5 +1,4 @@
-.card-create-container {
-    /* border: black solid; */
+.card-edit-container {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     width: 100%;
     height: 98vh;
@@ -9,21 +8,20 @@
     justify-content: space-evenly;
 }
 
-.card-create-header {
+.card-edit-header {
     font-size: 10vh;
     font-weight: bolder;
 }
 
-.card-create-form {
-    /* border: black solid; */
-    height: 25vh;
+.card-edit-form {
+    height: 35vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly
 }
 
-.question-field {
+.edit-question-field {
     height: 7vh;
     width: 50vw;
     text-align: center;
@@ -31,7 +29,7 @@
     font-weight: bold;
 }
 
-.answer-field {
+.edit-answer-field {
     height: 7vh;
     width: 50vw;
     text-align: center;
@@ -39,32 +37,26 @@
     font-weight: bold;
 }
 
-.new-submit {
+.edit-submit {
     height: 5vh;
     width: 15vw;
     font-weight: bold;
     color: teal;
+    margin-top: 13px;
 }
 
-.new-submit:hover{
+.edit-submit:hover {
     cursor: pointer;
     transform: scale(1.10);
     color: white;
     background-color: teal;
 }
 
-.card-view-link {
-    font-weight: bold;
-    font-size: 7vh;
-    color: black;
-    border-radius: 14px;
-    color: teal;
-    padding: 1rem;
+.edit-question-header {
+font-size: 3rem;
 }
 
-.card-view-link:hover {
-    text-decoration: none;
-    color: white;
-    background-color: teal;
-    transform: scale(1.10);
+.edit-answer-header {
+font-size: 3rem;
+margin-top: 1rem;
 }
