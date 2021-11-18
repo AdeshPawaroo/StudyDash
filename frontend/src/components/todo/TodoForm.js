@@ -6,13 +6,13 @@ class TodoForm extends Component {
   constructor(props) {
     super(props);
     this.state = { text: '' };
-    debugger;
+    // debugger;
   }
 
   onInputChange = event => {
-    debugger;
+    // debugger;
     this.setState({ text: event.currentTarget.value });
-    debugger;
+    // debugger;
   };
 
   onFormSubmit = event => {
