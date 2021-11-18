@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const db = require("./config/keys").mongoURI;
 const User = require("./models/User");
+// const Todo = require("./models/Todo");
 const cors = require('cors');
 const users = require("./routes/api/users");
 // const tasks = require("./routes/api/tasks");
