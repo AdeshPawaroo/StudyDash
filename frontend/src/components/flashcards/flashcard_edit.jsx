@@ -38,17 +38,23 @@ class FlashcardEdit extends React.Component {
         });
     }
 
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     const obj = {
+    //         question: this.state.question,
+    //         answer: this.state.answer
+    //     }
+    //     axios.post('http://localhost:5000/api/flashcards/' + this.props.match.params.flashcard_id, obj)
+    //         .then(res => console.log(res.data))
+    //         .catch(err => console.log(err))
+
+    //     // this.props.history.push("/flashcards/user");
+    // }
+
     handleSubmit(e) {
         e.preventDefault();
-        const obj = {
-            question: this.state.question,
-            answer: this.state.answer
-        }
-        axios.post('http://localhost:5000/api/flashcards/' + this.props.match.params.flashcard_id, obj)
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err))
 
-        // this.props.history.push("/flashcards/user");
+        
     }
 
     handleClick(e) {
