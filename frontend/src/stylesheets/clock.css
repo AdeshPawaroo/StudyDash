@@ -23,7 +23,7 @@ body {
   width: 21rem;
   height: 21rem;
   border: 5px solid rgba(255, 255, 255, 0.521);
-  border-radius: 10rem;
+  border-radius: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-size: 28pt;
+  font-size: 42pt;
   font-weight: 400;
 }
 

@@ -41,10 +41,10 @@ class Profile extends React.Component {
                     {/* <div id='profile-email'>
                         {this.props.currentUser.email}
                     </div> */}
-                    <h2>Flashcards:</h2>
+                    {/* <h2>Flashcards:</h2>
                     <div className="flashcard-div profile-info-div">
                         <FlashcardProfileContainer/>
-                    </div>
+                    </div> */}
 
                     <h2>Analytics:</h2>
                     <div className='profile-info-div'>
