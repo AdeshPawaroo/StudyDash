@@ -26,8 +26,8 @@ import Clock2 from './clock/clock_page';
 import ClockContainer from './clock/clock_container';
 import MusicPage from './music/music_page';
 import NavBar from './navbar/nav_bar';
-import Clock3 from './clock2/clock';
-import SettingsContextProvider from './clock2/SettingsContext';
+//import Clock3 from './clock2/clock';
+//import SettingsContextProvider from './clock2/SettingsContext';
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
         {/* <NavBar /> */}
@@ -42,7 +42,7 @@ const App = () => (
             <ProtectedRoute exact path="/flashcards/new" component={FlashcardCompose} />
             <ProtectedRoute exact path="/flashcards/:flashcard_id" component={FlashcardEdit} />
             <AuthRoute exact path="/" component={MainPage} />
-            <ProtectedRoute exact path="/clock" component={Clock2} />
+            <ProtectedRoute exact path="/clock" component={ClockContainer} />
             {/* <ProtectedRoute exact path="/clock4" component={Clock6} /> */}
   
 
@@ -51,10 +51,10 @@ const App = () => (
             <Route path='/list' exact component={TodosList} />
             <Route path='/playlist' exact component={MusicPage} />
             <Route exact path='/create' component={CreateTodo} />
-            <SettingsContextProvider>
+            {/* <SettingsContextProvider>
                 
             <ProtectedRoute exact path="/clock3" component={Clock3} />
-            </SettingsContextProvider>
+            </SettingsContextProvider> */}
         </Switch>
         <Footer />
 

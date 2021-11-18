@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class ClockPage extends React.Component {
     constructor(props){
         super(props)
-        this.start_timer = this.start_timer.bind(this);
+        // this.start_timer = this.start_timer.bind(this);
         this.handleClick = this.handleClick.bind(this);
         
     }
@@ -14,7 +15,7 @@ class ClockPage extends React.Component {
         let session_seconds = "00";
         let session_minutes = 25;
         // click_sound.play();
-        let that = this;
+
         // Change the minutes and seconds to starting time
         session_minutes = 24;
         session_seconds = 59;
@@ -32,11 +33,10 @@ class ClockPage extends React.Component {
         }
 
         // Function for second counter
-        
         function secondsTimer() {
             session_seconds = session_seconds - 1;
             document.getElementById("seconds").innerHTML = session_seconds;
-            that.props.currentUser.timeStudied += 1;
+
             // Check if the seconds and minutes counter has reached 0
             // If reached 0 then end the session
             if (session_seconds <= 0) {
@@ -66,8 +66,8 @@ class ClockPage extends React.Component {
         let session_minutes = 25;
         return(
         <div class="container1">
-       
-            <h1 class="clocktitle" >Pomodoro Clock</h1>
+            <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
+            <h1 class="clocktitle">Pomodoro Clock</h1>
 
           
             <div class="containertimer">
@@ -94,7 +94,7 @@ class ClockPage extends React.Component {
                 <button class="btn" onClick={this.handleClick}>
                     <i class="fas fa-play fa-2x"></i>
                 </button>
-                <a href="/"><i class="fas fa-redo-alt fa-2x redofontawes"></i></a>
+                {/* <a href="/"><i class="fas fa-redo-alt fa-2x"></i></a> */}
             </div>
         </div>
         )

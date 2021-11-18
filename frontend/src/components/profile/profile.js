@@ -10,9 +10,14 @@ class Profile extends React.Component {
 
     render(){
         
-        const lastLogin = new Date(this.props.currentUser.lastLogin)
-        const date = new Date(this.props.currentUser.date)
-        console.log(lastLogin)
+        const lastLogin = new Date(this.props.currentUser.lastLogin);
+        const date = new Date(this.props.currentUser.date);
+        let totalTime = this.props.currentUser.timeStudied;
+        const hours = totalTime / 60;
+        totalTime -= hours * 60;
+        const minutes = totalTime;
+
+
         return(
             <div className='profile-div'>
                 
@@ -42,7 +47,7 @@ class Profile extends React.Component {
                             Days Logged In: {this.props.currentUser.daysLoggedIn}
                         </div>
                         <div className='profile-info'>
-                            Total Time Spent Studying: __ hr(s) __ min(s)
+                            Total Time Spent Studying: {hours} hr(s) {minutes} min(s)
                         </div>
                     </div>
                     <div className='account-info'>

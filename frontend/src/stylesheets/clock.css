@@ -7,18 +7,22 @@ body {
 .heading {
   color: #bae8e8;
 }
+
 .container1 {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Countdown timer */
-.timer {
+.containertimer {
   color: #ffffff;
   text-align: center;
-  width: 20rem;
-  height: 20rem;
-  border: 5px solid #fff;
+  width: 21rem;
+  height: 21rem;
+  border: 5px solid rgba(255, 255, 255, 0.521);
   border-radius: 10rem;
   display: flex;
   justify-content: center;
@@ -27,11 +31,16 @@ body {
 
 .row {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 28pt;
+  font-weight: 400;
 }
 
 /* remove the padding on the play button */
 .btn {
   padding: 0;
+  width: 40%;
 }
 
 /* play and reset icons */
@@ -60,3 +69,13 @@ body {
   border-radius: 0.5rem;
   transition: 0.5s ease;
 } 
+
+.clock-main-link{
+    padding-bottom: 15px;
+}
+
+.clocktitle{
+    font-size: 28pt;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
