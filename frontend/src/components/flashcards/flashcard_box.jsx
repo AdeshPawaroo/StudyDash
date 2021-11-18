@@ -10,13 +10,14 @@ class FlashcardBox extends React.Component {
         // this.state = {
         //     question: '',
         //     answer: '',
-        //     text: 'a'
+        //     deleted: false
         // }
 
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleShow = this.handleShow.bind(this);
         this.handleHide = this.handleHide.bind(this);
+        // this.handleRefresh = this.handleRefresh.bind(this);
     }
 
     handleUpdate(e) {
@@ -28,11 +29,20 @@ class FlashcardBox extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.removeFlashcard(this.props.card_id);
-     
-        // this.setState({
-        //     text: "aa"
-        // })
+        this.render();
+        // console.log(this.state);
+        // let state = {
+        //     question: '',
+        //     answer: '',
+        //     deleted: true
+        // }
+        // this.setState({state});
+        // console.log(this.state);
     }
+
+    // handleRefresh() {
+    //     this.props.history.push("/flashcards/user")
+    // }
 
     handleShow(e) {
         e.preventDefault();
@@ -68,13 +78,18 @@ class FlashcardBox extends React.Component {
                 <br/>
                 <button className="edit-btn" onClick={this.handleUpdate}>Edit</button>
                 <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
+                {/* <button className="delete-btn" onClick={ () => this.props.removeFlashcard(this.props.flashcards.card_id)  }></button> */}
             </div>            
         )
     }
 }
 
+const mSTP = (state) => ({
+    flashcards: state.flashcards.user
+});
+
 const mDTP = (dispatch) => ({
     removeFlashcard: id => dispatch(removeFlashcard(id))
 });
 
-export default withRouter(connect(null, mDTP)(FlashcardBox));
+export default withRouter(connect(mSTP, mDTP)(FlashcardBox));
