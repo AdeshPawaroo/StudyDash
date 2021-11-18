@@ -47,4 +47,6 @@
 @import '../src/stylesheets/navbar.css';
 @import '../src/stylesheets/music.css';
 @import '../src/stylesheets/flashcards/user-flashcards.css';
+@import '../src/stylesheets/flashcards/create-flashcard.css';
+@import '../src/stylesheets/flashcards/edit-flashcard.css';
 

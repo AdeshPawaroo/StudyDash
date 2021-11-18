@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* overflow: scroll; */
+    height: 97vh;
 }
 
-.user-cards-container > a {
+/* .user-cards-container > a {
     text-decoration: none;
     color: black;
     font-size: 30px;
@@ -14,6 +16,24 @@
 .user-cards-container > a:hover {
     cursor: pointer;
     color: teal;
+} */
+
+.btn-to-new {
+    text-decoration: none;
+    color: teal;
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;    
+    padding: 1rem;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 7vh;
+}
+
+.btn-to-new:hover {
+    cursor: pointer;
+    color: white;
+    background-color: teal;
+    transform: scale(1.10);
 }
 
 .user-cards-header {
@@ -27,7 +47,7 @@
 }
 
 .flashcard-container {
-    border: black solid10px;
+    border: black solid 10px;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -35,8 +55,85 @@
     align-items: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     text-align: center;
+    border: black solid;
+    margin: 10px;
+    height: 40vh;
+    width: 40vw;
+    justify-content: space-between;
+    border-radius: 10px;
 }
 
 .answer-container {
     display: none;
+}
+
+.question-container {
+    font-weight: bold;
+    font-size: 2vh;
+    width: 100%;
+    height: 20%;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.to-hide {
+    display: none;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    align-content: flex-start;
+    width: 100%;
+    height: 85vh;
+}
+
+.show-btn {
+    height: 5vh;
+    border-radius: 8px;
+    margin-top: 1.4vh;
+}
+
+.hide-btn {
+    height: 5vh;
+    border-radius: 8px;
+}
+
+.show-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.hide-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.edit-btn {
+    border-radius: 8px;
+    width: 10vw;
+    height: 5vh;
+}
+
+.delete-btn {
+    border-radius: 8px;
+    margin-bottom: 1vh;
+    width: 10vw;
+    height: 5vh;
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
 }

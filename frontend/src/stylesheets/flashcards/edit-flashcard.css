@@ -1,0 +1,62 @@
+.card-edit-container {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-edit-header {
+    font-size: 10vh;
+    font-weight: bolder;
+}
+
+.card-edit-form {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.edit-question-field {
+    height: 7vh;
+    width: 50vw;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.edit-answer-field {
+    height: 7vh;
+    width: 50vw;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.edit-submit {
+    height: 5vh;
+    width: 15vw;
+    font-weight: bold;
+    color: teal;
+    margin-top: 13px;
+}
+
+.edit-submit:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    color: white;
+    background-color: teal;
+}
+
+.edit-question-header {
+font-size: 3rem;
+}
+
+.edit-answer-header {
+font-size: 3rem;
+margin-top: 1rem;
+}

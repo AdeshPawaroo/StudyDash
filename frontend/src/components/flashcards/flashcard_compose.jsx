@@ -12,6 +12,7 @@ class FlashcardCompose extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     update(field) {
@@ -34,26 +35,35 @@ class FlashcardCompose extends React.Component {
         })
     }
 
+    handleClick(e) {
+        e.preventDefault();
+
+        window.location = "login#/flashcards/user"
+    }
+
     render() {
         if (!this.props.composeFlashcard) return null;  
         return (
-            <div>
+            <div className='card-create-container'>
+                <h1 className='card-create-header'>Create a Flashcard!</h1>
                 <form onSubmit={this.handleSubmit}>
-                   <div>
+                   <div className='card-create-form'>
                         <input type="textarea" 
                             value={ this.state.question }
                             onChange={ this.update('question') }
                             placeholder="Question"
+                            className='question-field'
                         />
                         <input type="textarea" 
                             value={ this.state.answer }
                             onChange={ this.update('answer') }
                             placeholder="Answer"
+                            className='answer-field'
                         />
-                        <input type='submit' value="Submit" />
+                        <input className='new-submit' type='submit' value="Submit" />
                    </div>
                 </form>
-                <Link to={"/flashcards/user"}>View Your Current Flashcards!</Link>
+                <button className='card-view-link' onClick={this.handleClick}>View Your Current Flashcards!</button>
             </div>
         );
     }
