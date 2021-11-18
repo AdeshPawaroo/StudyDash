@@ -1,5 +1,6 @@
 body{
     background-image: linear-gradient(to right, aqua, rgb(132, 31, 179));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
 .app-name{
