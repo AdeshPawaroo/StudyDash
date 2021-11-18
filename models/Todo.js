@@ -1,19 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-let Todo = new Schema({
-    todo_description: {
-        type: String
-    },
-    todo_responsible: {
-        type: Date
-    },
-    todo_priority: {
-        type: String
-    },
-    todo_completed: {
-        type: Boolean
-    }
+const TodoSchema = new Schema({
+  name: { type: String, required: true },
+  done: { type: Boolean, default: false },
+  createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Todo', Todo);
+module.exports = mongoose.model('Todo', TodoSchema);
