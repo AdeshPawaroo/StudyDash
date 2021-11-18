@@ -40,8 +40,18 @@ body {
 /* remove the padding on the play button */
 .btn {
   padding: 0;
-  width: 40%;
+  width: 60%;
+  padding-right: 40px;
+  padding-top: 10px;
+  background-color: inherit;
+  border: none;
 }
+
+.buttonscontainer{
+    display: flex;
+    justify-content: center;
+}
+
 
 /* play and reset icons */
 .fa-play,
@@ -49,6 +59,7 @@ body {
   color: #e3f6f5;
   border: 2px solid transparent;
   padding: 1rem;
+  padding-right: 2rem;
   border-radius: 2rem;
 }
 
