@@ -17,10 +17,10 @@ class TodoForm extends Component {
 
   onFormSubmit = event => {
     event.preventDefault();
-    console.log('hello')
-    console.log(this.state.text)
+    // console.log('hello')
+    // console.log(this.state.text)
     this.props.addNewTodo(this.state.text);
-    console.log(this.state);
+    // console.log(this.state);
     this.setState({ text: '' });
   };
 
