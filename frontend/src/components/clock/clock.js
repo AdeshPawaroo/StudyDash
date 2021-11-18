@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
+// import Sound from 'react-sound';
+// import click_sound from '../../../public/click.mp3';
+// var click_sound = new Audio("./../../../public/click.mp3");
+import useSound from 'use-sound';
+import boopSfx from '../../sounds/boop.mp3';
+
 
 export default function App() {
     const [secondsLeft, setSecondsLeft] = useState(25 * 60);
     const [timer, setTimer] = useState();
+    const [play] = useSound(boopSfx);
 
     const start = () => {
         const timer = setInterval(() => {
@@ -12,6 +19,8 @@ export default function App() {
             }
         }, 1000);
         setTimer(timer);
+        // {play};
+        
     };
 
     useEffect(() => {
