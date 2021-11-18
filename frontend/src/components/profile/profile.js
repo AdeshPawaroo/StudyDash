@@ -9,7 +9,7 @@ class Profile extends React.Component {
         
         const lastLogin = new Date(this.props.currentUser.lastLogin)
         const date = new Date(this.props.currentUser.date)
-        console.log(lastLogin)
+        // console.log(lastLogin)
         return(
             <div className='profile-content'>
                 <div className='profile-info' id='profile-handle'>
