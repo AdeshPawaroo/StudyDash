@@ -10,6 +10,8 @@ class Profile extends React.Component {
         this.state = {
             flashcards: []
         }
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -21,8 +23,15 @@ class Profile extends React.Component {
         this.setState({ flashcards: newState.flashcards })
     }
 
+    handleClick(e) {
+        e.preventDefault();
+
+        window.location = 'login#/flashcards/new'
+    }
+
     render() {
-        // debugger
+        let i = 0;
+        // console.log(this.props);
         if (this.state.flashcards.length == 0) {
             return(
                 <div>
@@ -34,10 +43,12 @@ class Profile extends React.Component {
         } else {
             return (
                 <div className='user-cards-container'>
-                    <h1 className="user-cards-header">All of your Flashcards:</h1>
+                    <div className="user-cards-header">All of your Flashcards:</div>
                     <br />
-                    <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link>
+                    <button className='btn-to-new' onClick={this.handleClick}>Create A New Flashcard!</button>
+                    {/* <Link to={'/flashcards/new'}>Click me to create a new flashcard!</Link> */}
                     <br />
+                    <div className='container-card'>
                     {this.props.flashcards.map(flashcard => (
                         <div>
                             <FlashcardBox 
@@ -46,11 +57,16 @@ class Profile extends React.Component {
                                 question={flashcard.question}
                                 answer={flashcard.answer}
                                 card_id={flashcard._id}
+                                index={i}
                             />
+                            <div className="to-hide">
+                                {i = i + 1}
+                            </div>
                         </div>
                     ))}
+                    </div>
                 </div>
-            ); 
+            );
         }
         // if (!this.props.flashcards) return null;
         // return (
