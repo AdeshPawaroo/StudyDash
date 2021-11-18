@@ -10,6 +10,7 @@ class FlashcardEdit extends React.Component {
             answer: ''
         }
 
+
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -46,24 +47,31 @@ class FlashcardEdit extends React.Component {
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
 
+        // window.location = "login#/flashcards/user"
         this.props.history.push("/");
     }
 
     render() {
         return(
-            <div>
-                <h1>Update Flashcard</h1>
+            <div className='card-edit-container'>
+                <h1 className='card-edit-header'>Update Flashcard!</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className='card-edit-form'>
+                        <p className='edit-question-header'>Question:</p>
+                        <br />
                         <input type="textarea" 
                             value={this.state.question}
                             onChange={this.onChangeQuestion}
+                            className="edit-question-field"
                         />
-                         <input type="textarea" 
+                        <p className='edit-answer-header'>Answer:</p>
+                        <br />
+                        <input type="textarea" 
                             value={this.state.answer}
                             onChange={this.onChangeAnswer}
+                            className="edit-answer-field"
                         />
-                        <input type="submit" value="Update Flashcard" />
+                        <input className='edit-submit' type="submit" value="Update Flashcard" />
                     </div>
                 </form>
             </div>

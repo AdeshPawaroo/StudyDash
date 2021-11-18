@@ -66,7 +66,7 @@ class ClockPage extends React.Component {
         return(
         <div class="container1">
        
-            <h1 class="clocktitle">Pomodoro Clock</h1>
+            <h1 class="clocktitle" >Pomodoro Clock</h1>
 
           
             <div class="containertimer">
@@ -93,7 +93,7 @@ class ClockPage extends React.Component {
                 <button class="btn" onClick={this.handleClick}>
                     <i class="fas fa-play fa-2x"></i>
                 </button>
-                <a href="/"><i class="fas fa-redo-alt fa-2x"></i></a>
+                <a href="/"><i class="fas fa-redo-alt fa-2x redofontawes"></i></a>
             </div>
         </div>
         )

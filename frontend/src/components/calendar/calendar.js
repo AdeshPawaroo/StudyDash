@@ -7,7 +7,7 @@ import getDay from 'date-fns/getDay';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
-import moment from 'moment';
+
 
 export default function CalenderContainer() {
   
@@ -154,19 +154,32 @@ export default function CalenderContainer() {
             startAccessor="start" endAccessor="end" 
             style={{height: 600, margin: "50px"}} />
 
-            <form>
-                <input type="text" placeholder="Add title" style={{marginRight: "10px"}}
-                value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
+            <div className="calender-form">
 
-                <DatePicker placeholderText="Start date" style={{marginRight: "10px"}} 
-                selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})} />
-            
-                <DatePicker placeholderText="End date" selected={newEvent.end} 
-                onChange={(end) => setNewEvent({...newEvent, end})} />
+                <form className="calender-container-form">
+                    <div>
+                        <input type="text" placeholder="Add title" style={{marginRight: "10px"}} value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
+                    </div>
+                    
+                    <div className="date-picker">
+                        <DatePicker placeholderText="Start date" style={{marginRight: "10px"}} 
+                        selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})} />
+                    </div>
 
-                <button style={{marginTop: "10px"}} onClick={handleAddEvent}>Add event</button>
-            </form>
+                    <div className="date-picker">
+                        <DatePicker placeholderText="End date" selected={newEvent.end} 
+                        onChange={(end) => setNewEvent({...newEvent, end})} />
+                    </div>
 
+                    <div>
+                        <button className="calendar-submit" onClick={handleAddEvent}>Add event</button>
+                    </div>
+                    
+                </form>
+            </div>
+            <br/>
+            <br/>
+            <br/>
         </div>
     )
 }
