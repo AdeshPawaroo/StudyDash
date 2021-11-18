@@ -126,7 +126,7 @@
 }
 
 .empty-warning-container {
-    border: black solid;
+    /* border: black solid; */
     display: flex;
     flex-direction: column;
     align-items: center;

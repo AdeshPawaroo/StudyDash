@@ -52,6 +52,21 @@
     background-color: teal;
 }
 
+.edit-go-back {
+    height: 5vh;
+    width: 15vw;
+    font-weight: bold;
+    color: teal;
+    margin-top: 13px;
+}
+
+.edit-go-back:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    color: white;
+    background-color: teal;
+}
+
 .edit-question-header {
 font-size: 3rem;
 }

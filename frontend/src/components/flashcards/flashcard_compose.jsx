@@ -38,7 +38,7 @@ class FlashcardCompose extends React.Component {
     handleClick(e) {
         e.preventDefault();
 
-        window.location = "login#/flashcards/user"
+        this.props.history.push("/flashcards/user")
     }
 
     render() {
