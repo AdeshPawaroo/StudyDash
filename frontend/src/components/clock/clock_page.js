@@ -95,7 +95,7 @@ class ClockPage extends React.Component {
                     <button class="btn" onClick={this.handleClick}>
                         <i class="fas fa-play fa-2x"></i>
                     </button>
-                    <a href="/"><i class="fas fa-redo-alt fa-2x redofontawes"></i></a>
+                    {/* <a href="/"><i class="fas fa-redo-alt fa-2x redofontawes"></i></a> */}
                 </div>
             </div>
         )
