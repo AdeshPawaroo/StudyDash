@@ -47,7 +47,7 @@ class Profile extends React.Component {
                     </div> */}
 
                     <h2>Analytics:</h2>
-                    <div className='profile-info-div'>
+                    <div className='profile-info-div analytics'>
                         <div className='profile-info'>
                             Days Logged In: {this.props.currentUser.daysLoggedIn}
                         </div>

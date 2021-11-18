@@ -3,7 +3,13 @@
     flex-direction: column;
     align-items: center;
     height: 80%;
-    
+    color: rgba(0, 0, 0, 0.836);
+}
+
+.profile-info-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-content{
