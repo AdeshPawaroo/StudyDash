@@ -13,9 +13,9 @@ class Profile extends React.Component {
         const lastLogin = new Date(this.props.currentUser.lastLogin);
         const date = new Date(this.props.currentUser.date);
         let totalTime = this.props.currentUser.timeStudied;
-        const hours = totalTime / 60;
-        totalTime -= hours * 60;
-        const minutes = totalTime;
+        const hours = ((totalTime / 60) / 60);
+        totalTime -= ((hours * 60) * 60);
+        const minutes = totalTime / 60;
 
 
         return(

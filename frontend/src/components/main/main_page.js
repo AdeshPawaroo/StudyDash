@@ -15,7 +15,7 @@ class MainPage extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         let greeting = ''
         let msg = ''
         let hour = new Date().getHours();

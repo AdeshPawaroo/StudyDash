@@ -15,7 +15,7 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.currentUser.id);
+        // console.log(this.props.currentUser.id);
         this.props.fetchUserFlashcards(this.props.currentUser.id);
     }
 
@@ -34,9 +34,10 @@ class Profile extends React.Component {
         // console.log(this.props);
         if (this.state.flashcards.length == 0) {
             return(
-                <div>
-                    <h1>Sorry, you don't have any flashcards created!</h1>
-                     <Link to={'/flashcards/new'}>Create Some Here!</Link>
+                <div className='empty-warning-container'>
+                    <h1 className='empty-warning'>Sorry, you don't have any flashcards created!</h1>
+                    <button className='btn-to-new' onClick={this.handleClick}>Create Some Here!</button>
+                    {/* <Link to={'/flashcards/new'}>Create Some Here!</Link> */}
                 </div>
             )
 
