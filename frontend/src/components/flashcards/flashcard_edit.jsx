@@ -14,6 +14,10 @@ class FlashcardEdit extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidUpdate() {
+        
+    }
+
     componentDidMount() {
         axios.get('http://localhost:5000/api/flashcards/' + this.props.match.params.flashcard_id)
             .then(res => {
@@ -48,7 +52,7 @@ class FlashcardEdit extends React.Component {
             .catch(err => console.log(err))
 
         // window.location = "login#/flashcards/user"
-        this.props.history.push("/");
+        this.props.history.push("/flashcards/user");
     }
 
     render() {

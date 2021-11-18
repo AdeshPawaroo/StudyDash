@@ -9,7 +9,8 @@ class FlashcardBox extends React.Component {
 
         // this.state = {
         //     question: '',
-        //     answer: ''
+        //     answer: '',
+        //     text: 'a'
         // }
 
         this.handleUpdate = this.handleUpdate.bind(this);
@@ -29,10 +30,9 @@ class FlashcardBox extends React.Component {
         this.props.removeFlashcard(this.props.card_id);
      
         // this.setState({
-        //     question: null,
-        //     answer: null
+        //     text: "aa"
         // })
-        window.location = "login#/flashcards/user";
+        // window.location = "login#/flashcards/user";
     }
 
     handleShow(e) {
