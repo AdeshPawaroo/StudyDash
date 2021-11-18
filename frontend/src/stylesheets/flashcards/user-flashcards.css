@@ -27,7 +27,7 @@
 }
 
 .flashcard-container {
-    border: black solid10px;
+    border: black solid 10px;
     display: flex;
     flex-direction: column;
     align-content: space-around;

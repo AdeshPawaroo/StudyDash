@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FlashcardProfileContainer from '../flashcards/flashcards_user_container'
-import TodosList from '../todo/todos-list.component';
+import TodosList from '../todo/List';
 
 class Profile extends React.Component {
     constructor(props){

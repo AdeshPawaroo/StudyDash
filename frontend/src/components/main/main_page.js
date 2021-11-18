@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileContainer from '../profile/profile_container';
-import TodosList from '../todo/todos-list.component';
+import TodosList from '../todo/TodoList';
 
 class MainPage extends React.Component {
     constructor(props){

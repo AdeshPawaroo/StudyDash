@@ -45,7 +45,7 @@ const App = () => (
             <ProtectedRoute exact path="/clock" component={ClockContainer} />
             <ProtectedRoute exact path="/profile" component={UserProfileContainer} />
 
-            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
+            {/* <ProtectedRoute exact path="/profile" component={ProfileContainer} /> */}
             <Route path='/list' exact component={List} />
             <Route path='/playlist' exact component={MusicPage} />
      
