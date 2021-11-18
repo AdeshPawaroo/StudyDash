@@ -11,17 +11,17 @@ import ProfileContainer from './flashcards/flashcards_user_container';
 import FlashcardCompose from './flashcards/flashcard_compose_container';
 import FlashcardEdit from './flashcards/flashcard_edit_container';
 // import Clock6 from './clock3/clock6'
-
+import List from './todo/List';
 // import NavBarContainer from './nav/navbar_container';
 // import TasksContainer from './task/tasks_container';
 import MainPage from './main/main_page';
 // import TaskComposeContainer from './task/create_task_container';
 // import AnalyticsContainer from './profile/profile_container'
-import TodosList from './todo/todos-list.component';
-import CreateTodo from './todo/create_todo_component';
+// import TodosList from './todo/todos-list.component';
+// import CreateTodo from './todo/create_todo_component';
 // import EditTodo from './todo/edit-todo.component';
 import Footer from './footer/footer'
-import './todo/index.css';
+// import './todo/index.css';
 import Clock from './clock/clock';
 import Clock2 from './clock/clock_page';
 import MusicPage from './music/music_page';
@@ -48,9 +48,9 @@ const App = () => (
 
             {/* <ProtectedRoute exact path="/tasks" component={TasksContainer} /> */}
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
-            <Route path='/list' exact component={TodosList} />
+            <Route path='/list' exact component={List} />
             <Route path='/playlist' exact component={MusicPage} />
-            <Route exact path='/create' component={CreateTodo} />
+            {/* <Route exact path='/create' component={CreateTodo} /> */}
             {/* <SettingsContextProvider> */}
                 
             {/* <ProtectedRoute exact path="/clock3" component={Clock3} /> */}

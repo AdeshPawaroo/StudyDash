@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
+.bgdivlist {
+  font-family: 'Montserrat', sans-serif;
+  background: #ecf0f1;
+}
+
+header {
+  text-align: center;
+}
+
+.header-h1 .headerh1 {
+  font-size: 5rem;
+  font-weight: 300;
+  margin: 5vh 0 0 0;
+  color: #2c3e50;
+}
+
+.h1span {
+  font-weight: 700;
+}
+
+
+
+.form1 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input1 {
+  font: 300 1.2rem 'Ubuntu', sans-serif;
+  color: #34495e;
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #34495e;
+}
+
+.list1 {
+  list-style-position: inside;
+}
+
+.list1 {
+  width: 95%;
+}
+
+.task1 {
+  color: #34495e;
+  padding-left: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+.task1:hover {
+  background: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.task1:hover .span1 {
+  opacity: 1;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #bdc3c7;
+}
+
+.icon1 {
+  float: right;
+  margin-right: 1rem;
+  color: #c0392b;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.icon1.edit {
+  color: #58b2dc;
+}
+
+.icon:focus {
+  border: none;
+  outline: 0;
+}
+
+.edit-todo {
+  width: 85%;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.6s;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+}
+
+.edit-todo:focus {
+  outline: none;
+  border-bottom: 1px solid #58b2dc;
+}
+
+@media screen and (max-width: 650px) {
+  .edit-todo {
+    width: 70%;
+  }
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+}
+
+article * {
+  grid-column: start / end;
+}
+
+@media (max-width: 8.5in) {
+  article {
+    grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+  }
+}
+
+.button1 {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 2px 8px;
+  font-size: 13px;
+  color: #6c6777;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1.selected {
+  color: #fff;
+  background: #6c6777;
+}
+
+.button1.clear {
+  float: right;
+  color: #fff;
+  background: #ee1630;
+}
+
+a,
+a:visited,
+a:active {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  transition: 0.5s color ease;
+  text-decoration: none;
+  color: #81b3d2;
+}
+
+.bgdivlist {
+    font-family: 'Montserrat', sans-serif;
+    background: #ecf0f1;
+    height: 37em;
+    width: 81em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
