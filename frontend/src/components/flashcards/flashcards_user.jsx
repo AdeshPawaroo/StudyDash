@@ -26,12 +26,12 @@ class Profile extends React.Component {
     handleClick(e) {
         e.preventDefault();
 
-        window.location = 'login#/flashcards/new'
+        this.props.history.push("/flashcards/new");
     }
 
     render() {
         let i = 0;
-        // console.log(this.props);
+        console.log(this.props);
         if (this.state.flashcards.length == 0) {
             return(
                 <div className='empty-warning-container'>
