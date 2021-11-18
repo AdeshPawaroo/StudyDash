@@ -10,7 +10,7 @@ class FlashcardBox extends React.Component {
         // this.state = {
         //     question: '',
         //     answer: '',
-        //     text: 'a'
+        //     deleted: false
         // }
 
         this.handleUpdate = this.handleUpdate.bind(this);
@@ -28,10 +28,14 @@ class FlashcardBox extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.removeFlashcard(this.props.card_id);
-     
-        // this.setState({
-        //     text: "aa"
-        // })
+        // console.log(this.state);
+        // let state = {
+        //     question: '',
+        //     answer: '',
+        //     deleted: true
+        // }
+        // this.setState({state});
+        // console.log(this.state);
     }
 
     handleShow(e) {
