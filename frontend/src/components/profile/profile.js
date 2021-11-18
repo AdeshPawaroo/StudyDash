@@ -17,8 +17,11 @@ class Profile extends React.Component {
         if (hours > 0){
             totalTime -= ((hours * 60) * 60);
         }
-        const minutes = totalTime / 60;
-
+        const minutes = Math.floor(totalTime / 60);
+        if (minutes > 0) {
+            totalTime -= (minutes * 60);
+        }
+        const seconds = totalTime;
 
         return(
             <div className='profile-div'>
@@ -49,7 +52,7 @@ class Profile extends React.Component {
                             Days Logged In: {this.props.currentUser.daysLoggedIn}
                         </div>
                         <div className='profile-info'>
-                            Total Time Spent Studying: {hours} hr(s) {minutes} min(s)
+                            Total Time Spent Studying: {hours} hr(s) {minutes} min(s) {seconds} sec(s)
                         </div>
                     </div>
                     <div className='account-info'>
