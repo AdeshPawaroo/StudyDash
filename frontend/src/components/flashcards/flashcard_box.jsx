@@ -22,7 +22,7 @@ class FlashcardBox extends React.Component {
     handleUpdate(e) {
         e.preventDefault();
 
-        window.location = `login#/flashcards/${this.props.card_id}`
+        this.props.history.push(`/flashcards/${this.props.card_id}`)
     }
 
     handleDelete(e) {
@@ -32,7 +32,6 @@ class FlashcardBox extends React.Component {
         // this.setState({
         //     text: "aa"
         // })
-        // window.location = "login#/flashcards/user";
     }
 
     handleShow(e) {
@@ -54,7 +53,7 @@ class FlashcardBox extends React.Component {
 
     render () {
         // if (!this.props) return null
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <div className='flashcard-container' onMouseOver={this.handleShow} onMouseOut={this.handleHide} >
                 <div className='question-container'>
