@@ -27,3 +27,8 @@
     font-weight: bold;
     color: white;
 }
+
+.calendar-link{
+    display: flex;
+    justify-content: center;
+}

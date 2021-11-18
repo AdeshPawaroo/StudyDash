@@ -44,6 +44,7 @@ class Profile extends React.Component {
         } else {
             return (
                 <div className='user-cards-container'>
+                    <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
                     <div className="user-cards-header">All of your Flashcards:</div>
                     <br />
                     <button className='btn-to-new' onClick={this.handleClick}>Create A New Flashcard!</button>

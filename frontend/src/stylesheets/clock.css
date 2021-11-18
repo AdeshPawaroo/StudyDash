@@ -1,48 +1,81 @@
-.clocktitle {
-  display: flex;
-  justify-content: center;
-  font-size: 70px;
+/* Body background and font
+body {
+  background: #272343;
+  font-family: "Pacifico", cursive;
+}
+/* Main heading */
+.heading {
+  color: #bae8e8;
 }
 
+.container1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Countdown timer */
 .containertimer {
-  padding-left: 40%;
-  padding-top: 10%;
-  padding-right: 40%;
+  color: #ffffff;
+  text-align: center;
+  width: 21rem;
+  height: 21rem;
+  border: 5px solid rgba(255, 255, 255, 0.521);
+  border-radius: 12rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  font-size: 110px;
-}
-
-.btn {
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-left: 40%;
-  margin-top: 10px;
-  position: absolute;
+  font-size: 42pt;
+  font-weight: 400;
 }
 
-/* .redofontawes {
-  margin-right: 40%;
-  margin-left: 57%;
-  display: flex;
-  justify-content: end;
-} */
+/* remove the padding on the play button */
+.btn {
+  padding: 0;
+  width: 40%;
+}
 
+/* play and reset icons */
+.fa-play,
+.fa-redo-alt {
+  color: #e3f6f5;
+  border: 2px solid transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+}
 
-.redofontawes {
-    margin-right: 40%;
-    margin-left: 48%;
+.fa-play:hover,
+.fa-redo-alt:hover {
+  color: #bae8e8;
+  border: 2px solid #bae8e8;
+  transition: 0.3s ease;
+}
 
-    display: flex;
+/* Dynamic class */
+/* Make the message visible */
+.show_message {
+  display: block;
+  padding: 1rem 0;
+  color: #272343;
+  background: #e3f6f5;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+} 
 
-    justify-content: center;
-    position: absolute;
-    margin-top: 17
-px
-;
+.clock-main-link{
+    padding-bottom: 15px;
+}
+
+.clocktitle{
+    font-size: 28pt;
+    font-weight: 400;
+    padding-bottom: 10px;
 }

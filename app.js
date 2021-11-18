@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
     })
   }
 
+
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
