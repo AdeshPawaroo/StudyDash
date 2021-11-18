@@ -26,6 +26,8 @@ import Clock from './clock/clock';
 import Clock2 from './clock/clock_page';
 import MusicPage from './music/music_page';
 import NavBar from './navbar/nav_bar';
+import CalenderContainer from './calendar/calendar'
+
 // import Clock3 from './clock2/clock';
 // import SettingsContextProvider from './clock2/SettingsContext';
 const App = () => (
@@ -43,6 +45,8 @@ const App = () => (
             <ProtectedRoute exact path="/flashcards/:flashcard_id" component={FlashcardEdit} />
             <AuthRoute exact path="/" component={MainPage} />
             <ProtectedRoute exact path="/clock" component={Clock2} />
+            <ProtectedRoute exact path="/calender" component={CalenderContainer}/>
+            
             {/* <ProtectedRoute exact path="/clock4" component={Clock6} /> */}
   
 

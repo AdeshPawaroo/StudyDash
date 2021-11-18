@@ -1,0 +1,23 @@
+.calender-form{
+    padding-left: 10px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.date-picker{
+    padding-right: 10px;
+}
+
+.calender-container-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.calendar-submit{
+    font-size: 13px;
+    padding: 5px 40px;
+    white-space: nowrap;
+}
