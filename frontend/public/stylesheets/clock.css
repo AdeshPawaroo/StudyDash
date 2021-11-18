@@ -1,0 +1,48 @@
+.clocktitle {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+}
+
+.containertimer {
+  padding-left: 40%;
+  padding-top: 10%;
+  padding-right: 40%;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  font-size: 110px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-left: 40%;
+  margin-top: 10px;
+  position: absolute;
+}
+
+/* .redofontawes {
+  margin-right: 40%;
+  margin-left: 57%;
+  display: flex;
+  justify-content: end;
+} */
+
+
+.redofontawes {
+    margin-right: 40%;
+    margin-left: 48%;
+
+    display: flex;
+
+    justify-content: center;
+    position: absolute;
+    margin-top: 17
+px
+;
+}

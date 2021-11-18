@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
 
-.bgdivlist {
+/* .bgdivlist {
   font-family: 'Montserrat', sans-serif;
   background: #ecf0f1;
-}
+} */
 
 header {
   text-align: center;
@@ -161,11 +161,11 @@ a:active {
   color: #81b3d2;
 } 
 
-.bgdivlist {
+/* .bgdivlist {
     font-family: 'Montserrat', sans-serif;
     background: #ecf0f1;
     height: 37em;
     width: 81em;
     margin-left: 5em;
     margin-right: 5em;
-}
+} */

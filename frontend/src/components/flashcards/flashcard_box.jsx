@@ -77,7 +77,7 @@ class FlashcardBox extends React.Component {
                 <button className='hide-btn' onClick={this.handleHide}>Click here to hide the answer</button> */}
                 <br/>
                 <button className="edit-btn" onClick={this.handleUpdate}>Edit</button>
-                <button className="delete-btn" onClick={this.handleDelete} onClick={this.forceUpdate(this.render())}>Delete</button>
+                <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
                 {/* <button className="delete-btn" onClick={ () => this.props.removeFlashcard(this.props.flashcards.card_id)  }></button> */}
             </div>            
         )

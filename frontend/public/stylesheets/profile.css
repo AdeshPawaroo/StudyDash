@@ -1,0 +1,54 @@
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(232, 250, 255, 0.253);
+    width: 80%;
+    border-radius: 5px;
+}
+
+.profile-content h2{
+    font-size: 24pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-info{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 16pt;
+}
+
+#profile-handle{
+    margin-top: 10px;
+    font-size: 26pt;
+    border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+}
+
+#profile-account-info{
+    padding-top: 10px;
+    border-top: rgba(255, 255, 255, 0.5) solid 1px;
+}
+
+#profile-title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+    padding-top: 15px;
+}
+
+#profile-title a{
+    text-decoration: none;
+    color: #000;
+}
+
+.profile-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#flashcard-div{
+    font-size: 16pt;
+    display: flex;
+    justify-content: center;
+}

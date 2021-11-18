@@ -1,19 +1,102 @@
-.profile-content{
+.profile-div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    background-color: rgba(232, 250, 255, 0.205);
-    width: 55%;
+    height: 80%;
+    color: rgba(0, 0, 0, 0.836);
+}
+
+.profile-info-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(232, 250, 255, 0.274);
+    border: solid rgba(0, 0, 0, 0.384) 4px;
+    width: 80%;
+    height: 100%;
     border-radius: 5px;
 }
 
+.profile-content h2{
+    font-size: 22pt;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-bottom: rgba(202, 202, 202, 0.377) solid 2px;
+}
+
+.profile-info-div{
+    margin-bottom: 10px;
+}
+
 .profile-info{
+    font-size: 18pt;
+    margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 15px;
 }
 
 #profile-handle{
-    margin-top: 10px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+#p-handle{
+    border: none;
+}
+
+#profile-title{
+    font-size: 60px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#profile-title a{
+    text-decoration: none;
+    color: black;
+}
+
+.flashcard-div{
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
     font-size: 16pt;
 }
 
+#profile-email{
+    font-weight: 400;
+    font-size: 18pt;
+}
+
+#profile-deadlines{
+    position: relative;
+    display: inline;
+}
+
+.account-info{
+    display: flex;
+    border-bottom: rgba(202, 202, 202, 0.377) solid 2px;
+}
+
+.fa-bars{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#profile-account-info{
+    font-size: 22pt;
+    font-weight: 500;
+}
+
+.fa-user{
+    margin-top: 7px;
+    margin-right: 5px;
+    margin-left: 0px;
+}

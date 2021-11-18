@@ -79,7 +79,6 @@ class FlashcardEdit extends React.Component {
                         <p className='edit-answer-header'>Answer:</p>
                         <br />
                         <input type="textarea" 
-                            value={this.state.answer}
                             onChange={this.onChangeAnswer}
                             className="edit-answer-field"
                         />

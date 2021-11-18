@@ -7,7 +7,7 @@ import getDay from 'date-fns/getDay';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
-
+import { Link } from 'react-router-dom';
 
 export default function CalenderContainer() {
   
@@ -149,7 +149,7 @@ export default function CalenderContainer() {
 
     return (
         <div className="calender-container">
-
+            <h1 id='profile-title' className='calendar-link'><Link to='/' >Study Dash</Link></h1>
             <Calendar localizer={localizer} events={allEvents} 
             startAccessor="start" endAccessor="end" 
             style={{height: 600, margin: "50px"}} />

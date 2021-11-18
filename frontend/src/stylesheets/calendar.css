@@ -8,6 +8,7 @@
 
 .date-picker{
     padding-right: 10px;
+    z-index: 4;
 }
 
 .calender-container-form {
@@ -26,4 +27,9 @@
     font-size: 35px;
     font-weight: bold;
     color: white;
+}
+
+.calendar-link{
+    display: flex;
+    justify-content: center;
 }

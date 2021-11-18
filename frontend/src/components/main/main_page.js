@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileContainer from '../profile/profile_container';
+import TodosList from '../todo/TodoList';
 
 class MainPage extends React.Component {
     constructor(props){
@@ -75,7 +76,7 @@ class MainPage extends React.Component {
                 <div className="pomodorobox">
                         <div className="titleofbox">Profile Analytics<i class="far fa-chart-bar"></i></div>
                         <p className="maindesc">Track your study habits</p>
-                        <p className="clickbutton"><Link to={'/profile'} className="clocklink">Go</Link></p>
+                        <p className="clickbutton"><Link to='/profile' component={ProfileContainer} className="clocklink">Go</Link></p>
                 </div>
                 </div>
 

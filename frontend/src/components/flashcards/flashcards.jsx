@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
 import FlashcardBox from "./flashcard_box";
+import { Link } from 'react-router-dom';
 
 class Flashcard extends React.Component {
     constructor(props) {
