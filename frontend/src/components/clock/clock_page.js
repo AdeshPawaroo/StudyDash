@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class ClockPage extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        // this.start_timer = this.start_timer.bind(this);
+        this.start_timer = this.start_timer.bind(this);
         this.handleClick = this.handleClick.bind(this);
-        
     }
+    
     handleClick() {
         this.start_timer();
     }
@@ -19,7 +19,7 @@ class ClockPage extends React.Component {
         // Change the minutes and seconds to starting time
         session_minutes = 24;
         session_seconds = 59;
-
+        let that = this;
 
         // Start the countdown
         var minutes_interval = setInterval(minutesTimer, 60000);
@@ -36,7 +36,7 @@ class ClockPage extends React.Component {
         function secondsTimer() {
             session_seconds = session_seconds - 1;
             document.getElementById("seconds").innerHTML = session_seconds;
-
+            that.props.currentUser.timeStudied += 1;
             // Check if the seconds and minutes counter has reached 0
             // If reached 0 then end the session
             if (session_seconds <= 0) {
@@ -64,39 +64,40 @@ class ClockPage extends React.Component {
     render() {
         let session_seconds = "00";
         let session_minutes = 25;
-        return(
-        <div class="container1">
-            <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
-            <h1 class="clocktitle">Pomodoro Clock</h1>
+        return (
+            <div class="container1">
 
-          
-            <div class="containertimer">
-                <div class="row">
-                    <div class="timer">
-                        <h4 id="minutes">{session_minutes}</h4>
-                    </div>
-                    <div class="col2">
-                        <h4>:</h4>
-                    </div>
-                    <div class="col5">
-                        <h4 id="seconds">{session_seconds}</h4>
+                <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
+                <h1 class="clocktitle" >Pomodoro Clock</h1>
+
+
+                <div class="containertimer">
+                    <div class="row">
+                        <div class="timer">
+                            <h4 id="minutes">{session_minutes}</h4>
+                        </div>
+                        <div class="col2">
+                            <h4>:</h4>
+                        </div>
+                        <div class="col5">
+                            <h4 id="seconds">{session_seconds}</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-           
-            <div class="col6">
-                <h3 id="done" class="text-center"></h3>
-            </div>
 
-          
-            <div class="buttonscontainer">
-                <button class="btn" onClick={this.handleClick}>
-                    <i class="fas fa-play fa-2x"></i>
-                </button>
-                {/* <a href="/"><i class="fas fa-redo-alt fa-2x"></i></a> */}
+                <div class="col6">
+                    <h3 id="done" class="text-center"></h3>
+                </div>
+
+
+                <div class="buttonscontainer">
+                    <button class="btn" onClick={this.handleClick}>
+                        <i class="fas fa-play fa-2x"></i>
+                    </button>
+                    <a href="/"><i class="fas fa-redo-alt fa-2x redofontawes"></i></a>
+                </div>
             </div>
-        </div>
         )
     }
 }
