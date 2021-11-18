@@ -29,7 +29,7 @@ class FlashcardBox extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.removeFlashcard(this.props.card_id);
-        this.render();
+        // this.render();
         // console.log(this.state);
         // let state = {
         //     question: '',
@@ -69,7 +69,7 @@ class FlashcardBox extends React.Component {
                 <div className='question-container'>
                     Question: {this.props.question}
                 </div>
-                <br/>
+                <br/> 
                 <div className='answer-container'>
                     Answer: {this.props.answer}
                 </div>
@@ -84,12 +84,10 @@ class FlashcardBox extends React.Component {
     }
 }
 
-const mSTP = (state) => ({
-    flashcards: state.flashcards.user
-});
+// co      
 
 const mDTP = (dispatch) => ({
     removeFlashcard: id => dispatch(removeFlashcard(id))
 });
 
-export default withRouter(connect(mSTP, mDTP)(FlashcardBox));
+export default withRouter(connect(null, mDTP)(FlashcardBox));
