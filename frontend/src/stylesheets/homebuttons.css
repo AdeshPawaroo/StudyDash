@@ -37,4 +37,10 @@
     font-weight: 900;
     font-family: unset;
     padding-bottom: 7%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
 }
