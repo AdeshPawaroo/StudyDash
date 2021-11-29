@@ -139,7 +139,8 @@ export default function CalenderContainer() {
 
                 <form className="calender-container-form">
                     <div>
-                        <input type="text" placeholder="Add title" style={{marginRight: "10px"}} value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
+                        <input type="text" placeholder="Add title" style={{marginRight: "10px"}} 
+                        value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
                     </div>
                     
                     <div className="date-picker">
