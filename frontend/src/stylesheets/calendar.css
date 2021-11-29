@@ -1,6 +1,5 @@
 .calender-form{
     padding-left: 10px;
-    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,6 +26,8 @@
     font-size: 35px;
     font-weight: bold;
     color: white;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
 }
 
 .calendar-link{
