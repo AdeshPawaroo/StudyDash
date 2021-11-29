@@ -16,7 +16,7 @@ export const CreateFlashcard = () => {
     const _question = useRef(null);
     const _answer = useRef(null);
 
-    handleQuestion = () => {
+    const handleQuestion = () => {
         _question.current.focus();
         setFlashcard({
             question: _question.current.value,
@@ -24,15 +24,15 @@ export const CreateFlashcard = () => {
         });
     }
 
-    handleAnswer = () => {
+    const handleAnswer = () => {
         _answer.current.focus();
         setFlashcard({
             question: flashcard.question,
-            asnwer: _answer.current.value
+            answer: _answer.current.value
         });
     }
 
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(composeFlashcard(flashcard));
 
@@ -63,6 +63,8 @@ export const CreateFlashcard = () => {
                         onChange={handleAnswer}
                         ref={_answer}
                     />
+
+                    <button className="flashcard-create-btn" onClick={handleSubmit}>Create!</button>
                 </div>
             </form>
         </div>
