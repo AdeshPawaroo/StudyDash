@@ -69,22 +69,22 @@ router.post('/login', (req, res) => {
         if (!user) {
           return res.status(404).json({email: 'This user does not exist'});
         }
-
         bcrypt.compare(password, user.password)
           .then(isMatch => {
             if (isMatch) {
                 let days = user.daysLoggedIn;
                 const currentDate = new Date()
-                if (days === 0 || currentDate.getDate() != user.lastLogin.getDate()){
-                  days += 1;
-                }
+                const date = new Date(user.date)
+                days = Math.round((currentDate.getTime() - date.getTime()) / 86400000) + 1
+                
                 const payload = {
                     id: user.id,
                     handle: user.handle,
                     email: user.email,
                     date: user.date,
                     daysLoggedIn: days,
-                    lastLogin: new Date()
+                    lastLogin: new Date(),
+                    timeStudied: user.timeStudied
                 }
                 jwt.sign(
                     payload,

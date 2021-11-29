@@ -8,6 +8,7 @@
 
 .date-picker{
     padding-right: 10px;
+    z-index: 4;
 }
 
 .calender-container-form {
@@ -26,4 +27,22 @@
     font-size: 35px;
     font-weight: bold;
     color: white;
+}
+
+.calendar-link{
+    display: flex;
+    justify-content: center;
+}
+
+.rbc-day-bg {
+    background-color: white;
+}
+
+.rbc-row.rbc-month-header {
+    background-color: white;
+}
+
+.rbc-btn-group {
+    background-color: white;
+    border-radius: 5px;
 }

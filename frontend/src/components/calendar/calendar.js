@@ -5,8 +5,15 @@ import parse from 'date-fns/parse';
 import startOfWeek from 'date-fns/startOfWeek';
 import getDay from 'date-fns/getDay';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import DatePicker from "react-datepicker";
-import 'react-datepicker/dist/react-datepicker.css';
+// import DatePicker from "react-datepicker";
+// import 'react-datepicker/dist/react-datepicker.css';
+import { Link } from 'react-router-dom';
+
+// import DateTimePicker from 'react-datetime-picker';
+// import 'react-datetime-picker/dist/DateTimePicker.css';
+
+import Datetime from 'react-datetime';
+import "react-datetime/css/react-datetime.css";
 
 
 export default function CalenderContainer() {
@@ -26,8 +33,8 @@ export default function CalenderContainer() {
     const events = [ 
         {
             title: "Graduation Day!!! 🎓",
-            start: new Date(2021,11,-6),
-            end: new Date(2021,11,-6)
+            start: new Date(2021,11,-6, 15, 30),
+            end: new Date(2021,11,-6, 16, 0)
         },
         {
             title: "MERN Project",
@@ -130,7 +137,7 @@ export default function CalenderContainer() {
 
     return (
         <div className="calender-container">
-
+            <h1 id='profile-title' className='calendar-link'><Link to='/' >Study Dash</Link></h1>
             <Calendar localizer={localizer} events={allEvents} 
             startAccessor="start" endAccessor="end" 
             style={{height: 600, margin: "50px"}} />
@@ -144,12 +151,12 @@ export default function CalenderContainer() {
                     </div>
                     
                     <div className="date-picker">
-                        <DatePicker placeholderText="Start date" style={{marginRight: "10px"}} 
+                        <Datetime placeholderText="Start date" style={{marginRight: "10px"}}
                         selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})} />
                     </div>
 
                     <div className="date-picker">
-                        <DatePicker placeholderText="End date" selected={newEvent.end} 
+                        <Datetime placeholderText="End date" selected={newEvent.end} 
                         onChange={(end) => setNewEvent({...newEvent, end})} />
                     </div>
 

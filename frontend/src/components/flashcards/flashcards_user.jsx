@@ -15,7 +15,7 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.currentUser.id);
+        // console.log(this.props.currentUser.id);
         this.props.fetchUserFlashcards(this.props.currentUser.id);
     }
 
@@ -26,12 +26,12 @@ class Profile extends React.Component {
     handleClick(e) {
         e.preventDefault();
 
-        window.location = 'login#/flashcards/new'
+        this.props.history.push("/flashcards/new");
     }
 
     render() {
         let i = 0;
-        // console.log(this.props);
+        console.log(this.props);
         if (this.state.flashcards.length == 0) {
             return(
                 <div className='empty-warning-container'>
@@ -44,6 +44,7 @@ class Profile extends React.Component {
         } else {
             return (
                 <div className='user-cards-container'>
+                    <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
                     <div className="user-cards-header">All of your Flashcards:</div>
                     <br />
                     <button className='btn-to-new' onClick={this.handleClick}>Create A New Flashcard!</button>

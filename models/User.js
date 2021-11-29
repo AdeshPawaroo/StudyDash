@@ -25,6 +25,10 @@ const UserSchema = new Schema({
     lastLogin: {
         type: Date,
         default: new Date()
+    },
+    timeStudied: {
+        type: Number,
+        default: 0
     }
 });
 

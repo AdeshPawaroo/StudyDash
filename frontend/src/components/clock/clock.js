@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 
+
+
 export default function App() {
     const [secondsLeft, setSecondsLeft] = useState(25 * 60);
     const [timer, setTimer] = useState();
+
 
     const start = () => {
         const timer = setInterval(() => {
@@ -12,6 +15,7 @@ export default function App() {
             }
         }, 1000);
         setTimer(timer);
+        
     };
 
     useEffect(() => {

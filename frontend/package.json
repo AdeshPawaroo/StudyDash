@@ -15,6 +15,8 @@
     "react-big-calendar": "^0.38.1",
     "react-calendar": "^3.5.0",
     "react-datepicker": "^4.3.0",
+    "react-datetime": "^3.1.1",
+    "react-datetime-picker": "^3.4.3",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^4.2.2",
@@ -39,7 +41,6 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
       "not op_mini all"
     ],
     "development": [
