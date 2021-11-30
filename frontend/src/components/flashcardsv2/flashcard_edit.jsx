@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, {useState, useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
@@ -19,8 +20,6 @@ export const FlashcardEdit = (props) => {
     const dispatch = useDispatch();
     const card_id = props.match.params.flashcard_id;
 
-    // console.log(flashcard);
-
     useEffect(() => {
         dispatch(fetchFlashcard(card_id))
             .then(res => setFlashcard({
@@ -29,15 +28,41 @@ export const FlashcardEdit = (props) => {
             }))
     }, []);
 
+    const handleQuestion = (e) => {
+        setFlashcard({
+            question: e.target.value,
+            answer: flashcard.answer
+        })
+    }
+
+    const handleAnswer = (e) => {
+        setFlashcard({
+            question: flashcard.question,
+            answer: e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const data = {
+            question: flashcard.question,
+            answer: flashcard.answer
+        }
+        axios.post(`/api/flashcards/${card_id}`, data)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err))
+    }
+
     return (
         <div className="card-edit-container">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="card-edit-question">
                     <label>Question:</label>
                     <br />
                     <input type="textarea"
                         className="question-edit-field"
                         value={flashcard.question}
+                        onChange={handleQuestion}
                     />
                 </div>
                 <br />
@@ -47,8 +72,10 @@ export const FlashcardEdit = (props) => {
                     <input type="textarea" 
                         className="card-answer-field"
                         value={flashcard.answer}
+                        onChange={handleAnswer}
                     />
                 </div>
+                <input className="edit-submit" type="submit" value="Update Flashcard" />
             </form>
         </div>
     )
