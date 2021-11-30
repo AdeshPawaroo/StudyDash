@@ -7,7 +7,7 @@ import SignupFormContainer from './session/signup_form_container';
 import MainPageContainer from './main/main_page_container';
 
 
-import { UserFlashcards } from "./flashcardsv2/user_flashcards";
+import UserFlashcards from "./flashcardsv2/user_flashcards";
 import { CreateFlashcard } from './flashcardsv2/flashcard_create';
 
 
@@ -39,7 +39,7 @@ const App = () => (
             <ProtectedRoute exact path="/" component={MainPageContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
-{/* 
+            {/* 
             <ProtectedRoute exact path="/flashcards" component={FlashcardContainer} />
             <ProtectedRoute exact path="/flashcards/user" component={UserCards} />
             <ProtectedRoute exact path="/flashcards/new" component={FlashcardCompose} />

@@ -71,7 +71,7 @@ class MainPage extends React.Component {
                 <div className="pomodorobox">
                     <div className="titleofbox">Flash Cards</div>
                         <p className="maindesc">Test your studying habits</p>
-                        <p className="clickbutton"><Link to={'/flashcards/user'} className="clocklink">Go</Link></p>
+                        <p className="clickbutton"><Link to={'/flashcards'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
                         <div className="titleofbox">Profile Analytics<i class="far fa-chart-bar"></i></div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { composeFlashcard } from "../../actions/flashcard_actions";
 
@@ -43,11 +44,11 @@ export const CreateFlashcard = () => {
     }
 
     return (
-        <div>
-            <h2>Create Form</h2>
-            <form >
-                <div className="card-create-form">
+        <div className="card-create-container">
+            <form className="card-create-form" >
+                <div>
                    <label>Question</label>
+                   <br />
                     <input type="textarea" 
                         value={flashcard.question}
                         placeholder="Enter a question..."
@@ -55,7 +56,9 @@ export const CreateFlashcard = () => {
                         onChange={handleQuestion}
                         ref={_question}
                     />
-
+                    <br />
+                    <label>Answer</label>
+                    <br />
                     <input type="textarea" 
                         value={flashcard.answer}
                         placeholder="Enter the answer..."
@@ -63,8 +66,13 @@ export const CreateFlashcard = () => {
                         onChange={handleAnswer}
                         ref={_answer}
                     />
-
+                    <br />
+                    <br />
                     <button className="flashcard-create-btn" onClick={handleSubmit}>Create!</button>
+                    <br />
+                    <br />
+                    {/* <span onClick={handleClick}>Click here to go back to your flashcards!</span> */}
+                    <Link className="redir-cards" to="/flashcards">Click here to go back to your flashcards</Link>
                 </div>
             </form>
         </div>
