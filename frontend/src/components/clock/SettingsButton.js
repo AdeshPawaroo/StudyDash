@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+
 function SettingsButton(props) {
   return (
     <button {...props} className={'with-text'}>

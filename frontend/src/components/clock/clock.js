@@ -1,11 +1,13 @@
 import './App.css';
 import React from 'react'
-import ReactDOM from 'react-dom'
+
 import Timer from "./timer";
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 import Settings from './Settings';
 import SettingsContext from "./SettingsContext";
+import MusicPage from '../music/music_page';
+// import Modal from '../modal/modal';
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
 
             {showSettings ? <Settings /> : <Timer />}
             </SettingsContext.Provider>
+            
         </main>
     );
 }
