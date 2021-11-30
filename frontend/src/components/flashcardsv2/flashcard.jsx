@@ -16,7 +16,7 @@ export const Flashcard = (props) => {
 
     useEffect(() => {
         dispatch(fetchUserFlashcards(props.user_id))
-    },[fetchUserFlashcards(props.user_id)])
+    },[flashcard])
 
     const handleDelete = (e) => {
         e.preventDefault();
@@ -28,11 +28,6 @@ export const Flashcard = (props) => {
             answer: ""
         });
     }
-
-    // const handleUpdate = (e) => {
-    //     e.preventDefault();
-    //     <FlashcardEdit id={props.id}/> 
-    // }
 
     return (
         <div className="flashcard-container">

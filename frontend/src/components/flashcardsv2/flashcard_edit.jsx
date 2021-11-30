@@ -7,9 +7,9 @@ export const FlashcardEdit = (props) => {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchFlashcard(props.id))
-    })
+    // useEffect(() => {
+    //     dispatch(fetchFlashcard(props.id))
+    // })
 
     return (
         <div className="edit-card-container">

@@ -19,10 +19,8 @@ class UserFlashcards extends React.Component {
         this.props.fetchUserFlashcards(this.props.currUserID);
     }
 
-
-
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <div className="user-cards-container">
                 <Link to="/flashcards/new">Click here to create more flashcards!</Link>
@@ -30,13 +28,14 @@ class UserFlashcards extends React.Component {
                 <div className="user-cards">
                     {this.props.flashcards.map(flashcard => (
                        <div>
-                           <Flashcard 
+                            <Flashcard 
                                 key={flashcard._id}
                                 question={flashcard.question}
                                 answer={flashcard.answer}
                                 id={flashcard._id}
                                 user_id={flashcard.user}
-                           />
+                                _flashcards={this.props.flashcards}
+                            />
                        </div> 
                     ))}
                 </div>
