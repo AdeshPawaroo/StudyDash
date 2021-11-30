@@ -51,6 +51,9 @@ const App = () => (
             <Route path='/playlist' exact component={MusicPage} />
      
         </Switch>
+        <br />
+        <br />
+        <br />
         <Footer />
 
     </div>

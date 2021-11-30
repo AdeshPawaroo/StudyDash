@@ -1,7 +1,8 @@
 import { connect } from "react-redux"
 import MainPage from "./main_page"
 import { logout } from '../../actions/session_actions';
-
+import { fetchUserFlashcards } from "../../actions/flashcard_actions";
+import { getAllTodo } from "../../actions/todo_index";
 
 const mSTP = (state) => {
     return {
@@ -9,4 +10,10 @@ const mSTP = (state) => {
     }
 }
 
-export default connect(mSTP, {logout})(MainPage)
+const mDTP = (dispatch) => ({
+    fetchUserFlashcards: id => dispatch(fetchUserFlashcards(id)),
+    getAllTodo: () => dispatch(getAllTodo()),
+    logout: () => dispatch(logout())
+});
+
+export default connect(mSTP, mDTP)(MainPage)
