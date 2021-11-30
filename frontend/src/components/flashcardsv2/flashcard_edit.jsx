@@ -27,6 +27,12 @@ export const FlashcardEdit = (props) => {
                 answer: res.flashcards.data.answer
             }))
     }, []);
+    
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log(props);
+        props.history.push("/flashcards")
+    }
 
     const handleQuestion = (e) => {
         setFlashcard({
@@ -76,6 +82,7 @@ export const FlashcardEdit = (props) => {
                     />
                 </div>
                 <input className="edit-submit" type="submit" value="Update Flashcard" />
+                <span onClick={handleClick}>Click here to go back to you flashcards!</span>
             </form>
         </div>
     )
