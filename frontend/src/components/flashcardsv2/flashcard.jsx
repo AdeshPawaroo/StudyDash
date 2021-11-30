@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import { removeFlashcard } from "../../actions/flashcard_actions";
 import { fetchUserFlashcards } from "../../actions/flashcard_actions";
-import { FlashcardEdit } from "./flashcard_edit";
 
 export const Flashcard = (props) => {
 
@@ -29,6 +27,11 @@ export const Flashcard = (props) => {
         });
     }
 
+    const handleEdit = (e) => {
+        e.preventDefault();
+
+    }
+
     return (
         <div className="flashcard-container">
             <label>Question:</label>
@@ -44,8 +47,14 @@ export const Flashcard = (props) => {
             <span onClick={handleDelete}>DELETE</span>
             <br />
             <br />
-            {/* <span onClick={handleUpdate}>UPDATE</span> */}
+            <span onClick={handleEdit}>UPDATE</span>
+            {/* <Link to={{
+                pathname: "/flashcards/edit",
+
+                
+            }}>
+            UPDATE
+            </Link> */}
         </div>
     )
-
 }

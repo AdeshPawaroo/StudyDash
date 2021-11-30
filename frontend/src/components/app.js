@@ -9,6 +9,7 @@ import MainPageContainer from './main/main_page_container';
 
 import UserFlashcards from "./flashcardsv2/user_flashcards";
 import { CreateFlashcard } from './flashcardsv2/flashcard_create';
+import { FlashcardEdit } from './flashcardsv2/flashcard_edit';
 
 
 // import FlashcardContainer from './flashcards/flashcards_container';
@@ -34,7 +35,7 @@ import CalenderContainer from './calendar/calendar'
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
         {/* <NavBar /> */}
-    
+        
         <Switch>
             <ProtectedRoute exact path="/" component={MainPageContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
@@ -67,6 +68,7 @@ const App = () => (
 
             <ProtectedRoute exact path="/flashcards" component={UserFlashcards} />
             <ProtectedRoute exact path="/flashcards/new" component={CreateFlashcard} />
+            <ProtectedRoute exact path="/flashcards/edit" component={FlashcardEdit} />
      
         </Switch>
         <Footer />
