@@ -4,6 +4,7 @@ import ClockPage from "./clock_page"
 
 
 const mSTP = (state) => {
+    console.log(state);
     return {
         currentUser: state.session.user
     }

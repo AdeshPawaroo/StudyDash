@@ -17,7 +17,7 @@ import List from './todo/List';
 
 import MainPage from './main/main_page';
 import Footer from './footer/footer'
-
+import clock from './clock/clock'
 
 import Clock2 from './clock/clock_page';
 import ClockContainer from './clock/clock_container';
@@ -42,7 +42,8 @@ const App = () => (
             <AuthRoute exact path="/" component={MainPage} />
             {/* <ProtectedRoute exact path="/clock" component={Clock2} /> */}
             <ProtectedRoute exact path="/calender" component={CalenderContainer}/>
-            <ProtectedRoute exact path="/clock" component={ClockContainer} />
+            {/* <ProtectedRoute exact path="/clock" component={ClockContainer} /> */}
+            <ProtectedRoute exact path="/clock" component={clock} />
             <ProtectedRoute exact path="/profile" component={UserProfileContainer} />
 
             {/* <ProtectedRoute exact path="/profile" component={ProfileContainer} /> */}
