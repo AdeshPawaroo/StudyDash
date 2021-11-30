@@ -14,6 +14,7 @@ class LoginForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.demoUser = this.demoUser.bind(this);
     }
 
     // Once the user has been authenticated, redirect to the Tweets page
@@ -45,6 +46,16 @@ class LoginForm extends React.Component {
         this.props.login(user);
     }
 
+    demoUser(){
+        this.setState({email: 'demo@demo.com', password: '123456', errors: {}})
+        let user = {
+            email: this.state.email,
+            password: this.state.password
+        };
+        
+        this.props.login(user);
+    }
+
     // Render the session errors if there are any
     renderErrors() {
         return (
@@ -61,7 +72,8 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className='login-div'>
-                <h2 className='form-title'>Login</h2>
+                <h1 className='app-name form-app-name'>Study Dash</h1>
+                <h2 className='form-title'>Welcome Back!</h2>
                 <br />
                 <form onSubmit={this.handleSubmit}>
                     <div>
@@ -70,7 +82,6 @@ class LoginForm extends React.Component {
                             onChange={this.update('email')}
                             placeholder="Email"
                         />
-                        <br />
                         <input className='form-input' type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
@@ -78,7 +89,8 @@ class LoginForm extends React.Component {
                         />
                         <br />
 
-                        <input type="submit" value="Log In" className="button2"/>
+                        <input type="submit" value="Log In" className="button2 auth-button"/>
+                        <button onClick={this.demoUser} className="button2 auth-button">Demo User</button>
                         {this.renderErrors()}
                     </div>
                 </form>

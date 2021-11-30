@@ -49,10 +49,13 @@ class Profile extends React.Component {
                     <h2>Analytics:</h2>
                     <div className='profile-info-div analytics'>
                         <div className='profile-info'>
+                            Total Flashcards: {this.props.flashcards.length}
+                        </div>
+                        <div className='profile-info'>
                             Days Logged In: {this.props.currentUser.daysLoggedIn}
                         </div>
                         <div className='profile-info'>
-                            Total Time Spent Studying: {hours} hr(s) {minutes} min(s) {seconds} sec(s)
+                            Time Spent Studying: {hours} hr(s) {minutes} min(s) {seconds} sec(s)
                         </div>
                     </div>
                     <div className='account-info'>
