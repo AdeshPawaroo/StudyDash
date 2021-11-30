@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+
 import ReactSlider from 'react-slider';
 import './slider.css'
 import SettingsContext from "./SettingsContext";
