@@ -20,7 +20,7 @@
     border: solid rgba(0, 0, 0, 0.384) 4px;
     width: 80%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .profile-content h2{
@@ -36,7 +36,7 @@
 }
 
 .profile-info{
-    font-size: 18pt;
+    font-size: 16pt;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 15px;

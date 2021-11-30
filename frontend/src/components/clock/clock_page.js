@@ -64,36 +64,37 @@ class ClockPage extends React.Component {
     render() {
         let session_seconds = "00";
         let session_minutes = 25;
+        console.log(this.props)
         return (
-            <div class="container1">
+            <div className="container1">
 
-                <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
-                <h1 class="clocktitle" >Pomodoro Clock</h1>
+                <h1 id='profile-title' className="clock-main-link"><Link to='/'>Study Dash</Link></h1>
+                <h1 className="clocktitle" >Pomodoro Clock</h1>
 
 
-                <div class="containertimer">
-                    <div class="row">
-                        <div class="timer">
+                <div className="containertimer">
+                    <div className="row">
+                        <div className="timer">
                             <h4 id="minutes">{session_minutes}</h4>
                         </div>
-                        <div class="col2">
+                        <div className="col2">
                             <h4>:</h4>
                         </div>
-                        <div class="col5">
+                        <div className="col5">
                             <h4 id="seconds">{session_seconds}</h4>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="col6">
-                    <h3 id="done" class="text-center"></h3>
+                <div className="col6">
+                    <h3 id="done" className="text-center"></h3>
                 </div>
 
 
-                <div class="buttonscontainer">
-                    <button class="btn" onClick={this.handleClick}>
-                        <i class="fas fa-play fa-2x"></i>
+                <div className="buttonscontainer">
+                    <button className="btn" onClick={this.handleClick}>
+                        <i className="fas fa-play fa-2x"></i>
                     </button>
                     {/* <a href="/"><i class="fas fa-redo-alt fa-2x redofontawes"></i></a> */}
                 </div>
