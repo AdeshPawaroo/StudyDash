@@ -20,13 +20,15 @@ export const Flashcard = (props) => {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        dispatch(removeFlashcard(props.id));
+        dispatch(removeFlashcard(props.card_id));
 
         setFlashcard({
             question: "",
             answer: ""
         });
     }
+
+
 
     const redir = `/flashcards/${props.card_id}`;
 

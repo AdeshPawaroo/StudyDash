@@ -55,6 +55,7 @@ export const editFlashcard = (id) => dispatch => (
         .catch(err => console.log(err))
 );
 
+
 export const removeFlashcard = (id) => dispatch => (
     deleteFlashcard(id)
         .then(() => dispatch(destroyFlashcard(id)))
