@@ -7,11 +7,14 @@ import PauseButton from './PauseButton';
 import SettingsButton from './SettingsButton';
 import { useContext, useState, useEffect, useRef } from "react";
 import SettingsContext from './SettingsContext';
+import HelpButton from './HelpButton';
+import Popup from './Popup';
 
 const red = '#f54e4e'
 const green = '#4aec8c'
 
 function Timer() {
+    const [buttonPopup, setButtonPopup] = useState(false);
     const settingsInfo = useContext(SettingsContext);
     const [isPaused, setIsPaused] = useState(true);
     const [mode, setMode] = useState('work'); // work/break/null
@@ -123,7 +126,12 @@ function Timer() {
             </div>
             <div style={{marginTop:'20px'}}>
                 <SettingsButton onClick={() => { settingsInfo.setShowSettings(true)}}/>
+                <HelpButton onClick={() => setButtonPopup(true)}/>
             </div>
+                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                    <h3 className="help-title">About This</h3>
+                <p className="help-info">The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to break work into intervals, separated by short breaks.</p>
+                </Popup>
         </div>
     )
 }
