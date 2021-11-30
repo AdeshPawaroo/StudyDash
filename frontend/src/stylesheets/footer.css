@@ -8,3 +8,9 @@
 .footer-list-container {
     margin-top: 43%;
 }
+
+.footer-tag-line h3{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}

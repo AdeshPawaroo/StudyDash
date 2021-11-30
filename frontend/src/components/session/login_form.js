@@ -36,24 +36,26 @@ class LoginForm extends React.Component {
 
     // Handle form submission
     handleSubmit(e) {
-        e.preventDefault();
+        if(e){
+            e.preventDefault();
+        }
 
         let user = {
             email: this.state.email,
             password: this.state.password
         };
-
         this.props.login(user);
     }
 
     demoUser(){
         this.setState({email: 'demo@demo.com', password: '123456', errors: {}})
-        let user = {
-            email: this.state.email,
-            password: this.state.password
-        };
+        // let user = {
+        //     email: this.state.email,
+        //     password: this.state.password
+        // };
         
-        this.props.login(user);
+        // this.props.login(user);
+        // this.handleSubmit();
     }
 
     // Render the session errors if there are any

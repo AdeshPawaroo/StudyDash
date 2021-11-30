@@ -17,8 +17,8 @@ function App() {
 
     return (
         <main>
-            <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
-            <h1 class="clocktitle" >Pomodoro Clock</h1>
+            <h1 id='profile-title' className="clock-main-link"><Link to='/'>Study Dash</Link></h1>
+            <h1 className="clocktitle" >Pomodoro Clock</h1>
             <SettingsContext.Provider value={{
                 showSettings,
                 setShowSettings,
