@@ -3,6 +3,7 @@ import { getFlashcards, getUserFlashcards, getFlashcard, writeFlashcard, updateF
 export const RECEIVE_FLASHCARDS = "RECEIVE_FLASHCARDS";
 export const RECEIVE_USER_FLASHCARDS = "RECIEVE_USER_FLASHCARDS";
 export const RECEIVE_NEW_FLASHCARD = "RECEIVE_NEW_FLASHCARD";
+export const REMOVE_FLASHCARD = "REMOVE_FLASHCARD";
 
 export const receiveFlashcards = flashcards => ({
     type: RECEIVE_FLASHCARDS,
@@ -19,9 +20,10 @@ export const receiveNewFlashcard = flashcard => ({
     flashcard
 });
 
-
-
-
+export const destroyFlashcard = id => ({
+    type: REMOVE_FLASHCARD,
+    id
+})
 
 export const fetchFlashcards = () => dispatch => (
     getFlashcards()
@@ -55,6 +57,6 @@ export const editFlashcard = (id) => dispatch => (
 
 export const removeFlashcard = (id) => dispatch => (
     deleteFlashcard(id)
-        // .then((flashcard) => dispatch)
+        .then(() => dispatch(destroyFlashcard(id)))
         .catch(err => console.log(err))
 );

@@ -1,38 +1,37 @@
-import React, { useEffect, useState } from "react";
+import './App.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Timer from "./timer";
+import { Link } from 'react-router-dom';
+import { useState } from "react";
+import Settings from './Settings';
+import SettingsContext from "./SettingsContext";
 
+function App() {
 
-
-export default function App() {
-    const [secondsLeft, setSecondsLeft] = useState(25 * 60);
-    const [timer, setTimer] = useState();
-
-
-    const start = () => {
-        const timer = setInterval(() => {
-            setSecondsLeft((secondsLeft) => secondsLeft - 1);
-            if (secondsLeft === 0) {
-                clearInterval(timer);
-            }
-        }, 1000);
-        setTimer(timer);
-        
-    };
-
-    useEffect(() => {
-        if (secondsLeft === 0) {
-            clearInterval(timer);
-        }
-    }, [secondsLeft, timer]);
-
-    useEffect(() => {
-        return () => clearInterval(timer);
-    }, [timer]);
+    const [showSettings, setShowSettings] = useState(false);
+    const [workMinutes, setWorkMinutes] = useState(45);
+    const [breakMinutes, setBreakMinutes] = useState(15);
+    console.log('hi')
+    // debugger;
 
     return (
-        <div className="App">
-            <h1>Pomodoro Timer</h1>
-            <button onClick={start}>start</button>
-            <div>{secondsLeft} seconds left</div>
-        </div>
+        <main>
+            <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
+            <h1 class="clocktitle" >Pomodoro Clock</h1>
+            <SettingsContext.Provider value={{
+                showSettings,
+                setShowSettings,
+                workMinutes,
+                breakMinutes,
+                setWorkMinutes,
+                setBreakMinutes
+            }}>
+
+            {showSettings ? <Settings /> : <Timer />}
+            </SettingsContext.Provider>
+        </main>
     );
 }
+
+export default App;
