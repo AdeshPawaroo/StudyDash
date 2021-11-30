@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import ClockPage from "./clock_page"
+import ClockPage from "./clock"
 
 
 

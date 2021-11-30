@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Timer from "./timer";
-
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 import Settings from './Settings';
 import SettingsContext from "./SettingsContext";
@@ -17,6 +17,8 @@ function App() {
 
     return (
         <main>
+            <h1 id='profile-title' class="clock-main-link"><Link to='/'>Study Dash</Link></h1>
+            <h1 class="clocktitle" >Pomodoro Clock</h1>
             <SettingsContext.Provider value={{
                 showSettings,
                 setShowSettings,
