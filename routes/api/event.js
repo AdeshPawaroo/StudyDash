@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+const mongoose = require("mongoose");
 const validateEventInput = require('../../validation/event');
 const Event = require('../../models/Event');
-const keys = require("../../config/keys");
-const jwt = require("jsonwebtoken");
 
 router.get("/test", (req, res) => {
     res.json({msg: "This is the event route"});
@@ -29,9 +28,9 @@ router.post("/",
     }
 )
 
-router.get("/user/:user_id", (req, res) => {
+router.get("/", (req, res) => {
     Event 
-        .find({ user: req.params.user_id })
+        .find()
         .then(events => res.json(events))
         .catch(err => res.status(400).json(err));
 });

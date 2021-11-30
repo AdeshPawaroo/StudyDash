@@ -12,3 +12,15 @@ export const receiveNewEvent = event => ({
     type: RECEIVE_NEW_EVENT,
     event
 })
+
+export const fetchEvents = () => dispatch => (
+    getEvent()
+        .then(events => dispatch(receiveEvents(events)))
+        .catch(err => console.log(err))
+);
+
+export const createEvent = (data) => dispatch => (
+    writeEvent(data)
+        .then(event => dispatch(receiveNewEvent(event)))
+        .catch(err => console.log(err))
+);
