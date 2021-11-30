@@ -22,3 +22,9 @@
 .redir-create {
     font-size: 3rem;
 }
+
+.edit-card-form {
+    width: 100%;
+    height: 89vh;
+
+}
