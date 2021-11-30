@@ -68,7 +68,7 @@ const App = () => (
 
             <ProtectedRoute exact path="/flashcards" component={UserFlashcards} />
             <ProtectedRoute exact path="/flashcards/new" component={CreateFlashcard} />
-            <ProtectedRoute exact path="/flashcards/edit" component={FlashcardEdit} />
+            <ProtectedRoute exact path="/flashcards/:flashcard_id" component={FlashcardEdit} />
      
         </Switch>
         <Footer />

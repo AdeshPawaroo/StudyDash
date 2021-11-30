@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 
 import { Flashcard } from "./flashcard";
 import { fetchUserFlashcards } from "../../actions/flashcard_actions";
-import { FlashcardEdit } from "./flashcard_edit";
 
 class UserFlashcards extends React.Component {
     constructor(props) {
@@ -32,7 +30,7 @@ class UserFlashcards extends React.Component {
                                 key={flashcard._id}
                                 question={flashcard.question}
                                 answer={flashcard.answer}
-                                id={flashcard._id}
+                                card_id={flashcard._id}
                                 user_id={flashcard.user}
                             />
                        </div> 

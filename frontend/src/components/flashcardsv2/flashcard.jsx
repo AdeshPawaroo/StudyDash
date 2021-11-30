@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { removeFlashcard } from "../../actions/flashcard_actions";
 import { fetchUserFlashcards } from "../../actions/flashcard_actions";
+import { Link } from "react-router-dom";
 
 export const Flashcard = (props) => {
 
@@ -27,10 +28,7 @@ export const Flashcard = (props) => {
         });
     }
 
-    const handleEdit = (e) => {
-        e.preventDefault();
-
-    }
+    const redir = `/flashcards/${props.card_id}`;
 
     return (
         <div className="flashcard-container">
@@ -47,14 +45,19 @@ export const Flashcard = (props) => {
             <span onClick={handleDelete}>DELETE</span>
             <br />
             <br />
-            <span onClick={handleEdit}>UPDATE</span>
-            {/* <Link to={{
-                pathname: "/flashcards/edit",
-
-                
-            }}>
-            UPDATE
-            </Link> */}
+            <Link to={redir}>UPDATE</Link>
+            {/* <span onClick={handleUpdate}>UPDATE</span> */}
         </div>
     )
 }
+
+
+
+{/* <Link to={{
+    pathname: "/flashcards/edit",
+    props: {
+        id: props.id
+    }
+}}>
+UPDATE
+</Link> */}
