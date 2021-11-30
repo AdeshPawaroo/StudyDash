@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 
 import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
-
+import Events from './events_container'
 
 export default function CalenderContainer() {
   
@@ -130,7 +130,6 @@ export default function CalenderContainer() {
 
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
-    const [date, setdate] = useState(new Date());
 
     function handleAddEvent(){
         setAllEvents([...allEvents, newEvent])

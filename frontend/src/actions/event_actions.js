@@ -1,4 +1,4 @@
-import { addEvent, getEvemts } from '../util/events_api_util';
+import { addEvent, getEvents } from '../util/events_api_util';
 
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_NEW_EVENT = "RECEIVE_NEW_EVENT";
@@ -14,13 +14,13 @@ export const receiveNewEvent = event => ({
 })
 
 export const fetchEvents = () => dispatch => (
-    getEvent()
+    addEvent()
         .then(events => dispatch(receiveEvents(events)))
         .catch(err => console.log(err))
 );
 
 export const createEvent = (data) => dispatch => (
-    writeEvent(data)
+    getEvents(data)
         .then(event => dispatch(receiveNewEvent(event)))
         .catch(err => console.log(err))
 );
