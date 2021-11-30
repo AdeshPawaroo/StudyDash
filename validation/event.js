@@ -14,6 +14,14 @@ module.exports = function validateEventInput(data) {
         errors.title = "Title is required"
     }
 
+    if(Validator.isEmpty(data.startDate)){
+        errors.title = "Start date is required"
+    }
+
+    if(Validator.isEmpty(data.endDate)){
+        errors.title = "End date is required"
+    }
+
     return {
         errors,
         isValid: Object.keys(errors).length === 0

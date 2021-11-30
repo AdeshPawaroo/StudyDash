@@ -13,7 +13,7 @@ router.get("/test", (req, res) => {
 router.post("/", 
     passport.authenticate("jwt", {session: false}), 
     (req, res) => {
-        const { errors, isValid } = validateEventInput(req.body);
+        const { isValid, errors } = validateEventInput(req.body);
 
         if(!isValid) {
             return res.status(400).json(errors);
@@ -29,14 +29,11 @@ router.post("/",
     }
 )
 
-router.get('/', (req, res) => {
-    Event.find((err, events) => {
-        if (err)
-            console.log(err);
-        else {
-            res.json(events);
-        }
-    });
+router.get("/user/:user_id", (req, res) => {
+    Event 
+        .find({ user: req.params.user_id })
+        .then(events => res.json(events))
+        .catch(err => res.status(400).json(err));
 });
 
 module.exports = router;

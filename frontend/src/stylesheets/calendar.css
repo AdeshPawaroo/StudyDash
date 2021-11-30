@@ -26,7 +26,7 @@
     font-size: 35px;
     font-weight: bold;
     color: white;
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 1.3px;
     -webkit-text-stroke-color: black;
 }
 
@@ -41,6 +41,7 @@
 
 .rbc-row.rbc-month-header {
     background-color: white;
+    border: 1px solid black;
 }
 
 .rbc-btn-group {

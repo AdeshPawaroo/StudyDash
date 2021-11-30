@@ -130,6 +130,7 @@ export default function CalenderContainer() {
 
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
+    const [date, setdate] = useState(new Date());
 
     function handleAddEvent(){
         setAllEvents([...allEvents, newEvent])
@@ -151,12 +152,12 @@ export default function CalenderContainer() {
                     </div>
                     
                     <div className="date-picker">
-                        <Datetime placeholderText="Start date" style={{marginRight: "10px"}}
+                        <Datetime initialValue="Start date" style={{marginRight: "10px"}}
                         selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})} />
                     </div>
 
                     <div className="date-picker">
-                        <Datetime placeholderText="End date" selected={newEvent.end} 
+                        <Datetime initialValue="End date" selected={newEvent.end}
                         onChange={(end) => setNewEvent({...newEvent, end})} />
                     </div>
 
