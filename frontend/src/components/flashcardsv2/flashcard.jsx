@@ -11,7 +11,10 @@ export const Flashcard = (props) => {
         answer: props.answer
     });
 
+    const [flip, setFlip] = useState(false);
+
     const dispatch = useDispatch();
+    const redir = `/flashcards/${props.card_id}`;
 
     useEffect(() => {
         dispatch(fetchUserFlashcards(props.user_id))
@@ -28,38 +31,33 @@ export const Flashcard = (props) => {
         });
     }
 
-
-
-    const redir = `/flashcards/${props.card_id}`;
-
     return (
-        <div className="flashcard-container">
-            <label>Question:</label>
-            <br />
-            <span>{props.question}</span>
-            <br />
-            <br />
-            <label>Answer</label>
-            <br />
-            <span className="card-answer">{props.answer}</span>
-            <br />
-            <br />
-            <span onClick={handleDelete}>DELETE</span>
-            <br />
-            <br />
+        <div className="flashcards-container">
+            <div className="flashcard" onClick={() => setFlip(!flip)}>
+                {flip ? flashcard.answer : flashcard.question}
             <Link to={redir}>UPDATE</Link>
-            {/* <span onClick={handleUpdate}>UPDATE</span> */}
+            </div>
         </div>
     )
+
+    // return (
+    //     <div className="flashcard-container">
+    //         <label>Question:</label>
+    //         <br />
+    //         <span>{props.question}</span>
+    //         <br />
+    //         <br />
+    //         <label>Answer</label>
+    //         <br />
+    //         <span className="card-answer">{props.answer}</span>
+    //         <br />
+    //         <br />
+    //         <span onClick={handleDelete}>DELETE</span>
+    //         <br />
+    //         <br />
+    //         <Link to={redir}>UPDATE</Link>
+    //         {/* <span onClick={handleUpdate}>UPDATE</span> */}
+    //     </div>
+    // )
 }
 
-
-
-{/* <Link to={{
-    pathname: "/flashcards/edit",
-    props: {
-        id: props.id
-    }
-}}>
-UPDATE
-</Link> */}

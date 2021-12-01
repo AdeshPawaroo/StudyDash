@@ -1,4 +1,31 @@
+/* MAIN */
 .user-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-cards {
+    height: 97vh;
+    width: 100%;
+}
+
+.flashcards-container {
+    height: 97vh;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* .user-cards-container {
     width: 100%;
     height: 97vh;
     display: flex;
@@ -27,4 +54,4 @@
     width: 100%;
     height: 89vh;
 
-}
+} */

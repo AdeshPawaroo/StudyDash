@@ -21,8 +21,8 @@ class UserFlashcards extends React.Component {
     render() {
         return (
             <div className="user-cards-container">
-                <Link to="/flashcards/new" className="redir-create">Click here to create more flashcards!</Link>
                 <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
+                <Link to="/flashcards/new" className="redir-create">Click here to create more flashcards!</Link>
                 <div className="user-cards">
                     {this.props.flashcards.map(flashcard => (
                        <div>
