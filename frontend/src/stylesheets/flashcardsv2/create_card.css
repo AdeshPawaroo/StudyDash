@@ -64,12 +64,17 @@
 .update-card-btn {
     text-decoration: none;
     color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+
 }
 
 .update-card-btn:visited {
     color: black;
 }
 
+
 .delete-card-btn {
-    
+    text-decoration: none;
+    color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }

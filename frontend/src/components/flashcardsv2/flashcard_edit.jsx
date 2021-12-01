@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { editFlashcard, fetchFlashcard } from "../../actions/flashcard_actions";
+import { fetchFlashcard } from "../../actions/flashcard_actions";
 
 
 export const FlashcardEdit = (props) => {
@@ -22,10 +22,10 @@ export const FlashcardEdit = (props) => {
                 answer: res.flashcards.data.answer
             }))
     }, []);
-    
-    const handleClick = (e) => {
+
+    const handleRedir = (e) => {
         e.preventDefault();
-        console.log(props);
+
         props.history.push("/flashcards")
     }
 
@@ -56,18 +56,16 @@ export const FlashcardEdit = (props) => {
 
     return (
         <div className="card-edit-container">
-            <form onSubmit={handleSubmit}>
-                <div className="card-edit-question">
-                    <label>Question:</label>
+            <form className="card-edit-form-container" >
+                <div className="card-edit-form">
+                    <label className="question-edit-label">Question:</label>
                     <br />
                     <input type="textarea"
                         className="question-edit-field"
                         value={flashcard.question}
                         onChange={handleQuestion}
                     />
-                </div>
-                <br />
-                <div className="card-edit-answer">
+                    <br />
                     <label>Answer:</label>
                     <br />
                     <input type="textarea" 
@@ -75,9 +73,15 @@ export const FlashcardEdit = (props) => {
                         value={flashcard.answer}
                         onChange={handleAnswer}
                     />
+                    <br />
+                    <br />
+                    <button className="flashcard-edit-btn" onClick={handleSubmit}>Update!</button>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <button className="redir-cards2" onClick={handleRedir}>Click here to back to your flashcards!</button>
                 </div>
-                <input className="edit-submit" type="submit" value="Update Flashcard" />
-                <span onClick={handleClick}>Click here to go back to you flashcards!</span>
             </form>
         </div>
     )
