@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileContainer from '../profile/profile_container';
-import TodosList from '../todo/TodoList';
+// import TodosList from '../todo/TodoList';
 
 class MainPage extends React.Component {
     constructor(props){
@@ -76,7 +76,7 @@ class MainPage extends React.Component {
                 <div className="pomodorobox">
                     <div className="titleofbox">Flash Cards</div>
                         <p className="maindesc">Test your studying habits</p>
-                        <p className="clickbutton"><Link to={'/flashcards/user'} className="clocklink">Go</Link></p>
+                        <p className="clickbutton"><Link to={'/flashcards'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
                         <div className="titleofbox">Profile Analytics<i className="far fa-chart-bar"></i></div>

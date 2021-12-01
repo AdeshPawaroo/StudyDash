@@ -38,24 +38,24 @@ class FlashcardEdit extends React.Component {
         });
     }
 
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     const obj = {
-    //         question: this.state.question,
-    //         answer: this.state.answer
-    //     }
-    //     axios.post('http://localhost:5000/api/flashcards/' + this.props.match.params.flashcard_id, obj)
-    //         .then(res => console.log(res.data))
-    //         .catch(err => console.log(err))
-
-    //     // this.props.history.push("/flashcards/user");
-    // }
-
     handleSubmit(e) {
         e.preventDefault();
+        const obj = {
+            question: this.state.question,
+            answer: this.state.answer
+        }
+        axios.post('http://localhost:5000/api/flashcards/' + this.props.match.params.flashcard_id, obj)
+            .then(res => console.log(res.data))
+            .catch(err => console.log(err))
+
+        // this.props.history.push("/flashcards/user");
+    }
+
+    // handleSubmit(e) {
+    //     e.preventDefault();
 
         
-    }
+    // }
 
     handleClick(e) {
         e.preventDefault();
@@ -79,6 +79,7 @@ class FlashcardEdit extends React.Component {
                         <p className='edit-answer-header'>Answer:</p>
                         <br />
                         <input type="textarea" 
+                            value={this.state.answer}
                             onChange={this.onChangeAnswer}
                             className="edit-answer-field"
                         />
