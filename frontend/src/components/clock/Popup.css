@@ -1,0 +1,39 @@
+.popup {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #FFF;
+    border-radius: 40px;
+    color: black;
+}
+
+.popup-inner .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.help-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 900;
+}
+.help-info {
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}

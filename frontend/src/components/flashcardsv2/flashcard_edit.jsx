@@ -12,11 +12,6 @@ export const FlashcardEdit = (props) => {
         answer: ""
     });
 
-    // const [newFlashcard, setNewFlashcard] = useState({
-    //         question: "",
-    //         answer: ""
-    // });
-
     const dispatch = useDispatch();
     const card_id = props.match.params.flashcard_id;
 

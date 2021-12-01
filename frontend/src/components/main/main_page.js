@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProfileContainer from '../profile/profile_container';
-import TodosList from '../todo/TodoList';
+// import TodosList from '../todo/TodoList';
 
 class MainPage extends React.Component {
     constructor(props){
         super(props)
         this.logoutUser = this.logoutUser.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.getAllTodo();
+        this.props.fetchUserFlashcards(this.props.currentUser.id);
     }
 
     logoutUser(e) {
@@ -32,7 +37,7 @@ class MainPage extends React.Component {
         if(this.props.currentUser){
             greeting = (
                 <div className='greeting'>
-                    <h2 className="welcomemsg">Good {msg}, {this.props.currentUser.handle}!<i class="far fa-hand-peace"></i></h2>
+                    <h2 className="welcomemsg">Good {msg}, {this.props.currentUser.handle}!<i className="far fa-hand-peace"></i></h2>
                     <button id='logout-button' onClick={this.logoutUser}>Logout</button>
                     
                 </div>
@@ -47,24 +52,24 @@ class MainPage extends React.Component {
                 <br />
                 <div className="leftcontainer">
                 <div className="pomodorobox">
-                        <div className="titleofbox">Pomodoro Clock<i class="far fa-clock"></i></div>
+                        <div className="titleofbox">Pomodoro Clock<i className="far fa-clock"></i></div>
                         <p className="maindesc">Start a timed study session</p>
                         <p className="clickbutton"><Link to={'/clock'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
-                        <div className="titleofbox">Manage Tasks<i class="fas fa-tasks"></i></div>
+                        <div className="titleofbox">Manage Tasks<i className="fas fa-tasks"></i></div>
                     <p className="maindesc">Keep track of your deadlines</p>
                         <p className="clickbutton"><Link to={'/list'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
-                        <div className="titleofbox">Study Playlist<i class="fas fa-headphones-alt"></i></div>
+                        <div className="titleofbox">Study Playlist<i className="fas fa-headphones-alt"></i></div>
                         <p className="maindesc">Play some study music</p>
                         <p className="clickbutton"><Link to={'/playlist'} className="clocklink">Go</Link></p>
                 </div>
                 </div>
                     <div className="rightcontainer">
                 <div className="pomodorobox">
-                        <div className="titleofbox">Calender<i class="far fa-calendar"></i></div>
+                        <div className="titleofbox">Calender<i className="far fa-calendar"></i></div>
                         <p className="maindesc">Check calender for your schedule</p>
                         <p className="clickbutton"><Link to={'/calender'} className="clocklink">Go</Link></p>
                 </div>
@@ -74,7 +79,7 @@ class MainPage extends React.Component {
                         <p className="clickbutton"><Link to={'/flashcards'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
-                        <div className="titleofbox">Profile Analytics<i class="far fa-chart-bar"></i></div>
+                        <div className="titleofbox">Profile Analytics<i className="far fa-chart-bar"></i></div>
                         <p className="maindesc">Track your study habits</p>
                         <p className="clickbutton"><Link to='/profile' component={ProfileContainer} className="clocklink">Go</Link></p>
                 </div>
