@@ -37,10 +37,28 @@
 
 .card-contents {
     border: black solid;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+;
 }
 
 .card-buttons {
     border: black solid;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.question-container {
+    display: flex;
+    /* justify-content: center;
+    align-content: center;
+    position: absolute; */
 }
 
 .answer-container {
@@ -49,6 +67,10 @@
 
 .flashcard-container:hover .answer-container {
     display: flex;
+}
+
+.flashcard-container:hover .question-container {
+    display: none;
 }
 
 

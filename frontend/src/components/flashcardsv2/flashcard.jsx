@@ -41,11 +41,11 @@ export const Flashcard = (props) => {
                     Answer: {props.answer}
                 </div>
             </div>
-            <br/>
             
             <div className="card-buttons">
                 <Link to={redir}>UPDATE</Link>
-                <button className="delete-btn" onClick={handleDelete}>Delete</button>
+                <span onClick={handleDelete} className="delete-btn">Delete</span>
+                {/* <button className="delete-btn" onClick={handleDelete}>Delete</button> */}
             </div>
         </div>            
     )
