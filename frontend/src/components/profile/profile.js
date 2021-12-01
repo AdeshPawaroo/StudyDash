@@ -34,6 +34,15 @@ class Profile extends React.Component {
             totalTime -= (minutes * 60);
         }
         const seconds = totalTime;
+        let tasksDone = []
+        let activeTasks = []
+        this.props.todos.forEach(todo => {
+            if(todo.done){
+                tasksDone.push(todo)
+            } else {
+                activeTasks.push(todo)
+            }
+        })
 
         return(
             <div className='profile-div'>
@@ -49,12 +58,18 @@ class Profile extends React.Component {
 
                     <h2>Analytics:</h2>
                     <div className='profile-info-div analytics'>
-                        {/* <div className='profile-info'>
+                        <div className='profile-info'>
+                            Active Tasks: {activeTasks.length}
+                        </div>
+                        <div className='profile-info'>
+                            Tasks Completed: {tasksDone.length}
+                        </div>
+                        <div className='profile-info'>
                             Total Tasks: {this.props.todos.length}
                         </div>
                         <div className='profile-info'>
                             Total Flashcards: {this.props.flashcards.length}
-                        </div> */}
+                        </div>
                         <div className='profile-info'>
                             Days Logged In: {this.props.currentUser.daysLoggedIn}
                         </div>

@@ -9,7 +9,7 @@ import SettingsContext from "./SettingsContext";
 import MusicPage from '../music/music_page';
 // import Modal from '../modal/modal';
 
-function App() {
+function App(props) {
 
     const [showSettings, setShowSettings] = useState(false);
     const [workMinutes, setWorkMinutes] = useState(45);
@@ -30,7 +30,7 @@ function App() {
                 setBreakMinutes
             }}>
 
-            {showSettings ? <Settings /> : <Timer />}
+            {showSettings ? <Settings /> : <Timer receiveTimeStudied={props.receiveTimeStudied} currentUser={props.currentUser}/>}
             </SettingsContext.Provider>
             
         </main>
