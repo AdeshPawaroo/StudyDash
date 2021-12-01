@@ -2,19 +2,32 @@ import React from 'react';
 
 
 export default () => {
-    return (
-        <footer id="all-page-footer">
-            <div className="footer-list-container">
-                <ul>
-                </ul>
+    if (window.location.hash === '#/login' || window.location.hash === '#/signup') {
+        return null 
+    }
+    else {
+        return (
+            
+            <div style={{paddingTop: '20px'}}>
+                <iframe src="https://open.spotify.com/embed/playlist/2pCWQFnu7EBlLNJInbytUw?utm_source=generator&theme=0" width="100%" height="80px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <footer id="all-page-footer">
+                <div className="footer-list-container">
+                    <ul>
+                    </ul>
+                </div>
+                <div className="footer-tag-line">
+                    <h3 id="copyright">{'\u00A9'} 2021 StudyDash Inc. All rights reserved</h3>
+                </div>
+    
+            </footer>
+    
             </div>
-            <div className="footer-tag-line">
-                <h3 id="copyright">{'\u00A9'} 2021 StudyDash Inc. All rights reserved</h3>
-            </div>
+        )
+    }
+}
 
-        </footer>
-        
-    //     <footer className="site-footer">
+
+        //     <footer className="site-footer">
 
     //         <div className="container">
     //             <div className="row">
@@ -67,6 +80,3 @@ export default () => {
     //                 </div>
     //             </div>
     //     </footer>
-  
-    )
-}

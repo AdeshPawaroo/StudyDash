@@ -1,0 +1,75 @@
+.card-create-form-container {
+    width: 100%;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-create-form {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-field {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 50%;
+    height: 5%;
+    text-align: center;
+}
+
+.answer-field {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 50%;
+    height: 5%;
+    text-align: center;
+}
+
+.flashcard-create-btn {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 10%;
+    height: 2rem;
+    color: teal;
+    background-color: white;
+    border: none;
+    border-radius: .5rem;
+}
+
+.flashcard-create-btn:hover {
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+}
+
+.redir-cards {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: teal;
+    background-color: white;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+
+.redir-cards:hover {
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+}
+
+.update-card-btn {
+    text-decoration: none;
+    color: black;
+}
+
+.update-card-btn:visited {
+    color: black;
+}
+
+.delete-card-btn {
+    
+}
