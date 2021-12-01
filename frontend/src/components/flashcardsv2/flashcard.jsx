@@ -29,8 +29,6 @@ export const Flashcard = (props) => {
         });
     }
 
-    console.log(props);
-
     const handleUpdate = (e) => {
         e.preventDefault();
 
@@ -48,10 +46,10 @@ export const Flashcard = (props) => {
             </div>
             
             <div className="card-buttons">
-                <button onClick={handleUpdate} className="update-card-btn">UPDATE</button>
-                <button onClick={handleDelete} className="delete-card-btn">DELETE</button>
-                {/* <Link to={redir}>UPDATE</Link>
-                <span onClick={handleDelete} className="delete-btn">Delete</span> */}
+                <Link className="update-card-btn" to={redir}>UPDATE</Link>
+                <span className="delete-card-btn"onClick={handleDelete}>DELETE</span>
+
+
             </div>
         </div>            
     )

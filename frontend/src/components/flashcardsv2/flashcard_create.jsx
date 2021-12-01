@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 
 import { composeFlashcard } from "../../actions/flashcard_actions";
 
-export const CreateFlashcard = () => {
+export const CreateFlashcard = (props) => {
 
     const [flashcard, setFlashcard] = useState({
         question: "",
         answer: ""
     })
-
 
     const dispatch = useDispatch();
     const _question = useRef(null);
@@ -33,6 +32,11 @@ export const CreateFlashcard = () => {
         });
     }
 
+    const handleRedir = (e) => {
+        e.preventDefault();
+        props.history.push("/flashcards")
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(composeFlashcard(flashcard));
@@ -46,9 +50,9 @@ export const CreateFlashcard = () => {
 
     return (
         <div className="card-create-container">
-            <form className="card-create-form" >
-                <div>
-                   <label>Question</label>
+            <form className="card-create-form-container" >
+                <div className="card-create-form">
+                   <label className="question-label">Question:</label>
                    <br />
                     <input type="textarea" 
                         value={flashcard.question}
@@ -58,7 +62,7 @@ export const CreateFlashcard = () => {
                         ref={_question}
                     />
                     <br />
-                    <label>Answer</label>
+                    <label className="answer-label">Answer:</label>
                     <br />
                     <input type="textarea" 
                         value={flashcard.answer}
@@ -72,8 +76,10 @@ export const CreateFlashcard = () => {
                     <button className="flashcard-create-btn" onClick={handleSubmit}>Create!</button>
                     <br />
                     <br />
-                    {/* <span onClick={handleClick}>Click here to go back to your flashcards!</span> */}
-                    <Link className="redir-cards" to="/flashcards">Click here to go back to your flashcards</Link>
+                    <br />
+                    <br />
+                    <button className="redir-cards" onClick={handleRedir}>Click here to go back to your flashcards!</button>
+                    {/* <Link className="redir-cards" to="/flashcards">Click here to go back to your flashcards</Link> */}
                 </div>
             </form>
         </div>
