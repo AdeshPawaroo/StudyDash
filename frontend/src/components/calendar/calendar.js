@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 
 import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
-
+ 
 
 export default function CalenderContainer()  {
 
@@ -130,15 +130,12 @@ export default function CalenderContainer()  {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
 
-    localStorage.setItem("savedData", JSON.stringify(allEvents));
-    let objects = JSON.parse(localStorage.getItem("savedData"));
-
     function handleAddEvent(){
-            setAllEvents([...allEvents, newEvent])
+        setAllEvents([...allEvents, newEvent])
+        localStorage.setItem("savedData", JSON.stringify(allEvents));
     }
 
-    console.log(objects, "obj");
-    console.log(allEvents, "all events");
+    let objects = JSON.parse(localStorage.getItem("savedData"));
     
     return (
         <div className="calender-container">
