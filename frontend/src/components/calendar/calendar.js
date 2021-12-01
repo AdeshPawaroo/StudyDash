@@ -29,20 +29,121 @@ export default function CalenderContainer()  {
         locales
     })
 
-    const events = [];
+    const events = [ 
+        {
+            title: "Graduation Day!!! 🎓",
+            start: new Date(2021,11,-6, 15, 30),
+            end: new Date(2021,11,-6, 16, 0)
+        },
+        {
+            title: "MERN Project",
+            start: new Date(2021,11,-15),
+            end: new Date(2021,11,-11)
+        },
+        {
+            title: "MERN Project Due",
+            start: new Date(2021,11,-12),
+            end: new Date(2021,11,-12)
+        },
+        {
+            title: "Personal Pitch",
+            start: new Date(2021,11,-11),
+            end: new Date(2021,11,-11)
+        },
+        {
+            title: "Resume Lecture",
+            start: new Date(2021,11,-11),
+            end: new Date(2021,11,-11)
+        },
+        {
+            title: "Behavioral Interviewing",
+            start: new Date(2021,11,-11),
+            end: new Date(2021,11,-11)
+        },
+        {
+            title: "Technical Interviewing",
+            start: new Date(2021,11,-11),
+            end: new Date(2021,11,-11)
+        },
+        {
+            title: "Online Presence Lecture",
+            start: new Date(2021,11,-8),
+            end: new Date(2021,11,-8)
+        },
+        {
+            title: "Applying Approaches Lecture",
+            start: new Date(2021,11,-8),
+            end: new Date(2021,11,-8)
+        },
+        {
+            title: "Memoization/Recursion",
+            start: new Date(2021,11,-8),
+            end: new Date(2021,11,-8)
+        },
+        {
+            title: "Cover Letter",
+            start: new Date(2021,11,-7),
+            end: new Date(2021,11,-7)
+        },
+        {
+            title: "Tabulation, Naive Sorts",
+            start: new Date(2021,11,-7),
+            end: new Date(2021,11,-7)
+        },
+        {
+            title: "Open Material Completion",
+            start: new Date(2021,11,-7),
+            end: new Date(2021,11,-7)
+        },
+        {
+            title: "Portfolio Site",
+            start: new Date(2021,11,-6),
+            end: new Date(2021,11,-6)
+        },
+        {
+            title: "Negotiation Lecture",
+            start: new Date(2021,11,-6),
+            end: new Date(2021,11,-6)
+        },
+        {
+            title: "Thanksgiving 🦃",
+            start: new Date(2021,11,-5),
+            end: new Date(2021,11,-5)
+        },
+        {
+            title: "Sorts, Search, Linked List & Queues",
+            start: new Date(2021,11,0),
+            end: new Date(2021,11,0)
+        },
+        {
+            title: "Stacks, Queues, BSTs, Trees",
+            start: new Date(2021,12,-30),
+            end: new Date(2021,12,-30)
+        },
+        {
+            title: "Graphs, Heaps, Tries",
+            start: new Date(2021,12,-29),
+            end: new Date(2021,12,-29)
+        }
+    ];
 
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
+
+    localStorage.setItem("savedData", JSON.stringify(allEvents));
+    let objects = JSON.parse(localStorage.getItem("savedData"));
 
     function handleAddEvent(){
             setAllEvents([...allEvents, newEvent])
     }
 
+    console.log(objects, "obj");
+    console.log(allEvents, "all events");
     
     return (
         <div className="calender-container">
             <h1 id='profile-title' className='calendar-link'><Link to='/' >Study Dash</Link></h1>
-            <Calendar localizer={localizer} events={events} 
+            <Calendar localizer={localizer} events={objects} 
             startAccessor="start" endAccessor="end" 
             style={{height: 600, margin: "50px"}} />
 
