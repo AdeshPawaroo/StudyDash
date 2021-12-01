@@ -53,7 +53,6 @@ class FlashcardBox extends React.Component {
         document.getElementsByClassName("answer-container")[this.props.index].style.flexDirection = "column";
         document.getElementsByClassName("answer-container")[this.props.index].style.fontWeight = "bold";
         document.getElementsByClassName("answer-container")[this.props.index].style.fontSize = "2vh";
-
     }
 
     handleHide(e) {

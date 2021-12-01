@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: gray;
 }
 
 .flashcard-container {
@@ -25,7 +26,32 @@
     height: 40vh;
     border: black solid;
     margin: 2rem;
+    background-color: whitesmoke;
+    border-radius: .50rem;
+    box-shadow: 0 0  5px 2px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.card-contents {
+    border: black solid;
+}
+
+.card-buttons {
+    border: black solid;
+}
+
+.answer-container {
+    display: none;
+}
+
+.flashcard-container:hover .answer-container {
+    display: flex;
+}
+
+
 
 .redir-create {
     font-size: 3rem;
@@ -34,5 +60,4 @@
 .edit-card-form {
     width: 100%;
     height: 89vh;
-
 } 
