@@ -31,7 +31,7 @@ function App(props) {
                 setBreakMinutes
             }}>
 
-            {showSettings ? <Settings /> : <Timer receiveTimeStudied={props.receiveTimeStudied} currentUser={props.currentUser}/>}
+            {showSettings ? <Settings /> : <Timer editUser={props.editUser} currentUser={props.currentUser}/>}
             </SettingsContext.Provider>
             {/* <Footer /> */}
             

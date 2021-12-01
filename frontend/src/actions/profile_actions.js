@@ -1,4 +1,5 @@
 import { updateUser } from "../util/profile_util";
+import { RECEIVE_CURRENT_USER } from "./session_actions";
 
 export const RECEIVE_TIME_STUDIED = "RECEIVE_TIME_STUDIED";
 export const RECEIVE_USER = "RECEIVE_USER";
@@ -15,12 +16,12 @@ export const receiveTimeStudied = timeStudied => ({
 // )
 
 export const receiveUser = user => ({
-    type: RECEIVE_USER,
+    type: RECEIVE_CURRENT_USER,
     user
 });
 
-export const editUser = (id) => dispatch => (
-    updateUser(id)
+export const editUser = (user) => dispatch => (
+    updateUser(user)
         .then((user) => dispatch(receiveUser(user)))
         .catch(err => console.log(err))
 )

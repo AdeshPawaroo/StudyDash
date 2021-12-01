@@ -7,18 +7,18 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-    let timeStudied = undefined;
-    switch (action.type) {
-        case RECEIVE_TIME_STUDIED:
-            timeStudied = action.timeStudied;
-        default:
-            timeStudied = undefined;
-    }
+    // let timeStudied = undefined;
+    // switch (action.type) {
+    //     case RECEIVE_TIME_STUDIED:
+    //         timeStudied = action.timeStudied;
+    //     default:
+    //         timeStudied = undefined;
+    // }
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            if (timeStudied){
-                action.currentUser.timeStudied = timeStudied;
-            }
+            // if (timeStudied){
+            //     action.currentUser.timeStudied = timeStudied;
+            // }
             return {
                 isAuthenticated: true,
                 user: action.currentUser,

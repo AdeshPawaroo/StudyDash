@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 import ClockPage from "./clock"
-import { receiveTimeStudied } from "../../actions/profile_actions";
+import { receiveTimeStudied,  editUser} from "../../actions/profile_actions";
 
 
 
@@ -12,7 +12,8 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
     return {
-        receiveTimeStudied: (timeStudied) => dispatch(receiveTimeStudied(timeStudied))
+        receiveTimeStudied: (timeStudied) => dispatch(receiveTimeStudied(timeStudied)),
+        editUser: (user) => dispatch(editUser(user))
     }
 }
 

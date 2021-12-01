@@ -31,8 +31,8 @@ function Timer(props) {
 
     function tick() {
         props.currentUser.timeStudied += 1;
-        let timeStudied = props.currentUser.timeStudied;
-        props.receiveTimeStudied(timeStudied);
+        // let timeStudied = props.currentUser.timeStudied;
+        props.editUser(props.currentUser);
         secondsLeftRef.current--; //current - 1 
         setSecondsLeft(secondsLeftRef.current);
 
