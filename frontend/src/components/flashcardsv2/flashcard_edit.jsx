@@ -69,7 +69,7 @@ export const FlashcardEdit = (props) => {
                     <label>Answer:</label>
                     <br />
                     <input type="textarea" 
-                        className="card-answer-field"
+                        className="answer-edit-field"
                         value={flashcard.answer}
                         onChange={handleAnswer}
                     />

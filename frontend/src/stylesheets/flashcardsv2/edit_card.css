@@ -1,4 +1,4 @@
-.card-edit-container {
+.card-edit-form-container {
     width: 100%;
     height: 97vh;
     display: flex;
@@ -16,3 +16,47 @@
     justify-content: center;
 }
 
+.question-edit-field {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 50%;
+    height: 5%;
+    text-align: center;
+}
+
+.answer-edit-field {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 50%;
+    height: 5%;
+    text-align: center;
+}
+
+.flashcard-edit-btn {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: 10%;
+    height: 2rem;
+    color: teal;
+    background-color: white;
+    border: none;
+    border-radius: .5rem;
+}
+
+.flashcard-edit-btn:hover {
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+}
+
+.redir-cards2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: teal;
+    background-color: white;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+
+.redir-cards2:hover {
+    color: white;
+    background-color: teal;
+    cursor: pointer;
+}

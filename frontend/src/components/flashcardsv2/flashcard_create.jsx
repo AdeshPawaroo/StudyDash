@@ -50,7 +50,7 @@ export const CreateFlashcard = (props) => {
 
     return (
         <div className="card-create-container">
-            <form className="card-create-form-container" >
+            <form className="   m-container" >
                 <div className="card-create-form">
                    <label className="question-label">Question:</label>
                    <br />
