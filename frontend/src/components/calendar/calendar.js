@@ -15,7 +15,6 @@ import { Link } from 'react-router-dom';
 
 import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
- 
 
 export default function CalenderContainer()  {
 
@@ -28,6 +27,8 @@ export default function CalenderContainer()  {
         getDay,
         locales
     })
+
+    
 
     const events = [ 
         {
@@ -136,7 +137,7 @@ export default function CalenderContainer()  {
     }
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
-    
+ 
     return (
         <div className="calender-container">
             <h1 id='profile-title' className='calendar-link'><Link to='/' >Study Dash</Link></h1>
