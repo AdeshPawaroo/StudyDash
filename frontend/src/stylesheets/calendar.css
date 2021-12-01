@@ -1,6 +1,5 @@
 .calender-form{
     padding-left: 10px;
-    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,9 +26,25 @@
     font-size: 35px;
     font-weight: bold;
     color: white;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: black;
 }
 
 .calendar-link{
     display: flex;
     justify-content: center;
+}
+
+.rbc-day-bg {
+    background-color: white;
+}
+
+.rbc-row.rbc-month-header {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.rbc-btn-group {
+    background-color: white;
+    border-radius: 5px;
 }

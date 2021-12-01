@@ -14,6 +14,7 @@ const mongoose = require("mongoose");
 const todoRoutes = require('./routes/api/todos');
 const keys = require('./config/keys');
 const path = require('path');
+const eventRoutes = require('./routes/api/event')
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
@@ -54,6 +55,7 @@ require('./config/passport')(passport);
 app.use('/api/todos', todoRoutes);
 app.use("/api/users", users)
 app.use("/api/flashcards", flashcards)
+app.use("/api/event", eventRoutes);
 // app.use("/api/tasks", tasks)
 // app.use("/api/tasks", tasks)
 
