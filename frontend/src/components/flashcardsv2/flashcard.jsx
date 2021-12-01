@@ -11,8 +11,6 @@ export const Flashcard = (props) => {
         answer: props.answer
     });
 
-    const [flip, setFlip] = useState(false);
-
     const dispatch = useDispatch();
     const redir = `/flashcards/${props.card_id}`;
 
@@ -31,6 +29,13 @@ export const Flashcard = (props) => {
         });
     }
 
+    console.log(props);
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+
+    }
+
     return (
         <div className='flashcard-container' >
             <div className="card-contents">
@@ -43,9 +48,10 @@ export const Flashcard = (props) => {
             </div>
             
             <div className="card-buttons">
-                <Link to={redir}>UPDATE</Link>
-                <span onClick={handleDelete} className="delete-btn">Delete</span>
-                {/* <button className="delete-btn" onClick={handleDelete}>Delete</button> */}
+                <button onClick={handleUpdate} className="update-card-btn">UPDATE</button>
+                <button onClick={handleDelete} className="delete-card-btn">DELETE</button>
+                {/* <Link to={redir}>UPDATE</Link>
+                <span onClick={handleDelete} className="delete-btn">Delete</span> */}
             </div>
         </div>            
     )

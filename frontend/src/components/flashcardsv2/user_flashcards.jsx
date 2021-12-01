@@ -12,17 +12,26 @@ class UserFlashcards extends React.Component {
         this.state = {
             flashcards: []
         }
+    
+        this.handleRedir = this.handleRedir.bind(this);
     }
+
+    redir_new = "/flashcards/new"
 
     componentDidMount() {
         this.props.fetchUserFlashcards(this.props.currUserID);
+    }
+
+    handleRedir(e) {
+        e.preventDefault();
+        this.props.history.push(this.redir_new)
     }
 
     render() {
         return (
             <div className="user-cards-container">
                 <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
-                <Link to="/flashcards/new" className="redir-create">Click here to create more flashcards!</Link>
+                <button onClick={this.handleRedir} className="new-redir-btn" >Click here to create more flashcards!</button>
                 <div className="user-cards">
                     {this.props.flashcards.map(flashcard => (
                        <div>

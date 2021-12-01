@@ -8,7 +8,6 @@
 }
 
 .user-cards {
-    border: black solid;
     width: 100%;
     height: 100%;
     overflow: scroll;
@@ -24,7 +23,6 @@
 .flashcard-container {
     width: 40vw;
     height: 40vh;
-    border: black solid;
     margin: 2rem;
     background-color: whitesmoke;
     border-radius: .50rem;
@@ -36,17 +34,14 @@
 }
 
 .card-contents {
-    border: black solid;
     width: 100%;
     height: 70%;
     display: flex;
     align-items: center ;
     justify-content: center;
-;
 }
 
 .card-buttons {
-    border: black solid;
     width: 100%;
     height: 3rem;
     display: flex;
@@ -56,13 +51,23 @@
 
 .question-container {
     display: flex;
-    /* justify-content: center;
-    align-content: center;
-    position: absolute; */
+    font-size: 1.3rem;
 }
 
 .answer-container {
     display: none;
+    font-size: 1.3rem;
+
+}
+
+.card-buttons > button {
+    width: 33%;
+    height: 2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.card-buttons > button:hover {
+    cursor: pointer;
 }
 
 .flashcard-container:hover .answer-container {
@@ -75,11 +80,42 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 .redir-create {
     font-size: 3rem;
+    color: black;
+    text-decoration: none;
+    border: black solid;
 }
 
 .edit-card-form {
     width: 100%;
     height: 89vh;
 } 
+
+.new-redir-btn {
+    border: none; 
+    background-color: white;
+    color: teal;
+    height: 5vh;
+    margin-bottom: 1rem;
+    width: 50%;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.new-redir-btn:hover {
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
