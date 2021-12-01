@@ -41,6 +41,7 @@ export const CreateFlashcard = () => {
             question: "",
             answer: ""
         });
+        console.log("hereerererererere");
     }
 
     return (

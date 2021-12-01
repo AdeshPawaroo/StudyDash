@@ -16,18 +16,10 @@ export const writeFlashcard = data => {
     return axios.post("/api/flashcards/", data)
 };
 
-// export const updateFlashcard = flashcard_id => {
-//     return axios.put(`/api/flashcards/${flashcard_id}`)
-// } 
-
-// export const updateFlashcard = flashcard_id => {
-//     return axios.post(`/api/flashcards/${flashcard_id}`)
-// };
-
 export const updateFlashcard = flashcard_id => {
     return axios.post(`api/flashcards/${flashcard_id}`)
-}
+};
 
 export const deleteFlashcard = flashcard_id => {
     return axios.delete(`/api/flashcards/${flashcard_id}`)
-}
+};

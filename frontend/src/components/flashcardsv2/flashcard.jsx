@@ -31,33 +31,32 @@ export const Flashcard = (props) => {
         });
     }
 
+    // return (
+    //         <div className="flashcard" onClick={() => setFlip(!flip)}>
+    //             {flip ? flashcard.answer : flashcard.question}
+    //             <Link to={redir} className="redir-update-card">UPDATE</Link>
+    //             <span onClick={handleDelete}>DELETE</span>
+    //         </div>
+    // )
+
     return (
-        <div className="flashcards-container">
-            <div className="flashcard" onClick={() => setFlip(!flip)}>
-                {flip ? flashcard.answer : flashcard.question}
+        <div className="flashcard-container">
+            <label>Question:</label>
+            <br />
+            <span>{props.question}</span>
+            <br />
+            <br />
+            <label>Answer</label>
+            <br />
+            <span className="card-answer">{props.answer}</span>
+            <br />
+            <br />
+            <span onClick={handleDelete}>DELETE</span>
+            <br />
+            <br />
             <Link to={redir}>UPDATE</Link>
-            </div>
+            {/* <span onClick={handleUpdate}>UPDATE</span> */}
         </div>
     )
-
-    // return (
-    //     <div className="flashcard-container">
-    //         <label>Question:</label>
-    //         <br />
-    //         <span>{props.question}</span>
-    //         <br />
-    //         <br />
-    //         <label>Answer</label>
-    //         <br />
-    //         <span className="card-answer">{props.answer}</span>
-    //         <br />
-    //         <br />
-    //         <span onClick={handleDelete}>DELETE</span>
-    //         <br />
-    //         <br />
-    //         <Link to={redir}>UPDATE</Link>
-    //         {/* <span onClick={handleUpdate}>UPDATE</span> */}
-    //     </div>
-    // )
 }
 
