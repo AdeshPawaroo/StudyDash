@@ -23,7 +23,7 @@ import Clock2 from './clock/clock_page';
 import ClockContainer from './clock/clock_container';
 import MusicPage from './music/music_page';
 
-import CalenderContainer from './calendar/calendar'
+import CalenderContainer from './calendar/calendar_container'
 
 
 const App = () => (

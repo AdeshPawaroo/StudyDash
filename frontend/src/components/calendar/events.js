@@ -6,10 +6,16 @@ class Event extends React.Component {
         super(props);
 
         this.state = {
-            events: []
+            events: [
+                {
+                    title: "Graduation Day!!! 🎓",
+                    start: new Date(2021,11,-6, 15, 30),
+                    end: new Date(2021,11,-6, 16, 0)
+                }
+            ]
         }
     }
-
+    
     // componentDidMount() {
     //     this.props.fetchFlashcards();
     // }
