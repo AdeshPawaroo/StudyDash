@@ -28,8 +28,6 @@ export default function CalenderContainer()  {
         locales
     })
 
-    
-
     const events = [ 
         {
             title: "Graduation Day!!! 🎓",
