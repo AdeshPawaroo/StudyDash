@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import PlayButton from './PlayButton';
@@ -9,12 +9,16 @@ import { useContext, useState, useEffect, useRef } from "react";
 import SettingsContext from './SettingsContext';
 import HelpButton from './HelpButton';
 import Popup from './Popup';
+// import MusicButton from './MusicButton';
+// import MusicPopup from './MusicPopup';
+// import Footer from './../footer/footer'
 
 const red = '#f54e4e'
 const green = '#4aec8c'
 
 function Timer() {
     const [buttonPopup, setButtonPopup] = useState(false);
+    // const [musicPopup, setMusicPopup] = useState(false);
     const settingsInfo = useContext(SettingsContext);
     const [isPaused, setIsPaused] = useState(true);
     const [mode, setMode] = useState('work'); // work/break/null
@@ -127,13 +131,26 @@ function Timer() {
             <div style={{marginTop:'20px'}}>
                 <SettingsButton onClick={() => { settingsInfo.setShowSettings(true)}}/>
                 <HelpButton onClick={() => setButtonPopup(true)}/>
+                {/* <MusicButton onClick={() => setMusicPopup(true)}/> */}
             </div>
                 <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                     <h3 className="help-title">About This</h3>
                 <p className="help-info">The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to break work into intervals, separated by short breaks.</p>
                 </Popup>
+               
         </div>
     )
 }
 
 export default Timer; 
+
+
+/* <MusicPopup trigger2={musicPopup} setTrigger2={setMusicPopup}>
+                    <h3 className="help-title">Music</h3>
+                    <p className="help-info">
+                    
+                        {/* <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> */
+/* <iframe src="https://open.spotify.com/embed/playlist/2pCWQFnu7EBlLNJInbytUw?utm_source=generator&theme=0" width="100%" height="600px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> */ 
+
+/* </p> */ 
+/* /*</MusicPopup> */ 
