@@ -18,7 +18,7 @@ import List from './todo/List';
 import MainPage from './main/main_page';
 import Footer from './footer/footer'
 import clock from './clock/clock'
-
+import Header from './header/header';
 import Clock2 from './clock/clock_page';
 import ClockContainer from './clock/clock_container';
 import MusicPage from './music/music_page';
@@ -29,7 +29,7 @@ import CalenderContainer from './calendar/calendar'
 const App = () => (
     <div style={{ width: "100%", height: "100%"}}>
         {/* <NavBar /> */}
-    
+        {/* <Header /> */}
         <Switch>
             <ProtectedRoute exact path="/" component={MainPageContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
@@ -49,6 +49,9 @@ const App = () => (
             {/* <ProtectedRoute exact path="/profile" component={ProfileContainer} /> */}
             <Route path='/list' exact component={List} />
             <Route path='/playlist' exact component={MusicPage} />
+            {/* <Route>
+                <Footer />
+            </Route> */}
      
         </Switch>
         <br />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoList from './TodoList';
 import './App.css';
 import { Link } from 'react-router-dom';
+// import Footer from './../footer/footer'
 
 class Lists extends Component {
   render() {
@@ -15,6 +16,7 @@ class Lists extends Component {
           {/* <h2> A MERN (MongoDB + Express.js + React.js + Node.js) Stack Todo-List Lists </h2> */}
         </header>
         <TodoList />
+        {/* <Footer />  */}
       </div>
     );
   }

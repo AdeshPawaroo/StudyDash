@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 import { useState } from "react";
 import Settings from './Settings';
 import SettingsContext from "./SettingsContext";
-import MusicPage from '../music/music_page';
+// import MusicPage from '../music/music_page';
 // import Modal from '../modal/modal';
+// import Footer from './../footer/footer'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
 
             {showSettings ? <Settings /> : <Timer />}
             </SettingsContext.Provider>
+            {/* <Footer /> */}
             
         </main>
     );
