@@ -38,10 +38,16 @@ export const Flashcard = (props) => {
         <div className='flashcard-container' >
             <div className="card-contents">
                 <div className='question-container'>
-                    Question: {props.question}
+                    Question: 
+                    < br />
+                    < br />
+                    {props.question}
                 </div>
                 <div className='answer-container'>
-                    Answer: {props.answer}
+                    Answer: 
+                    <br />
+                    <br />
+                    {props.answer}
                 </div>
             </div>
             
