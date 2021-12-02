@@ -28,7 +28,7 @@ import Header from './header/header';
 import Clock2 from './clock/clock_page';
 import ClockContainer from './clock/clock_container';
 import MusicPage from './music/music_page';
-
+import TeamPage from './team/team'
 import CalenderContainer from './calendar/calendar_container'
 
 
@@ -51,6 +51,7 @@ const App = () => (
             <ProtectedRoute exact path="/clock" component={ClockContainer} />
             {/* <ProtectedRoute exact path="/clock" component={clock} /> */}
             <ProtectedRoute exact path="/profile" component={UserProfileContainer} />
+            <ProtectedRoute exact path="/team" component={TeamPage} />
 
             {/* <ProtectedRoute exact path="/profile" component={ProfileContainer} /> */}
             <Route path='/list' exact component={List} />

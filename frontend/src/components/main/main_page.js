@@ -61,18 +61,14 @@ class MainPage extends React.Component {
                     <p className="maindesc">Keep track of your deadlines</p>
                         <p className="clickbutton"><Link to={'/list'} className="clocklink">Go</Link></p>
                 </div>
-                <div className="pomodorobox">
-                        <div className="titleofbox">Study Playlist<i className="fas fa-headphones-alt"></i></div>
-                        <p className="maindesc">Play some study music</p>
-                        <p className="clickbutton"><Link to={'/playlist'} className="clocklink">Go</Link></p>
-                </div>
+                    <div className="pomodorobox">
+                        <div className="titleofbox">Calender<i className="far fa-calendar"></i></div>
+                        <p className="maindesc">Check the calender for your schedule</p>
+                        <p className="clickbutton"><Link to={'/calender'} className="clocklink">Go</Link></p>
+                    </div>
                 </div>
                     <div className="rightcontainer">
-                <div className="pomodorobox">
-                        <div className="titleofbox">Calender<i className="far fa-calendar"></i></div>
-                        <p className="maindesc">Check calender for your schedule</p>
-                        <p className="clickbutton"><Link to={'/calender'} className="clocklink">Go</Link></p>
-                </div>
+                
                 <div className="pomodorobox">
                     <div className="titleofbox">Flash Cards</div>
                         <p className="maindesc">Test your studying habits</p>
@@ -83,6 +79,11 @@ class MainPage extends React.Component {
                         <p className="maindesc">Track your study habits</p>
                         <p className="clickbutton"><Link to='/profile' component={ProfileContainer} className="clocklink">Go</Link></p>
                 </div>
+                    <div className="pomodorobox">
+                        <div className="titleofbox">About Us<i className="fas fa-address-card"></i></div>
+                        <p className="maindesc">Check out our team</p>
+                        <p className="clickbutton"><Link to={'/team'} className="clocklink">Go</Link></p>
+                    </div>
                 </div>
 
 
