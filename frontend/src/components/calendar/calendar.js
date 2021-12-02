@@ -134,7 +134,7 @@ export default function CalenderContainer()  {
     function handleAddEvent(){
 
         if(!newEvent.title || !newEvent.start || !newEvent.end){
-            errors = "Missing fields";
+            errors = "Missing fields. Please fill out event fields";
             return errors
         }
  
