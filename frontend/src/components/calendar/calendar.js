@@ -129,16 +129,21 @@ export default function CalenderContainer()  {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
 
+    let errors;
+
     function handleAddEvent(){
         setAllEvents([...allEvents, newEvent])
         localStorage.setItem("savedData", JSON.stringify(allEvents));
         
+        
+
+        if(!newEvent.title){
+            errors = "Event title cant be blank"    
+        }    
+        
     }
-    localStorage.removeItem("dddd");
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
-
-    console.log(objects)
  
     return (
         <div className="calender-container">
@@ -151,6 +156,7 @@ export default function CalenderContainer()  {
 
                 <form className="calender-container-form">
                     <div>
+                        <p>{errors}</p>
                         <input type="text" placeholder="Add title" style={{marginRight: "10px"}} 
                         value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
                     </div>
