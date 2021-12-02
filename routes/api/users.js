@@ -105,6 +105,13 @@ router.post('/login', (req, res) => {
   }
 )
 
+router.patch('/:user_id', (req, res) => {
+  User.findById(req.params.user_id, (err, user) => {
+    user.timeStudied = req.body.timeStudied;
+    user.save();
+  })
+})
+
 //FIND ALL -- SORTS BY DATE
 router.get("/", (req, res) => {
   User
