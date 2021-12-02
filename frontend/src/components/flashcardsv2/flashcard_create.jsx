@@ -45,7 +45,26 @@ export const CreateFlashcard = (props) => {
             question: "",
             answer: ""
         });
-        console.log("hereerererererere");
+    }
+
+    const checkQuestion = () => {
+        if (flashcard.question === "") {
+            return (
+                <p>
+                    Can't create a flashcard without a question.
+                </p>
+            )
+        }
+    }
+
+    const checkAnswer = () => {
+        if (flashcard.answer === "") {
+            return (
+                <p>
+                    Can't create a flashcard without an answer.
+                </p>
+            )
+        }
     }
 
     return (
@@ -61,6 +80,7 @@ export const CreateFlashcard = (props) => {
                         onChange={handleQuestion}
                         ref={_question}
                     />
+                    {checkQuestion()}
                     <br />
                     <label className="answer-label">Answer:</label>
                     <br />
@@ -71,6 +91,7 @@ export const CreateFlashcard = (props) => {
                         onChange={handleAnswer}
                         ref={_answer}
                     />
+                    {checkAnswer()}
                     <br />
                     <br />
                     <button className="flashcard-create-btn" onClick={handleSubmit}>Create!</button>
