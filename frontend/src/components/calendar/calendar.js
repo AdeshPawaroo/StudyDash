@@ -132,9 +132,13 @@ export default function CalenderContainer()  {
     function handleAddEvent(){
         setAllEvents([...allEvents, newEvent])
         localStorage.setItem("savedData", JSON.stringify(allEvents));
+        
     }
+    localStorage.removeItem("dddd");
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
+
+    console.log(objects)
  
     return (
         <div className="calender-container">
