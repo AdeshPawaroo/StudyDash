@@ -69,8 +69,8 @@ class MainPage extends React.Component {
                 </div>
                     <div className="rightcontainer">
                 <div className="pomodorobox">
-                        <div className="titleofbox">Calender<i className="far fa-calendar"></i></div>
-                        <p className="maindesc">Check calender for your schedule</p>
+                        <div className="titleofbox">Calendar&nbsp;<i className="far fa-calendar"></i></div>
+                        <p className="maindesc">Check calendar for your schedule</p>
                         <p className="clickbutton"><Link to={'/calender'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
