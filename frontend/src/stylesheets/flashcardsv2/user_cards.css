@@ -53,11 +53,13 @@
 .question-container {
     display: flex;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .answer-container {
     display: none;
     font-size: 1.3rem;
+    text-align: center;
 
 }
 
