@@ -132,15 +132,15 @@ export default function CalenderContainer()  {
     let errors;
 
     function handleAddEvent(){
-        setAllEvents([...allEvents, newEvent])
-        localStorage.setItem("savedData", JSON.stringify(allEvents));
         
-        
-
         if(!newEvent.title){
             errors = "Event title cant be blank"    
-        }    
-        
+            return errors
+        }
+
+        setAllEvents([...allEvents, newEvent])
+        localStorage.setItem("savedData", JSON.stringify(allEvents));
+           
     }
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
