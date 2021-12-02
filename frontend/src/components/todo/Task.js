@@ -63,10 +63,10 @@ class Task extends Component {
           />
         </form>
         <span className="icon1" onClick={this.handleDeleteTodo}>
-          <i className="fas fa-trash" />
+          <i className="fas fa-trash" style={{ marginTop: "-35px", display: 'flex', marginLeft: '70%' }}/>
         </span>
         <span className="icon1 edit" onClick={this.showEditForm}>
-          <i className="fas fa-pen" />
+          <i className="fas fa-pen" style={{marginTop: "-35px", display: 'flex', marginLeft: '70%'}}/>
         </span>
       </li>
     );
