@@ -129,13 +129,24 @@ export default function CalenderContainer()  {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
 
+    let errors;
+
     function handleAddEvent(){
+
+        if(!newEvent.title || !newEvent.start || !newEvent.end){
+            errors = "Missing fields. Please fill out event fields";
+            return errors
+        }
+ 
         setAllEvents([...allEvents, newEvent])
         localStorage.setItem("savedData", JSON.stringify(allEvents));
+           
     }
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
  
+
+    
     return (
         <div className="calender-container">
             <h1 id='profile-title' className='calendar-link'><Link to='/' >Study Dash</Link></h1>
@@ -147,6 +158,7 @@ export default function CalenderContainer()  {
 
                 <form className="calender-container-form">
                     <div>
+                        {errors}
                         <input type="text" placeholder="Add title" style={{marginRight: "10px"}} 
                         value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
                     </div>
@@ -172,6 +184,6 @@ export default function CalenderContainer()  {
             <br/>
         </div>
     )
-    
+       
 }
 
