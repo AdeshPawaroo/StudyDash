@@ -57,7 +57,7 @@ const AboutPage = () => (
             {/* person 4 */}
             <div className="our-team">
                 <div className="pic">
-                    <img src="" alt=""></img>
+                    <img src="https://aa-homes-dev.s3.ca-central-1.amazonaws.com/Screen+Shot+2021-12-02+at+6.17.58+PM.png" alt="Pierre"></img>
                 </div>
                 <div className="team-content">
                     <h3 className="title">Pierre Navarin</h3>
