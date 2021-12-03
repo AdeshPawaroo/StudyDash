@@ -15,7 +15,8 @@ import { Link } from 'react-router-dom';
 import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
 
-export default function CalenderContainer()  {
+export default function CalenderContainer() {
+
     const locales = {"en-US": require("date-fns/locale/en-US")};
 
     const localizer = dateFnsLocalizer({
@@ -138,25 +139,41 @@ export default function CalenderContainer()  {
     }
     let objects = JSON.parse(localStorage.getItem("savedData"));
 
+    const event = [];
 
-    // const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
-    // const [allEvents, setAllEvents] = useState(events);
+    const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
+    const savedEvent = JSON.parse(localStorage.getItem("savedData"));
+    const [allEvents, setAllEvents] = useState([...event, ...savedEvent]);
+    
+    let errors;
 
-    // let errors;
+    function removeDup(arr) {
+        let result = []
+        arr.forEach((item, index) => { if (arr.indexOf(item) == index) result.push(item) });
+        return result;
+    }
 
-    // function handleAddEvent(){
+    function handleAddEvent(){
 
-    //     if(!newEvent.title || !newEvent.start || !newEvent.end){
-    //         errors = "Missing fields";
-    //         return errors
-    //     }
- 
-    //     setAllEvents([...allEvents, newEvent])
-    //     localStorage.setItem("savedData", JSON.stringify(allEvents));
-           
-    // }
+        if(!newEvent.title){
+            errors = <p>Missing fields. Please fill out event fields</p>;
+            return errors;
+        }
+        let newEvents = [...allEvents, newEvent];
+        setAllEvents(newEvents)
+        console.log(newEvents, "newEvents");
+        
+        let finalEvents = removeDup(newEvents);
 
-    // let objects = JSON.parse(localStorage.getItem("savedData"));
+        localStorage.setItem("savedData", JSON.stringify(finalEvents));
+        
+    }
+    
+    let objects = JSON.parse(localStorage.getItem("savedData"));
+    
+    console.log(allEvents, "allEvents")
+    console.log(objects, "objects")
+    
  
     return (
         <div className="calender-container">
