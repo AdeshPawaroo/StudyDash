@@ -16,7 +16,6 @@ import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
 
 export default function CalenderContainer()  {
-
     const locales = {"en-US": require("date-fns/locale/en-US")};
 
     const localizer = dateFnsLocalizer({
@@ -124,25 +123,40 @@ export default function CalenderContainer()  {
             end: new Date(2021,12,-29)
         }
     ];
-
-    const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
-    const [allEvents, setAllEvents] = useState(events);
-
+    const savedEvent = JSON.parse(localStorage.getItem("savedData"));
+    const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+    const [allEvents, setAllEvents] = useState([...events, ...savedEvent]);
     let errors;
-
-    function handleAddEvent(){
-
-        if(!newEvent.title || !newEvent.start || !newEvent.end){
-            errors = "Missing fields";
-            return errors
+    function handleAddEvent() {
+        if (!newEvent.title) {
+            errors = <p>Missing fields. Please fill out event fields</p>;
+            return errors;
         }
- 
-        setAllEvents([...allEvents, newEvent])
-        localStorage.setItem("savedData", JSON.stringify(allEvents));
-           
+        let newEvents = [...allEvents, newEvent];
+        setAllEvents(newEvents)
+        localStorage.setItem("savedData", JSON.stringify(newEvents));
     }
-
     let objects = JSON.parse(localStorage.getItem("savedData"));
+
+
+    // const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
+    // const [allEvents, setAllEvents] = useState(events);
+
+    // let errors;
+
+    // function handleAddEvent(){
+
+    //     if(!newEvent.title || !newEvent.start || !newEvent.end){
+    //         errors = "Missing fields";
+    //         return errors
+    //     }
+ 
+    //     setAllEvents([...allEvents, newEvent])
+    //     localStorage.setItem("savedData", JSON.stringify(allEvents));
+           
+    // }
+
+    // let objects = JSON.parse(localStorage.getItem("savedData"));
  
     return (
         <div className="calender-container">

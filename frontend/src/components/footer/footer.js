@@ -9,7 +9,7 @@ export default () => {
         return (
             
             <div style={{paddingTop: '20px', textAlign: "center"}}>
-                <iframe src="https://open.spotify.com/embed/playlist/2pCWQFnu7EBlLNJInbytUw?utm_source=generator&theme=0" width="70%" height="80px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" style={{border: '2px solid purple', borderRadius: '25px'}}></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/2pCWQFnu7EBlLNJInbytUw?utm_source=generator&theme=0" width="70%" height="80px" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" style={{border: '2px solid purple', borderRadius: '25px'}}></iframe>
             <footer id="all-page-footer">
                 <div className="footer-list-container">
                     <ul>
