@@ -125,11 +125,19 @@ export default function CalenderContainer() {
         }
     ];
 
-    const savedEvent = JSON.parse(localStorage.getItem("savedData"));
+    const event = [];
+
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
-    const [allEvents, setAllEvents] = useState([...events, ...savedEvent]);
+    const savedEvent = JSON.parse(localStorage.getItem("savedData"));
+    const [allEvents, setAllEvents] = useState([...event, ...savedEvent]);
     
     let errors;
+
+    function removeDup(arr) {
+        let result = []
+        arr.forEach((item, index) => { if (arr.indexOf(item) == index) result.push(item) });
+        return result;
+    }
 
     function handleAddEvent(){
 
@@ -139,8 +147,11 @@ export default function CalenderContainer() {
         }
         let newEvents = [...allEvents, newEvent];
         setAllEvents(newEvents)
+        console.log(newEvents, "newEvents");
         
-        localStorage.setItem("savedData", JSON.stringify(newEvents));
+        let finalEvents = removeDup(newEvents);
+
+        localStorage.setItem("savedData", JSON.stringify(finalEvents));
         
     }
     
