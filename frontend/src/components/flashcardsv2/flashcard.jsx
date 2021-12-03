@@ -14,9 +14,9 @@ export const Flashcard = (props) => {
     const dispatch = useDispatch();
     const redir = `/flashcards/${props.card_id}`;
 
-    useEffect(() => {
-        dispatch(fetchUserFlashcards(props.user_id))
-    },[flashcard])
+    // useEffect(() => {
+    //     dispatch(fetchUserFlashcards(props.user_id))
+    // },[flashcard])
 
     const handleDelete = (e) => {
         e.preventDefault();

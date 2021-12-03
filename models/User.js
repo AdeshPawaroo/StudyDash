@@ -29,6 +29,10 @@ const UserSchema = new Schema({
     timeStudied: {
         type: Number,
         default: 0
+    },
+    timeOnBreak: {
+        type: Number,
+        default: 0
     }
 });
 

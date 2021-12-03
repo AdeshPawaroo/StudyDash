@@ -105,6 +105,20 @@ router.post('/login', (req, res) => {
   }
 )
 
+router.put('/:user_id', (req, res) => {
+  const email = req.body.email
+  User.findOne({id: req.params.user_id})
+    .then(user => {
+      user.timeStudied = req.body.timeStudied;
+      user.save();
+      //res.json(req.body)
+    })
+  // User.findById(req.params.user_id, (err, user) => {
+  //   user.timeStudied = req.body.timeStudied;
+  //   user.save();
+  // })
+})
+
 //FIND ALL -- SORTS BY DATE
 router.get("/", (req, res) => {
   User

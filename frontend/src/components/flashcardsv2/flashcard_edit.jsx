@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { fetchFlashcard } from "../../actions/flashcard_actions";
 
 
@@ -54,6 +53,26 @@ export const FlashcardEdit = (props) => {
             .catch(err => console.log(err))
     }
 
+    const handleQuestionError = () => {
+        if (flashcard.question.length === 0) {
+            return (
+                <p>
+                    Can't create a flashcard without a question.
+                </p>
+            )
+        }
+    }
+
+    const handleAnswerError = () => {
+        if (flashcard.answer.length === 0) {
+            return (
+                <p>
+                    Can't create a flashcard without an answer.
+                </p>
+            )
+        }
+    }
+
     return (
         <div className="card-edit-container">
             <form className="card-edit-form-container" >
@@ -65,6 +84,7 @@ export const FlashcardEdit = (props) => {
                         value={flashcard.question}
                         onChange={handleQuestion}
                     />
+                    {handleQuestionError()}
                     <br />
                     <label>Answer:</label>
                     <br />
@@ -73,6 +93,7 @@ export const FlashcardEdit = (props) => {
                         value={flashcard.answer}
                         onChange={handleAnswer}
                     />
+                    {handleAnswerError()}
                     <br />
                     <br />
                     <button className="flashcard-edit-btn" onClick={handleSubmit}>Update!</button>

@@ -40,6 +40,18 @@ StudyDash will also allow a user to listen to music while studying, add deadline
 
     * User Analytics 
       * This includes a various statistics about the user like the amount of times the user has logged, the amount of hours/minutes the user has spent studying, the amount of hours/minutes the user has spent taking breaks.
+### Technologies
+* MongoDB
+* Mongoose
+* Express.js
+* React
+* Redux
+* Node.js
+* HTML5
+* CSS3
+* Axios
+* JSON Web Tokens
+* Amazon Web Services (AWS)
 
 ### Members 
 * [Zayed Cheema](https://github.com/cheemaz1) 

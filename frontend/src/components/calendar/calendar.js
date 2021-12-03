@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { withRouter } from 'react-router-dom';
 import {Calendar, dateFnsLocalizer} from 'react-big-calendar';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
@@ -16,7 +15,7 @@ import { Link } from 'react-router-dom';
 import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css";
 
-export default function CalenderContainer()  {
+export default function CalenderContainer() {
 
     const locales = {"en-US": require("date-fns/locale/en-US")};
 
@@ -126,9 +125,10 @@ export default function CalenderContainer()  {
         }
     ];
 
+    const savedEvent = JSON.parse(localStorage.getItem("savedData"));
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
-    const [allEvents, setAllEvents] = useState(events);
-
+    const [allEvents, setAllEvents] = useState([...events, ...savedEvent]);
+    
     let errors;
 
     function handleAddEvent(){
@@ -137,15 +137,17 @@ export default function CalenderContainer()  {
             errors = <p>Missing fields. Please fill out event fields</p>;
             return errors;
         }
- 
-        setAllEvents([...allEvents, newEvent])
-        localStorage.setItem("savedData", JSON.stringify(allEvents));
+        let newEvents = [...allEvents, newEvent];
+        setAllEvents(newEvents)
+        
+        localStorage.setItem("savedData", JSON.stringify(newEvents));
+        
     }
-
+    
     let objects = JSON.parse(localStorage.getItem("savedData"));
     
-    console.log(allEvents, "allEvents");
-    console.log(objects, "obj");
+    console.log(allEvents, "allEvents")
+    console.log(objects, "objects")
     
  
     return (
@@ -175,7 +177,7 @@ export default function CalenderContainer()  {
                     </div>
 
                     <div>
-                        <button className="calendar-submit" onClick={handleAddEvent}>Add event</button>
+                        <button className="calendar-submit" onClick={handleAddEvent} style={{borderRadius: "50px"}}>Add event</button>
                     </div>
                     
                 </form>

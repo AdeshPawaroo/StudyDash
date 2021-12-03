@@ -15,7 +15,6 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        // console.log(this.props.currentUser.id);
         this.props.fetchUserFlashcards(this.props.currentUser.id);
     }
 
@@ -31,7 +30,6 @@ class Profile extends React.Component {
 
     render() {
         let i = 0;
-        console.log(this.props);
         if (this.state.flashcards.length == 0) {
             return(
                 <div className='empty-warning-container'>
@@ -70,16 +68,6 @@ class Profile extends React.Component {
                 </div>
             );
         }
-        // if (!this.props.flashcards) return null;
-        // return (
-        //     <div>
-        //         here
-        //        {/* <h1>All of the User's Flashcards</h1>
-        //        {this.state.flashcards.map(flashcard => (
-
-        //        ))} */}
-        //     </div>
-        // )
     }
 }
 

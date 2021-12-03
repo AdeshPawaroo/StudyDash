@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FlashcardProfileContainer from '../flashcards/flashcards_user_container'
-import TodosList from '../todo/List';
+
 
 
 class Profile extends React.Component {
@@ -34,6 +33,15 @@ class Profile extends React.Component {
             totalTime -= (minutes * 60);
         }
         const seconds = totalTime;
+        let tasksDone = []
+        let activeTasks = []
+        this.props.todos.forEach(todo => {
+            if(todo.done){
+                tasksDone.push(todo)
+            } else {
+                activeTasks.push(todo)
+            }
+        })
 
         return(
             <div className='profile-div'>
@@ -47,17 +55,31 @@ class Profile extends React.Component {
                         </h2>
                     </div>
 
-                    <h2>Analytics:</h2>
+                    <h2>Stats:</h2>
                     <div className='profile-info-div analytics'>
-                        {/* <div className='profile-info'>
-                            Total Tasks: {this.props.todos.length}
+                        <h3 class='h3-prof'>Tasks:</h3>
+                        <div id='div-tasks'>
+                            <div className='profile-info'>
+                                Active Tasks: {activeTasks.length}
+                            </div>
+                            <div className='profile-info'>
+                                Tasks Completed: {tasksDone.length}
+                            </div>
+                            <div className='profile-info'>
+                                Total Tasks: {this.props.todos.length}
+                            </div>
+                            <Link id='m-tasks' to='/list'>Manage Tasks</Link>
+                            
                         </div>
-                        <div className='profile-info'>
-                            Total Flashcards: {this.props.flashcards.length}
-                        </div> */}
-                        <div className='profile-info'>
-                            Days Logged In: {this.props.currentUser.daysLoggedIn}
+
+                        <h3 class='h3-prof'>Flashcards:</h3>
+                        <div id='div-fcards'>
+                            <div className='profile-info'>
+                                Total Flashcards: {this.props.flashcards.length}
+                            </div>
+                            <Link id='m-tasks' to='/flashcards'>Manage Flashcards</Link>
                         </div>
+
                         <div className='profile-info'>
                             Time Spent Studying: {hours} hr(s) {minutes} min(s) {seconds} sec(s)
                         </div>
@@ -78,6 +100,9 @@ class Profile extends React.Component {
                         </div>
                         <div className='profile-info'>
                             Last Login: {lastLogin.toDateString()}
+                        </div>
+                        <div className='profile-info'>
+                            Days Logged In: {this.props.currentUser.daysLoggedIn}
                         </div>
                     </div>
                 </div>

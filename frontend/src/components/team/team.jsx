@@ -16,12 +16,12 @@ const AboutPage = () => (
                 </div>
                 <div className="team-content">
                     <h3 className="title">Zayed Cheema</h3>
-                    <span className="post">Project Lead</span>
+                    <span className="post">Project Lead / Flex Developer</span>
                 </div>
                 <ul className="social">
-                    <li><a href="https://www.linkedin.com/in/zayed-cheema-30521920a/" class="fab fa-linkedin"></a></li>
-                    <li><a href="https://github.com/cheemaz1" class="fab fa-github-square"></a></li>
-                    <li><a href="https://angel.co/u/zayed-cheema" class="fab fa-angellist"></a></li>
+                    <li><a href="https://www.linkedin.com/in/zayed-cheema-30521920a/" class="fab fa-linkedin"> </a></li>
+                    <li><a href="https://github.com/cheemaz1" class="fab fa-github-square"> </a></li>
+                    <li><a href="https://angel.co/u/zayed-cheema" class="fab fa-angellist"> </a></li>
                 </ul>
             </div>
             {/* person 2  */}
@@ -34,9 +34,9 @@ const AboutPage = () => (
                     <span className="post">Backend Lead</span>
                 </div>
                 <ul className="social">
-                    <li><a href="https://www.linkedin.com/in/adesh-pawaroo-997394226/" class="fab fa-linkedin"></a></li>
-                    <li><a href="https://github.com/AdeshPawaroo" class="fab fa-github-square"></a></li>
-                    <li><a href="https://angel.co/u/adesh-pawaroo" class="fab fa-angellist"></a></li>
+                    <li><a href="https://www.linkedin.com/in/adesh-pawaroo-997394226/" class="fab fa-linkedin"> </a></li>
+                    <li><a href="https://github.com/AdeshPawaroo" class="fab fa-github-square"> </a></li>
+                    <li><a href="https://angel.co/u/adesh-pawaroo" class="fab fa-angellist"> </a></li>
                 </ul>
             </div>
             {/* person 3  */}
@@ -46,12 +46,12 @@ const AboutPage = () => (
                 </div>
                 <div className="team-content">
                     <h3 className="title">Efren Bahena</h3>
-                    <span className="post">Flex Lead</span>
+                    <span className="post">Flex Developer</span>
                 </div>
                 <ul className="social">
-                    <li><a href="https://www.linkedin.com/in/efren-bahena-419807172/" class="fab fa-linkedin"></a></li>
-                    <li><a href="https://github.com/Efren707" class="fab fa-github-square"></a></li>
-                    <li><a href="https://angel.co/u/efren-bahena" class="fab fa-angellist"></a></li>
+                    <li><a href="https://www.linkedin.com/in/efren-bahena-419807172/" class="fab fa-linkedin"> </a></li>
+                    <li><a href="https://github.com/Efren707" class="fab fa-github-square"> </a></li>
+                    <li><a href="https://angel.co/u/efren-bahena" class="fab fa-angellist"> </a></li>
                 </ul>
             </div>
             {/* person 4 */}
@@ -64,9 +64,9 @@ const AboutPage = () => (
                     <span className="post">Frontend Lead</span>
                 </div>
                 <ul className="social">
-                    <li><a href="https://www.linkedin.com/in/pierre-navarin-709335223/" class="fab fa-linkedin"></a></li>
-                    <li><a href="https://github.com/pierrenav13" class="fab fa-github-square"></a></li>
-                    <li><a href="https://angel.co/u/pierre-navarin" class="fab fa-angellist"></a></li>
+                    <li><a href="https://www.linkedin.com/in/pierre-navarin-709335223/" class="fab fa-linkedin"> </a></li>
+                    <li><a href="https://github.com/pierrenav13" class="fab fa-github-square"> </a></li>
+                    <li><a href="https://angel.co/u/pierre-navarin" class="fab fa-angellist"> </a></li>
                 </ul>
             </div>
         </div>
