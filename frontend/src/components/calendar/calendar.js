@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { withRouter } from 'react-router-dom';
 import {Calendar, dateFnsLocalizer} from 'react-big-calendar';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';
@@ -129,9 +128,18 @@ export default function CalenderContainer()  {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""});
     const [allEvents, setAllEvents] = useState(events);
 
+    let errors;
+
     function handleAddEvent(){
+
+        if(!newEvent.title || !newEvent.start || !newEvent.end){
+            errors = "Missing fields";
+            return errors
+        }
+ 
         setAllEvents([...allEvents, newEvent])
         localStorage.setItem("savedData", JSON.stringify(allEvents));
+           
     }
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
@@ -147,6 +155,7 @@ export default function CalenderContainer()  {
 
                 <form className="calender-container-form">
                     <div>
+                        {errors}
                         <input type="text" placeholder="Add title" style={{marginRight: "10px"}} 
                         value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})} />
                     </div>
@@ -162,7 +171,7 @@ export default function CalenderContainer()  {
                     </div>
 
                     <div>
-                        <button className="calendar-submit" onClick={handleAddEvent}>Add event</button>
+                        <button className="calendar-submit" onClick={handleAddEvent} style={{borderRadius: "50px"}}>Add event</button>
                     </div>
                     
                 </form>
@@ -172,6 +181,6 @@ export default function CalenderContainer()  {
             <br/>
         </div>
     )
-    
+       
 }
 

@@ -9,6 +9,7 @@ import SettingsContext from "./SettingsContext";
 // import MusicPage from '../music/music_page';
 // import Modal from '../modal/modal';
 // import Footer from './../footer/footer'
+import { Prompt } from 'react-router-dom';
 
 function App(props) {
 
@@ -18,8 +19,14 @@ function App(props) {
     console.log('hi')
     // debugger;
 
+    // let leaveClock = (window.confirm('Are you sure you wish to delete this item?'))
+
+
     return (
         <main>
+            <Prompt 
+                message="Are you sure you want to leave? Pomodoro progress may be lost."
+            />
             <h1 id='profile-title' className="clock-main-link"><Link to='/'>Study Dash</Link></h1>
             <h1 className="clocktitle" >Pomodoro Clock</h1>
             <SettingsContext.Provider value={{
