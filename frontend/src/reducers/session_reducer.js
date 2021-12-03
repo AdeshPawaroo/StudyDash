@@ -1,3 +1,4 @@
+import { RECEIVE_TIME_STUDIED } from '../actions/profile_actions';
 import { RECEIVE_USER_LOGOUT, RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const initialState = {

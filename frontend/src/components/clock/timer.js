@@ -16,7 +16,7 @@ import Popup from './Popup';
 const red = '#f54e4e'
 const green = '#4aec8c'
 
-function Timer() {
+function Timer(props) {
     const [buttonPopup, setButtonPopup] = useState(false);
     // const [musicPopup, setMusicPopup] = useState(false);
     const settingsInfo = useContext(SettingsContext);
@@ -30,6 +30,9 @@ function Timer() {
 
 
     function tick() {
+        props.currentUser.timeStudied += 1;
+        // let timeStudied = props.currentUser.timeStudied;
+        props.editUser(props.currentUser);
         secondsLeftRef.current--; //current - 1 
         setSecondsLeft(secondsLeftRef.current);
     }

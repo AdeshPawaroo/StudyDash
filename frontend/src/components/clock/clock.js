@@ -11,7 +11,7 @@ import SettingsContext from "./SettingsContext";
 // import Footer from './../footer/footer'
 import { Prompt } from 'react-router-dom';
 
-function App() {
+function App(props) {
 
     const [showSettings, setShowSettings] = useState(false);
     const [workMinutes, setWorkMinutes] = useState(45);
@@ -38,7 +38,7 @@ function App() {
                 setBreakMinutes
             }}>
 
-            {showSettings ? <Settings /> : <Timer />}
+            {showSettings ? <Settings /> : <Timer editUser={props.editUser} currentUser={props.currentUser}/>}
             </SettingsContext.Provider>
             {/* <Footer /> */}
             
