@@ -16,7 +16,7 @@ const AboutPage = () => (
                 </div>
                 <div className="team-content">
                     <h3 className="title">Zayed Cheema</h3>
-                    <span className="post">Project Lead</span>
+                    <span className="post">Project Lead / Flex Developer</span>
                 </div>
                 <ul className="social">
                     <li><a href="https://www.linkedin.com/in/zayed-cheema-30521920a/" class="fab fa-linkedin"></a></li>
@@ -46,7 +46,7 @@ const AboutPage = () => (
                 </div>
                 <div className="team-content">
                     <h3 className="title">Efren Bahena</h3>
-                    <span className="post">Flex Lead</span>
+                    <span className="post">Flex Developer</span>
                 </div>
                 <ul className="social">
                     <li><a href="https://www.linkedin.com/in/efren-bahena-419807172/" class="fab fa-linkedin"></a></li>
