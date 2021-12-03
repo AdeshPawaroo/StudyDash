@@ -1,0 +1,173 @@
+.about-body {
+    margin: 0;
+    padding: 100px 0px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.h1-team {
+    text-align: center;
+    /* color: cornflowerblue; */
+    font-size: 27px;
+    font-weight: 800;
+    padding-bottom: 23px;
+    font-family: 'Font Awesome 5 Brands';
+    padding-top: 33px;
+    
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.container12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.our-team {
+    background: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0px 20px;
+    padding: 30px 0 40px;
+    width: 30%;
+    border-radius: 5%;
+    border: 5px solid black;
+
+}
+
+.our-team .pic {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0px;
+    z-index: 1;
+    position: relative;
+    border: 4px solid #576cce;
+    border-radius: 50%;
+}
+
+.our-team .pic::before {
+    content: '';
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background: #576cce;
+    position: absolute;
+    bottom: 135%;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+
+}
+
+.our-team:hover .pic::before {
+    height: 100%;
+}
+
+.our-team .pic:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #576cce;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .pic img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7)
+}
+.outeam .team-content {
+    margin-bottom: 30px;
+
+}
+
+.our-team .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: 'Bebas Neue';
+    padding-top: 9%;
+}
+
+.our-team .post {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+
+}
+
+.our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #576cce;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+    bottom: 0;
+
+}
+
+.our-team .social li {
+    display: inline-block;
+
+}
+
+.our-team .social li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+
+}
+
+.our-team .social li a:hover {
+    color: blue;
+    background: #f7f5ec;
+
+}
+
+
+
+#profile-title21 {
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    font-size: 90px;
+}
+
+#profile-title21 a{
+    text-decoration: none;
+    color: #000;
+}

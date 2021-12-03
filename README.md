@@ -22,6 +22,9 @@ StudyDash will also allow a user to listen to music while studying, add deadline
       <img width="846" alt="Screen Shot 2021-11-30 at 11 33 41 PM" src="https://user-images.githubusercontent.com/87393981/144172395-e3768dec-29cb-4f11-9f50-e63a469f7631.png">
 
     * Calendar
+      * Users can view and create events on calendar
+      ![image](https://user-images.githubusercontent.com/53492872/144486646-4eb992fd-18bf-4ce5-9d3b-8da530233f05.png)
+
     * Pomodoro Clock
       * Users can start a timer based on their work/break minutes and the timer will display a ring when the time is up
       <img width="423" alt="Screen Shot 2021-11-30 at 11 34 43 PM" src="https://user-images.githubusercontent.com/87393981/144172458-13da6dae-e77e-4b75-8311-261389eab8c3.png">
@@ -37,6 +40,18 @@ StudyDash will also allow a user to listen to music while studying, add deadline
 
     * User Analytics 
       * This includes a various statistics about the user like the amount of times the user has logged, the amount of hours/minutes the user has spent studying, the amount of hours/minutes the user has spent taking breaks.
+### Technologies
+* MongoDB
+* Mongoose
+* Express.js
+* React
+* Redux
+* Node.js
+* HTML5
+* CSS3
+* Axios
+* JSON Web Tokens
+* Amazon Web Services (AWS)
 
 ### Members 
 * [Zayed Cheema](https://github.com/cheemaz1) 

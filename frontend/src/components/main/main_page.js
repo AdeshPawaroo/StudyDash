@@ -52,37 +52,38 @@ class MainPage extends React.Component {
                 <br />
                 <div className="leftcontainer">
                 <div className="pomodorobox">
-                        <div className="titleofbox">Pomodoro Clock<i className="far fa-clock"></i></div>
+                        <div className="titleofbox">Pomodoro Clock<i className="far fa-clock" style={{ marginTop: '4%' }}></i></div>
                         <p className="maindesc">Start a timed study session</p>
                         <p className="clickbutton"><Link to={'/clock'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
-                        <div className="titleofbox">Manage Tasks<i className="fas fa-tasks"></i></div>
+                        <div className="titleofbox">Manage Tasks<i className="fas fa-tasks" style={{ marginLeft: '0%', marginTop: '4%' }}></i></div>
                     <p className="maindesc">Keep track of your deadlines</p>
                         <p className="clickbutton"><Link to={'/list'} className="clocklink">Go</Link></p>
                 </div>
-                <div className="pomodorobox">
-                        <div className="titleofbox">Study Playlist<i className="fas fa-headphones-alt"></i></div>
-                        <p className="maindesc">Play some study music</p>
-                        <p className="clickbutton"><Link to={'/playlist'} className="clocklink">Go</Link></p>
-                </div>
+                    <div className="pomodorobox">
+                        <div className="titleofbox">Calender<i className="far fa-calendar" style={{ marginLeft: '3%' }}></i></div>
+                        <p className="maindesc">Check the calender for your schedule</p>
+                        <p className="clickbutton"><Link to={'/calender'} className="clocklink">Go</Link></p>
+                    </div>
                 </div>
                     <div className="rightcontainer">
+                
                 <div className="pomodorobox">
-                        <div className="titleofbox">Calender<i className="far fa-calendar"></i></div>
-                        <p className="maindesc">Check calender for your schedule</p>
-                        <p className="clickbutton"><Link to={'/calender'} className="clocklink">Go</Link></p>
-                </div>
-                <div className="pomodorobox">
-                    <div className="titleofbox">Flash Cards</div>
+                        <div className="titleofbox">Flash Cards<i class="far fa-clipboard" style={{ marginLeft: '3%' }}></i></div>
                         <p className="maindesc">Test your studying habits</p>
                         <p className="clickbutton"><Link to={'/flashcards'} className="clocklink">Go</Link></p>
                 </div>
                 <div className="pomodorobox">
-                        <div className="titleofbox">Profile Analytics<i className="far fa-chart-bar"></i></div>
+                        <div className="titleofbox">Profile Analytics<i className="far fa-chart-bar" style={{ marginTop: '4%' }}></i></div>
                         <p className="maindesc">Track your study habits</p>
                         <p className="clickbutton"><Link to='/profile' component={ProfileContainer} className="clocklink">Go</Link></p>
                 </div>
+                    <div className="pomodorobox">
+                        <div className="titleofbox">About Us<i className="fas fa-address-card" style={{marginLeft: '3%'}}></i></div>
+                        <p className="maindesc">Check out our team</p>
+                        <p className="clickbutton"><Link to={'/team'} className="clocklink">Go</Link></p>
+                    </div>
                 </div>
 
 
@@ -92,3 +93,6 @@ class MainPage extends React.Component {
 }
 
 export default MainPage;
+
+
+

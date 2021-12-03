@@ -53,6 +53,17 @@ body{
     margin-left: 40%;
 }
 
+.fa-pen {
+    display: flex;
+    margin-left: 70%;
+    margin-top: -35px;
+}
+.fa-trash {
+    display: flex;
+    margin-left: 70%;
+    margin-top: -35px;
+}
+
 .maindesc {
     padding-top: 4%;
     align-items: center;
@@ -82,8 +93,9 @@ body{
     color: white;
     font-size: 20px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    width: -webkit-fill-available;
+    text-align: center;
 }
-
 .welcomemsg {
     font-weight: 300;
     font-size: 30px;
