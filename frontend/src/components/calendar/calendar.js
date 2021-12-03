@@ -133,17 +133,20 @@ export default function CalenderContainer()  {
 
     function handleAddEvent(){
 
-        if(!newEvent.title || !newEvent.start || !newEvent.end){
-            errors = "Missing fields";
-            return errors
+        if(!newEvent.title){
+            errors = <p>Missing fields. Please fill out event fields</p>;
+            return errors;
         }
  
         setAllEvents([...allEvents, newEvent])
         localStorage.setItem("savedData", JSON.stringify(allEvents));
-           
     }
 
     let objects = JSON.parse(localStorage.getItem("savedData"));
+    
+    console.log(allEvents, "allEvents");
+    console.log(objects, "obj");
+    
  
     return (
         <div className="calender-container">
