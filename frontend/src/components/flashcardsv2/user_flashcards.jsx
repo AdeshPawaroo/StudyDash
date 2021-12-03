@@ -23,8 +23,7 @@ class UserFlashcards extends React.Component {
 
 
     componentDidMount() {
-        this.props.fetchUserFlashcards(this.props.currUserID)
-        console.log("in CDM");
+        this.props.fetchUserFlashcards(this.props.currUserID);
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -62,8 +61,7 @@ class UserFlashcards extends React.Component {
             <div className="user-cards-container">
                 <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
                 <button onClick={this.handleRedir} className="new-redir-btn" >Click here to create more flashcards!</button>
-                {/* <button onClick={this.handleShuffle(this.props.flashcards)}>Shuffle</button> */}
-                <button onClick={this.handleShuffle}>Shuffle</button>
+                <button onClick={this.handleShuffle} className="shuffle-card-btn">Shuffle</button>
                 <div className="user-cards">
                     {this.state.flashcards.map(flashcard => (
                        <div>

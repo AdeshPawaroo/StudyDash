@@ -84,11 +84,6 @@
 
 
 
-
-
-
-
-
 .redir-create {
     font-size: 3rem;
     color: black;
@@ -106,17 +101,35 @@
     background-color: white;
     color: teal;
     height: 5vh;
-    margin-bottom: 1rem;
     width: 50%;
     font-size: 1.3rem;
     border-radius: .5rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    margin-bottom: .6rem;
 }
 
 .new-redir-btn:hover {
     background-color: teal;
     color: white;
     cursor: pointer;
+}
+
+.shuffle-card-btn {
+    color: teal;
+    background-color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    border-radius: .5rem;
+    border: none;
+    font-size: 1rem;
+    width: 15%;
+    height: 10%;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.shuffle-card-btn:hover {
+    color: white;
+    background-color: teal;
 }
 
 
