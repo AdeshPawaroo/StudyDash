@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from './../navbar/nav_bar';
 import { Link } from 'react-router-dom'
 
 const MusicPage = () => (
