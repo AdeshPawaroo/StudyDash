@@ -35,7 +35,6 @@ function Timer(props) {
         props.editUser(props.currentUser);
         secondsLeftRef.current--; //current - 1 
         setSecondsLeft(secondsLeftRef.current);
-
     }
 
     // function initTimer() {
