@@ -172,7 +172,7 @@ export default function CalenderContainer()  {
                     </div>
 
                     <div>
-                        <button className="calendar-submit" onClick={handleAddEvent}>Add event</button>
+                        <button className="calendar-submit" onClick={handleAddEvent} style={{borderRadius: "50px"}}>Add event</button>
                     </div>
                     
                 </form>
