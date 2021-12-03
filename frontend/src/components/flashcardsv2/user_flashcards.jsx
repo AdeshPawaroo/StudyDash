@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { setState } from "react";
 import { connect } from "react-redux";
 
 import { Flashcard } from "./flashcard";
@@ -28,6 +29,7 @@ class UserFlashcards extends React.Component {
     }
 
     render() {
+        console.log(this.props.flashcards);
         return (
             <div className="user-cards-container">
                 <h1 id='profile-title'><Link to='/'>Study Dash</Link></h1>
