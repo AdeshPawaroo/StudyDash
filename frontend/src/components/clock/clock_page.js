@@ -64,7 +64,7 @@ class ClockPage extends React.Component {
     render() {
         let session_seconds = "00";
         let session_minutes = 25;
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div className="container1">
 
