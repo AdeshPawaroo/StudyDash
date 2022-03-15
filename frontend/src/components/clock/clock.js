@@ -16,7 +16,7 @@ function App(props) {
     const [showSettings, setShowSettings] = useState(false);
     const [workMinutes, setWorkMinutes] = useState(45);
     const [breakMinutes, setBreakMinutes] = useState(15);
-    console.log('hi')
+    // console.log('hi')
     // debugger;
 
     // let leaveClock = (window.confirm('Are you sure you wish to delete this item?'))

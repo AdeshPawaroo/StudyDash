@@ -24,6 +24,30 @@ StudyDash will also allow a user to listen to music while studying, add deadline
     * Calendar
       * Users can view and create events on calendar
       ![image](https://user-images.githubusercontent.com/53492872/144486646-4eb992fd-18bf-4ce5-9d3b-8da530233f05.png)
+      
+      ```JavaScript
+        const event = [];
+        const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+        const savedEvent = JSON.parse(localStorage.getItem("savedData"));
+        const [allEvents, setAllEvents] = useState([...event, ...savedEvent]);
+        let errors;
+        function removeDup(arr) {
+            let result = []
+            arr.forEach((item, index) => { if (arr.indexOf(item) == index) result.push(item) });
+            return result;
+        }
+        function handleAddEvent() {
+            if (!newEvent.title) {
+                errors = <p>Missing fields. Please fill out event fields</p>;
+                return errors;
+            }
+            let newEvents = [...allEvents, newEvent];
+            setAllEvents(newEvents)
+            let finalEvents = removeDup(newEvents);
+            localStorage.setItem("savedData", JSON.stringify(finalEvents));
+        }
+        let objects = JSON.parse(localStorage.getItem("savedData"));
+      ```
 
     * Pomodoro Clock
       * Users can start a timer based on their work/break minutes and the timer will display a ring when the time is up
@@ -40,6 +64,31 @@ StudyDash will also allow a user to listen to music while studying, add deadline
 
     * User Analytics 
       * This includes a various statistics about the user like the amount of times the user has logged, the amount of hours/minutes the user has spent studying, the amount of hours/minutes the user has spent taking breaks.
+      
+      ```JavaScript
+        const lastLogin = new Date(this.props.currentUser.lastLogin);
+        const date = new Date(this.props.currentUser.date);
+        let totalTime = this.props.currentUser.timeStudied;
+        const hours = Math.floor((totalTime / 60) / 60);
+        if (hours > 0){
+            totalTime -= ((hours * 60) * 60);
+        }
+        const minutes = Math.floor(totalTime / 60);
+        if (minutes > 0) {
+            totalTime -= (minutes * 60);
+        }
+        const seconds = totalTime;
+        let tasksDone = []
+        let activeTasks = []
+        this.props.todos.forEach(todo => {
+            if(todo.done){
+                tasksDone.push(todo)
+            } else {
+                activeTasks.push(todo)
+            }
+        })
+      ```
+      
 ### Technologies
 * MongoDB
 * Mongoose

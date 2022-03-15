@@ -16,7 +16,7 @@ export const getAllTodo = () => async dispatch => {
 
 export const addNewTodo = name => async dispatch => {
   const res = await axios.post('/api/todos', { name });
-  console.log(name);
+  // console.log(name);
   dispatch({ type: ADDNEW_TODO, payload: res.data });
 };
 

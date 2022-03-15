@@ -135,12 +135,21 @@ export default function CalenderContainer() {
         }
         let newEvents = [...allEvents, newEvent];
         setAllEvents(newEvents)
+<<<<<<< HEAD
         
+=======
+        // console.log(newEvents, "newEvents");
+>>>>>>> 5ae41aedbbe4b49387e23e94844e72f22cda5899
         let finalEvents = removeDup(newEvents);
         localStorage.setItem("savedData", JSON.stringify(finalEvents));
     }
     let objects = JSON.parse(localStorage.getItem("savedData"));
+<<<<<<< HEAD
    
+=======
+    // console.log(allEvents, "allEvents")
+    // console.log(objects, "objects")
+>>>>>>> 5ae41aedbbe4b49387e23e94844e72f22cda5899
     return (
         <div className="calender-container">
             <h1 id='profile-title' className='calendar-link'><Link to='/' >Study Dash</Link></h1>
